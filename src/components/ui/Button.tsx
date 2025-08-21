@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 interface ButtonProps {
   children: ReactNode;
-  variant?: "primary";
+  variant?: "primary" | "secondary";
   onClick?: () => void;
   disabled?: boolean;
   className?: string;
@@ -34,6 +34,7 @@ const Button = ({
 
   const variantStyles = {
     primary: "bg-[#12FF80]",
+    secondary: "bg-[#1A1A1A] text-white",
   };
 
   const disabledStyles = "opacity-50 cursor-not-allowed";
