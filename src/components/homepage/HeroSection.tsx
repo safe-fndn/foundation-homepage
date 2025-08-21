@@ -159,7 +159,7 @@ const WarpDitherCanvas = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 block"
+      className="absolute inset-0 block"
       style={{ width: "100%", height: "75%" }}
     />
   );
@@ -167,7 +167,7 @@ const WarpDitherCanvas = () => {
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-screen flex justify-center items-center">
+    <div className="relative w-full h-full flex justify-center items-center">
       <WarpDitherCanvas />
       <div
         className="absolute bottom-0 left-0 right-0 h-full pointer-events-none"
