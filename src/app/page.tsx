@@ -37,7 +37,7 @@ export default function Home() {
       <div className="pt-[160px] md:pt-[240px]">
         <Governance />
       </div>
-      <div className="pt-[100px] md:pt-[275px]">
+      <div className="py-[100px] md:pt-[275px] md:pb-[140px]">
         <CommunityVoices />
       </div>
     </div>
