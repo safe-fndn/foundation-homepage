@@ -176,7 +176,7 @@ const HeroSection = () => {
             "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 25.16%, #FFF 75.56%)",
         }}
       />
-      <div className="z-10 max-w-[408px] md:max-w-[860px] text-center">
+      <div className="z-10 max-w-[408px] md:max-w-[860px] text-center px-4">
         <div className="text-4xl md:text-7xl pb-2 md:pb-5">
           Self Custody is a <span className="italic font-bold">Right*</span> Not
           a Feature.

@@ -1,3 +1,4 @@
+import Governance from "@/components/homepage/Governance";
 import HeroSection from "@/components/homepage/HeroSection";
 import Impact from "@/components/homepage/Impact";
 import MeetSafeFoundation from "@/components/homepage/MeetSafeFoundation";
@@ -27,6 +28,9 @@ export default function Home() {
       </div>
       <div className="pt-[160px] md:pt-[240px]">
         <SafeSmartAccounts />
+      </div>
+      <div className="pt-[160px] md:pt-[240px]">
+        <Governance />
       </div>
     </div>
   );
