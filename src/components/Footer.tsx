@@ -20,7 +20,7 @@ export default function Footer() {
           <button className="w-full max-w-full md:max-w-[274px] bg-[#1A1A1A] text-[#12FF80] text-[24px] md:text-[32px] px-[30px] py-[16px] rounded-full flex items-center justify-between">
             Get Started
             <Image
-              src="/images/common/arrow-right-primary.svg"
+              src="./images/common/arrow-right-primary.svg"
               alt="arrow right"
               width={24}
               height={24}
