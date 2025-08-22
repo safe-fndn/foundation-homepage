@@ -2,6 +2,7 @@ import HeroSection from "@/components/homepage/HeroSection";
 import Impact from "@/components/homepage/Impact";
 import MeetSafeFoundation from "@/components/homepage/MeetSafeFoundation";
 import SafeEcosystem from "@/components/homepage/SafeEcosystem";
+import SafeSmartAccounts from "@/components/homepage/SafeSmartAccounts";
 import Values from "@/components/homepage/Values";
 import Navbar from "@/components/Navbar";
 
@@ -23,6 +24,9 @@ export default function Home() {
       <div className="bg-[#E4EDE6] py-[100px] md:py-[160px] flex flex-col gap-[160px]">
         <Impact />
         <Values />
+      </div>
+      <div className="pt-[160px] md:pt-[240px]">
+        <SafeSmartAccounts />
       </div>
     </div>
   );
