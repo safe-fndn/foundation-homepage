@@ -1,7 +1,9 @@
+import CommunityVoices from "@/components/homepage/CommunityVoices";
 import Governance from "@/components/homepage/Governance";
 import HeroSection from "@/components/homepage/HeroSection";
 import Impact from "@/components/homepage/Impact";
 import MeetSafeFoundation from "@/components/homepage/MeetSafeFoundation";
+import Resources from "@/components/homepage/Resources";
 import SafeEcosystem from "@/components/homepage/SafeEcosystem";
 import SafeSmartAccounts from "@/components/homepage/SafeSmartAccounts";
 import Values from "@/components/homepage/Values";
@@ -26,11 +28,17 @@ export default function Home() {
         <Impact />
         <Values />
       </div>
+      <div className="pt-[60px] md:pt-[160px]">
+        <Resources />
+      </div>
       <div className="pt-[160px] md:pt-[240px]">
         <SafeSmartAccounts />
       </div>
       <div className="pt-[160px] md:pt-[240px]">
         <Governance />
+      </div>
+      <div className="pt-[100px] md:pt-[275px]">
+        <CommunityVoices />
       </div>
     </div>
   );
