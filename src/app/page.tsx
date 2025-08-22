@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import CommunityVoices from "@/components/homepage/CommunityVoices";
 import Governance from "@/components/homepage/Governance";
 import HeroSection from "@/components/homepage/HeroSection";
@@ -39,6 +40,9 @@ export default function Home() {
       </div>
       <div className="py-[100px] md:pt-[275px] md:pb-[140px]">
         <CommunityVoices />
+      </div>
+      <div className="bg-[#12FF80] pt-[60px] md:pt-[120px]">
+        <Footer />
       </div>
     </div>
   );
