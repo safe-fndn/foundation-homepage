@@ -55,7 +55,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center flex-row gap-1">
               <Image
-                src="/images/common/safe-logo.svg"
+                src="./images/common/safe-logo.svg"
                 alt="Safe Logo"
                 width={24}
                 height={24}
@@ -71,7 +71,7 @@ const Navbar = () => {
             <div className="md:hidden">
               <button type="button" className="p-2" aria-label="Toggle menu">
                 <Image
-                  src="/images/navbar/menu.svg"
+                  src="./images/navbar/menu.svg"
                   alt="Menu"
                   width={24}
                   height={24}
@@ -95,7 +95,7 @@ const Navbar = () => {
             {/* CTA Button */}
             <div className="hidden md:flex items-center">
               <Button
-                icon="/images/common/arrow-right.svg"
+                icon="./images/common/arrow-right.svg"
                 iconAlt="Arrow Right"
                 iconHeight={18}
                 iconWidth={18}

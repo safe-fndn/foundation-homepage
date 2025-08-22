@@ -39,8 +39,8 @@ export default function SafeSmartAccounts() {
 
     const src =
       type === 1
-        ? "/images/homepage/safe-smart-accounts/defence-black.svg"
-        : "/images/homepage/safe-smart-accounts/defence-gray.svg";
+        ? "./images/homepage/safe-smart-accounts/defence-black.svg"
+        : "./images/homepage/safe-smart-accounts/defence-gray.svg";
 
     return (
       <div
@@ -85,7 +85,7 @@ export default function SafeSmartAccounts() {
         <Button
           className="w-full max-w-[274px] text-lg md:text-[32px] px-5 md:px-[30px]"
           variant="outline"
-          icon="/images/common/arrow-right.svg"
+          icon="./images/common/arrow-right.svg"
           iconAlt="arrow right"
           iconHeight={24}
           iconWidth={24}
@@ -95,7 +95,7 @@ export default function SafeSmartAccounts() {
         <Button
           className="w-full max-w-[340px] text-lg md:text-[32px] px-5 md:px-[30px]"
           variant="secondary"
-          icon="/images/common/arrow-right-light.svg"
+          icon="./images/common/arrow-right-light.svg"
           iconAlt="arrow right"
           iconHeight={24}
           iconWidth={24}

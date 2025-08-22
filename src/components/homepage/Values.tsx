@@ -13,7 +13,7 @@ export default function Values() {
       </div>
       <div className="flex flex-col md:flex-row justify-between gap-15">
         <Image
-          src="/images/homepage/values/safe-foundation.png"
+          src="./images/homepage/values/safe-foundation.png"
           alt="foundation"
           width={297}
           height={530}
@@ -43,7 +43,7 @@ export default function Values() {
             <Button
               className="w-full max-w-[530px] text-lg md:text-[32px] px-[30px]"
               variant="secondary"
-              icon="/images/common/arrow-right-light.svg"
+              icon="./images/common/arrow-right-light.svg"
               iconAlt="arrow right"
               iconHeight={24}
               iconWidth={24}

@@ -21,7 +21,7 @@ export default function SafeEcosystem() {
         <Button
           className="w-full max-w-[188px] whitespace-nowrap text-[14px]"
           variant="secondary"
-          icon="/images/common/arrow-right-light.svg"
+          icon="./images/common/arrow-right-light.svg"
           iconAlt="arrow right"
           iconHeight={18}
           iconWidth={18}

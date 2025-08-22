@@ -38,7 +38,7 @@ export const stats = [
         y="576"
         width="240"
         height="40"
-        href="/images/homepage/impact/supported-networks.png"
+        href="./images/homepage/impact/supported-networks.png"
       />
     ),
     d: "M943 296H588C582.477 296 578 300.477 578 306V624C578 629.523 582.477 634 588 634H943C948.523 634 953 629.523 953 624V306C953 300.477 948.523 296 943 296Z",
