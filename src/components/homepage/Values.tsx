@@ -39,7 +39,12 @@ export default function Values() {
               </div>
             ))}
           </div>
-          <div className="flex justify-end">
+          <a
+            href="https://safe.global/blog/safe-research-manifesto?utm_source=safe_dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex justify-end"
+          >
             <Button
               className="w-full max-w-[530px] text-lg md:text-[32px] px-[30px]"
               variant="secondary"
@@ -48,9 +53,9 @@ export default function Values() {
               iconHeight={24}
               iconWidth={24}
             >
-              Start building
+              Read More
             </Button>
-          </div>
+          </a>
         </div>
       </div>
     </div>

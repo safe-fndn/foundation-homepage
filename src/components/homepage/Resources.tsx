@@ -67,7 +67,12 @@ export default function Resources() {
           />
         </div>
       </div>
-      <div className="flex justify-end">
+      <a
+        href="http://docs.safe.global"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full flex justify-end"
+      >
         <Button
           className="mt-[60px] w-full max-w-[530px] text-lg md:text-[32px] px-[30px]"
           variant="secondary"
@@ -78,7 +83,7 @@ export default function Resources() {
         >
           Start building
         </Button>
-      </div>
+      </a>
     </div>
   );
 }

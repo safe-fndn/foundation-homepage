@@ -86,6 +86,8 @@ const Navbar = () => {
                   href={item.href}
                   key={item.name}
                   className="px-3 py-1 text-sm"
+                  {...(item.target && { target: item.target })}
+                  {...(item.rel && { rel: item.rel })}
                 >
                   {item.name}
                 </a>
@@ -94,14 +96,20 @@ const Navbar = () => {
 
             {/* CTA Button */}
             <div className="hidden md:flex items-center">
-              <Button
-                icon="./images/common/arrow-right.svg"
-                iconAlt="Arrow Right"
-                iconHeight={18}
-                iconWidth={18}
+              <a
+                href="http://docs.safe.global"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Build on Safe
-              </Button>
+                <Button
+                  icon="./images/common/arrow-right.svg"
+                  iconAlt="Arrow Right"
+                  iconHeight={18}
+                  iconWidth={18}
+                >
+                  Build on Safe
+                </Button>
+              </a>
             </div>
           </div>
         </div>

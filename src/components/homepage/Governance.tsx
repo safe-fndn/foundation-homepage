@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import SectionTag from "../ui/SectionTag";
 import FloatingToken from "../ui/FloatingToken";
@@ -40,6 +42,7 @@ export default function Governance() {
             iconAlt="arrow right"
             iconHeight={18}
             iconWidth={18}
+            onClick={() => window.open("https://safe.global/token", "_blank")}
           >
             Learn More
           </Button>
@@ -66,6 +69,12 @@ export default function Governance() {
               iconAlt="arrow right"
               iconHeight={18}
               iconWidth={18}
+              onClick={() =>
+                window.open(
+                  "https://www.notion.so/safe-global/SafeDAO-Governance-Hub-6a7368cc72554c8d94b05fcc47f246d5",
+                  "_blank"
+                )
+              }
             >
               Go to Hub
             </Button>
@@ -91,6 +100,9 @@ export default function Governance() {
               iconAlt="arrow right"
               iconHeight={18}
               iconWidth={18}
+              onClick={() =>
+                window.open("https://snapshot.box/#/s:safe.eth", "_blank")
+              }
             >
               View Proposals
             </Button>

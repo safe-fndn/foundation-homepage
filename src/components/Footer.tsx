@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import {
@@ -8,6 +10,7 @@ import {
   socialLinks,
 } from "@/content/footer";
 import FooterLinkSection from "@/components/ui/FooterLinkSection";
+import Button from "./ui/Button";
 
 export default function Footer() {
   return (
@@ -17,15 +20,17 @@ export default function Footer() {
           Champion Usable Self Custody with Safe
         </div>
         <div className="flex justify-end">
-          <button className="w-full max-w-full md:max-w-[274px] bg-[#1A1A1A] text-[#12FF80] text-[24px] md:text-[32px] px-[30px] py-[16px] rounded-full flex items-center justify-between">
-            Get Started
-            <Image
-              src="./images/common/arrow-right-primary.svg"
-              alt="arrow right"
-              width={24}
-              height={24}
-            />
-          </button>
+          <Button
+            className="w-full max-w-[340px] text-lg md:text-[32px] px-5 md:px-[30px] text-[#12FF80] font-medium"
+            variant="secondary"
+            icon="./images/common/arrow-right-primary.svg"
+            iconAlt="arrow right"
+            iconHeight={24}
+            iconWidth={24}
+            onClick={() => window.open("http://docs.safe.global", "_blank")}
+          >
+            Build with Safe
+          </Button>
         </div>
       </div>
 
@@ -67,7 +72,9 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <div className="text-[#1a1a1a66]">©2025 Safe Ecosystem Foundation</div>
+        <div className="text-[#1a1a1a66]">
+          &copy;{new Date().getFullYear()} Safe Ecosystem Foundation
+        </div>
       </div>
     </footer>
   );

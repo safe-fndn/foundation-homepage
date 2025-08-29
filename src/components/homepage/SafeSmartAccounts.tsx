@@ -96,6 +96,12 @@ export default function SafeSmartAccounts() {
           iconAlt="arrow right"
           iconHeight={24}
           iconWidth={24}
+          onClick={() =>
+            window.open(
+              "https://safe-global.notion.site/Safe-Contract-Audits-f9757c9ffab24ffdac43221b9a970ebc",
+              "_blank"
+            )
+          }
         >
           View Audits
         </Button>
@@ -106,6 +112,12 @@ export default function SafeSmartAccounts() {
           iconAlt="arrow right"
           iconHeight={24}
           iconWidth={24}
+          onClick={() =>
+            window.open(
+              "https://docs.safe.global/advanced/smart-account-bug-bounty",
+              "_blank"
+            )
+          }
         >
           <span className="hidden md:inline-block">Start</span> Bug Bounty
         </Button>

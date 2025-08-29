@@ -11,7 +11,7 @@ export default function MeetSafeFoundation() {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 0.4", "end 0.8"],
+    offset: ["start 0.6", "end 0.4"],
   });
 
   const fullText =
@@ -33,16 +33,22 @@ export default function MeetSafeFoundation() {
         ))}
       </div>
       <div className="flex justify-end">
-        <Button
-          className="mt-[60px] w-full max-w-[530px] text-lg md:text-[32px] px-[30px]"
-          variant="secondary"
-          icon="./images/common/arrow-right-light.svg"
-          iconAlt="arrow right"
-          iconHeight={24}
-          iconWidth={24}
+        <a
+          href="http://docs.safe.global"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Start building
-        </Button>
+          <Button
+            className="mt-[60px] w-full max-w-[530px] text-lg md:text-[32px] px-[30px]"
+            variant="secondary"
+            icon="./images/common/arrow-right-light.svg"
+            iconAlt="arrow right"
+            iconHeight={24}
+            iconWidth={24}
+          >
+            Start building
+          </Button>
+        </a>
       </div>
     </div>
   );

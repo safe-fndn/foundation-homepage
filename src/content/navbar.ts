@@ -1,11 +1,15 @@
 export const menuItems = [
   {
-    name: "Safe Labs",
-    href: "#",
+    name: "Safe{Wallet}",
+    href: "http://app.safe.global",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   {
     name: "Ecosystem",
-    href: "#",
+    href: "https://safe.global/ecosystem",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   {
     name: "Community",
@@ -17,6 +21,8 @@ export const menuItems = [
   },
   {
     name: "Research",
-    href: "#",
+    href: "http://safe.dev",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
 ];

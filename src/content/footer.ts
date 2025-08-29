@@ -49,13 +49,13 @@ export const additionalLinks = [
 ];
 
 export const legalLinks = [
-  { name: "Terms", href: "#" },
-  { name: "Privacy", href: "#" },
-  { name: "Licenses", href: "#" },
-  { name: "Cookie Policy", href: "#" },
-  { name: "Preferences", href: "#" },
-  { name: "Imprint", href: "#" },
-  { name: "Trademark", href: "#" },
-  { name: "Disclaimer", href: "#" },
+  { name: "Terms", href: "https://safe.global/terms" },
+  { name: "Privacy", href: "https://safe.global/privacy" },
+  { name: "Licenses", href: "https://app.safe.global/licenses" },
+  { name: "Cookie Policy", href: "https://safe.global/cookie" },
+  { name: "Preferences", href: "https://safe.global/#cookies" },
+  { name: "Imprint", href: "https://safe.global/imprint" },
+  { name: "Trademark", href: "https://safe.global/trademark" },
+  { name: "Disclaimer", href: "https://safe.global/disclaimer" },
   { name: "v1.6.18", href: "#" },
 ];

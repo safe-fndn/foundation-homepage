@@ -7,7 +7,6 @@ import { stats } from "@/content/impact";
 
 export default function Impact() {
   const [hoveredStat, setHoveredStat] = useState<string | null>(null);
-
   return (
     <div className="px-[16px] max-w-[953px] w-full text-left mx-auto">
       <SectionTag text="Impact" />
@@ -22,6 +21,7 @@ export default function Impact() {
             onMouseEnter={() => setHoveredStat(stat.title)}
             onMouseLeave={() => setHoveredStat(null)}
             style={{ cursor: "pointer" }}
+            onClick={() => window.open(stat.href, "_blank")}
           >
             <motion.path
               d={stat.d}

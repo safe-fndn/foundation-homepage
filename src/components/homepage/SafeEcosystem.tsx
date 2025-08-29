@@ -18,16 +18,22 @@ export default function SafeEcosystem() {
             200+ ecosystem project are built on the Safe smart account standard
           </div>
         </div>
-        <Button
-          className="w-full max-w-[188px] whitespace-nowrap text-[14px]"
-          variant="secondary"
-          icon="./images/common/arrow-right-light.svg"
-          iconAlt="arrow right"
-          iconHeight={18}
-          iconWidth={18}
+        <a
+          href="https://safe.global/ecosystem"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Explore Ecosystem
-        </Button>
+          <Button
+            className="w-full max-w-[188px] whitespace-nowrap text-[14px]"
+            variant="secondary"
+            icon="./images/common/arrow-right-light.svg"
+            iconAlt="arrow right"
+            iconHeight={18}
+            iconWidth={18}
+          >
+            Explore Ecosystem
+          </Button>
+        </a>
       </div>
 
       <div className="relative overflow-hidden">
@@ -37,7 +43,7 @@ export default function SafeEcosystem() {
             x: [0, -320 * logos.length],
           }}
           transition={{
-            duration: logos.length * 2,
+            duration: logos.length * 4,
             ease: "linear",
             repeat: Infinity,
           }}
