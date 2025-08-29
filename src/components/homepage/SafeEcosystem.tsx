@@ -43,8 +43,11 @@ export default function SafeEcosystem() {
           }}
         >
           {logos.map((logo, index) => (
-            <div
+            <a
               key={`first-${index}`}
+              href={logo.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex-shrink-0 w-[300px] h-[150px] bg-[#12ff8038] rounded-[10px] flex items-center justify-center"
             >
               <Image
@@ -54,11 +57,14 @@ export default function SafeEcosystem() {
                 height={42}
                 className="w-[80%] h-auto"
               />
-            </div>
+            </a>
           ))}
           {logos.map((logo, index) => (
-            <div
+            <a
               key={`second-${index}`}
+              href={logo.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex-shrink-0 w-[300px] h-[150px] bg-[#12ff8038] rounded-[10px] flex items-center justify-center"
             >
               <Image
@@ -68,7 +74,7 @@ export default function SafeEcosystem() {
                 height={42}
                 className="w-[80%] h-auto"
               />
-            </div>
+            </a>
           ))}
         </motion.div>
       </div>
