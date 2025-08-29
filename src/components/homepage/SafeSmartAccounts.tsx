@@ -7,9 +7,11 @@ import Image from "next/image";
 import Button from "../ui/Button";
 import { gridPattern, blobContent } from "@/content/safeSmartAccounts";
 import { Blob } from "./Blob";
+import { useResponsive } from "@/hooks/useResponsive";
 
 export default function SafeSmartAccounts() {
   const [showBlobs, setShowBlobs] = useState(true);
+  const { isMobile } = useResponsive();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,10 +25,14 @@ export default function SafeSmartAccounts() {
     return () => clearInterval(interval);
   }, []);
 
-  const blobShieldIndices = [0, 6, 16];
+  const blobShieldIndices = [0, 15, 9, 18];
 
   const renderIcon = (type: number, index: number) => {
-    const shouldShowBlob = showBlobs && blobShieldIndices.includes(index);
+    const blobIndex = blobShieldIndices.indexOf(index);
+    const shouldShowBlob = showBlobs && blobIndex !== -1;
+
+    const blobData = blobContent[blobIndex];
+    const shouldShowOnMobile = !isMobile || (blobData && blobData.showOnMobile);
 
     if (type === 0) {
       return (
@@ -55,9 +61,10 @@ export default function SafeSmartAccounts() {
           className="w-full h-full"
         />
         <AnimatePresence>
-          {shouldShowBlob && (
+          {shouldShowBlob && shouldShowOnMobile && (
             <Blob
-              content={blobContent[blobShieldIndices.indexOf(index)]}
+              content={blobContent[blobIndex].content}
+              position={blobContent[blobIndex].position}
               className="text-xl whitespace-nowrap md:text-[42px]"
             />
           )}
