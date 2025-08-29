@@ -1,8 +1,27 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import SectionTag from "../ui/SectionTag";
 import Button from "../ui/Button";
+import { testimonials } from "@/content/communityVoices";
 
 export default function CommunityVoices() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const currentTestimonial = testimonials[currentIndex];
+
   return (
     <div className="px-[16px] max-w-[953px] w-full text-left mx-auto">
       <div className="flex flex-row justify-between items-center">
@@ -10,24 +29,32 @@ export default function CommunityVoices() {
         <div className="flex flex-row gap-[10px] items-center">
           <Button
             icon="./images/common/arrow-right-bold.svg"
-            iconAlt="Arrow Right"
+            iconAlt="Previous"
             iconHeight={24}
             iconWidth={24}
             variant="link"
             className="p-0 rotate-180"
-          ></Button>
+            onClick={goToPrevious}
+          />
           <Button
             icon="./images/common/arrow-right-bold.svg"
-            iconAlt="Arrow Right"
+            iconAlt="Next"
             iconHeight={24}
             iconWidth={24}
             variant="link"
             className="p-0"
-          ></Button>
+            onClick={goToNext}
+          />
         </div>
       </div>
       <div className="pt-4 md:pt-10">
         <svg viewBox="0 0 953 534" fill="none" className="w-full">
+          <defs>
+            <clipPath id="roundedImageClip">
+              <rect x="686" y="264" width="270" height="270" rx="20" ry="20" />
+            </clipPath>
+          </defs>
+
           <path
             d="M0 20C0 8.9543 8.95431 0 20 0H933C944.046 0 953 8.9543 953 20V230C953 241.046 944.046 250 933 250H0V20Z"
             fill="#12FF80"
@@ -61,27 +88,32 @@ export default function CommunityVoices() {
             fill="#12FF80"
             fillOpacity="0.4"
           />
-          <foreignObject x={20} y={20} width={470} height={120}>
-            <div className="text-[29px] font-medium text-[#1a1a1acc]">
-              Safe is DeFiPunk
+          <foreignObject x={20} y={20} width={470} height={150}>
+            <div className="text-[29px] font-medium text-[#1a1a1acc] transition-all duration-300">
+              {currentTestimonial.title}
             </div>
-            <div className="text-[18px] font-light text-[#1a1a1acc] mt-2 max-w-[520px]">
-              {`The EF is active Safe{Wallet} user for its "DeFiPunk" ethos and
-              open-source`}
+            <div className="text-[18px] font-light text-[#1a1a1acc] mt-2 max-w-[520px] transition-all duration-300">
+              {currentTestimonial.subtitle}
             </div>
           </foreignObject>
           <foreignObject x={20} y={410} width={360} height={100}>
-            <div className="text-[40px] font-bold">Hsiao-Wei Wang</div>
-            <div className="text-[18px] font-light text-[#1a1a1acc]">
-              Co-Director, Ethereum Foundation
+            <div className="text-[40px] font-bold transition-all duration-300">
+              {currentTestimonial.name}
             </div>
+            {currentTestimonial.professionalTitle && (
+              <div className="text-[18px] font-light text-[#1a1a1acc] transition-all duration-300">
+                {currentTestimonial.professionalTitle}
+              </div>
+            )}
           </foreignObject>
           <image
             x="686"
             y="264"
             width="270"
             height="270"
-            href="./images/homepage/community/member1.png"
+            href={currentTestimonial.imageUrl}
+            className="transition-all duration-300"
+            clipPath="url(#roundedImageClip)"
           />
         </svg>
       </div>
