@@ -19,9 +19,9 @@ export default function MeetSafeFoundation() {
   const words = fullText.split(" ");
 
   return (
-    <div ref={containerRef} className="px-[16px] max-w-[953px] mx-auto">
+    <div ref={containerRef} className="px-[16px] max-w-[1002px] mx-auto">
       <SectionTag text="Meet Safe Foundation" />
-      <div className="pt-5 md:pt-[40px] text-[#1A1A1A] text-[52px] md:text-[77px] leading-[120%]">
+      <div className="pt-5 md:pt-[40px] text-[#1A1A1A] text-[52px] md:text-[82px] leading-[120%]">
         {words.map((word, wordIndex) => (
           <AnimatedWord
             key={wordIndex}
