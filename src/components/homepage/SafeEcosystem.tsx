@@ -10,7 +10,7 @@ export default function SafeEcosystem() {
   return (
     <div>
       <div className="max-w-[953px] px-[16px] mx-auto flex flex-row justify-between items-end gap-2 pb-5">
-        <div className="max-w-[216px] md:max-w-full">
+        <div className="max-w-[170px] md:max-w-full">
           <div className="text-[#1A1A1A] text-lg md:text-2xl font-medium pb-2 md:pb-5">
             The Safe Ecosystem:
           </div>
