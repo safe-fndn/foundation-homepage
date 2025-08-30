@@ -88,7 +88,7 @@ export default function CommunityVoices() {
             fill="#12FF80"
             fillOpacity="0.4"
           />
-          <foreignObject x={20} y={20} width={470} height={180}>
+          <foreignObject x={20} y={20} width={480} height={240}>
             <div className="text-[29px] font-medium text-[#1a1a1acc] transition-all duration-300">
               {currentTestimonial.title}
             </div>
@@ -97,7 +97,7 @@ export default function CommunityVoices() {
             </div>
           </foreignObject>
           <foreignObject x={20} y={410} width={360} height={100}>
-            <div className="text-[40px] font-bold transition-all duration-300">
+            <div className="text-[40px] font-semibold transition-all duration-300">
               {currentTestimonial.name}
             </div>
             {currentTestimonial.professionalTitle && (
