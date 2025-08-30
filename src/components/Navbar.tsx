@@ -5,12 +5,19 @@ import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 import Button from "./ui/Button";
 import DropdownMenu from "./ui/DropdownMenu";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "./ui/Accordion";
 import { menuItems, MenuItem } from "@/content/navbar";
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const navbarRef = useRef<HTMLDivElement>(null);
   const sentinelRef = useRef<HTMLDivElement>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const sentinel = sentinelRef.current;
@@ -63,6 +70,54 @@ const Navbar = () => {
     );
   };
 
+  const renderMobileMenuItem = (item: MenuItem) => {
+    if (item.dropdown) {
+      return (
+        <AccordionItem key={item.name}>
+          <AccordionTrigger id={item.name} className="py-3 px-4">
+            {item.name}
+          </AccordionTrigger>
+          <AccordionContent id={item.name}>
+            <div className="space-y-0">
+              {item.dropdown.map((dropdownItem) => (
+                <a
+                  key={dropdownItem.name}
+                  href={dropdownItem.href}
+                  className="flex items-center py-3 pl-4 text-base"
+                  {...(dropdownItem.target && { target: dropdownItem.target })}
+                  {...(dropdownItem.rel && { rel: dropdownItem.rel })}
+                >
+                  {dropdownItem.icon && (
+                    <Image
+                      src={dropdownItem.icon}
+                      alt={dropdownItem.name}
+                      width={18}
+                      height={18}
+                      className="mr-2"
+                    />
+                  )}
+                  {dropdownItem.name}
+                </a>
+              ))}
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+      );
+    }
+
+    return (
+      <a
+        key={item.name}
+        href={item.href}
+        className="block px-4 py-3"
+        {...(item.target && { target: item.target })}
+        {...(item.rel && { rel: item.rel })}
+      >
+        {item.name}
+      </a>
+    );
+  };
+
   return (
     <>
       {/* Sentinel element - when this goes out of view, navbar becomes sticky */}
@@ -99,9 +154,18 @@ const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <div className="md:hidden">
-              <button type="button" className="p-2" aria-label="Toggle menu">
+              <button
+                type="button"
+                className="p-2"
+                aria-label="Toggle menu"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
                 <Image
-                  src="./images/navbar/menu.svg"
+                  src={
+                    isMobileMenuOpen
+                      ? "./images/common/close.svg"
+                      : "./images/navbar/menu.svg"
+                  }
                   alt="Menu"
                   width={24}
                   height={24}
@@ -133,6 +197,39 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-[61px] bg-white w-full">
+            <div className="w-full rounded-2xl shadow-md">
+              <div className="py-5">
+                <Accordion allowMultiple={false}>
+                  {menuItems.map(renderMobileMenuItem)}
+                </Accordion>
+              </div>
+
+              {/* Mobile CTA Button */}
+              <div className="py-6 border-t border-[#E9EAEB]">
+                <a
+                  href="http://docs.safe.global"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full px-4"
+                >
+                  <Button
+                    icon="./images/common/arrow-right.svg"
+                    iconAlt="Arrow Right"
+                    iconHeight={18}
+                    iconWidth={18}
+                    className="w-full justify-center"
+                  >
+                    Build on Safe
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
     </>
   );
