@@ -4,7 +4,8 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useEffect, useState, useRef } from "react";
 import Button from "./ui/Button";
-import { menuItems } from "@/content/navbar";
+import DropdownMenu from "./ui/DropdownMenu";
+import { menuItems, MenuItem } from "@/content/navbar";
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -32,6 +33,35 @@ const Navbar = () => {
       observer.disconnect();
     };
   }, []);
+
+  const renderMenuItem = (item: MenuItem) => {
+    if (item.dropdown) {
+      return (
+        <DropdownMenu
+          key={item.name}
+          trigger={
+            <span className="px-3 py-1 text-sm cursor-pointer">
+              {item.name}
+            </span>
+          }
+          items={item.dropdown}
+          offsetTop={32}
+        />
+      );
+    }
+
+    return (
+      <a
+        href={item.href}
+        key={item.name}
+        className="px-3 py-1 text-sm"
+        {...(item.target && { target: item.target })}
+        {...(item.rel && { rel: item.rel })}
+      >
+        {item.name}
+      </a>
+    );
+  };
 
   return (
     <>
@@ -81,17 +111,7 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-[2px]">
-              {menuItems.map((item) => (
-                <a
-                  href={item.href}
-                  key={item.name}
-                  className="px-3 py-1 text-sm"
-                  {...(item.target && { target: item.target })}
-                  {...(item.rel && { rel: item.rel })}
-                >
-                  {item.name}
-                </a>
-              ))}
+              {menuItems.map(renderMenuItem)}
             </div>
 
             {/* CTA Button */}
