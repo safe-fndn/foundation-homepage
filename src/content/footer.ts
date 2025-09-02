@@ -51,7 +51,6 @@ export const additionalLinks = [
 export const legalLinks = [
   { name: "Terms", href: "https://safe.global/terms" },
   { name: "Privacy", href: "https://safe.global/privacy" },
-  { name: "Licenses", href: "https://app.safe.global/licenses" },
   { name: "Cookie Policy", href: "https://safe.global/cookie" },
   { name: "Preferences", href: "https://safe.global/#cookies" },
   { name: "Imprint", href: "https://safe.global/imprint" },
