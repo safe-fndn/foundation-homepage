@@ -96,7 +96,7 @@ export default function CommunityVoices() {
               {currentTestimonial.subtitle}
             </div>
           </foreignObject>
-          <foreignObject x={20} y={410} width={360} height={100}>
+          <foreignObject x={20} y={410} width={380} height={100}>
             <div className="text-[40px] font-semibold transition-all duration-300">
               {currentTestimonial.name}
             </div>
