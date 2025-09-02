@@ -11,8 +11,8 @@ export default function Resources() {
       <div className="text-[#1A1A1A] text-[36px] max-w-[408px] md:max-w-full leading-[120%] pt-2 pb-4 md:pt-5 md:pb-[40px] md:text-[64px]">
         The most secure smart accounts on Ethereum
       </div>
-      <div className="flex flex-row items-center">
-        <div className="px-4 md:px-[30px] py-[8px] md:py-[14px] font-medium text-sm md:text-base flex flex-row items-center gap-1 bg-[#12ff8014] rounded-t-[5px]">
+      <div className="flex flex-row items-end">
+        <div className="px-4 md:px-[30px] py-[8px] md:py-[14px] font-medium text-sm md:text-base flex flex-row items-center gap-1 bg-[#12ff8014] rounded-t-[10px]">
           <Image
             src="./images/homepage/resources/frame.svg"
             alt="Safe Smart Accounts"
@@ -21,14 +21,8 @@ export default function Resources() {
           />
           Safe Smart Accounts
         </div>
-        <div className="px-4 md:px-[30px] py-[8px] md:py-[14px] font-medium text-sm md:text-base flex flex-row items-center gap-1">
-          <Image
-            src="./images/homepage/resources/code.svg"
-            alt="Safe Smart Accounts"
-            width={20}
-            height={20}
-          />
-          Safe API
+        <div className="h-[26px] w-[26px] bg-[#12ff8014] relative">
+          <div className="h-full w-full bg-white absolute top-0 left-0 rounded-[0_0_0_20px]"></div>
         </div>
       </div>
       <div className="h-[600px] md:h-[532px] w-full bg-[#12ff8014] rounded-[0px_20px_20px_20px] flex flex-col md:flex-row justify-start md:justify-between items-end md:items-center overflow-hidden">
