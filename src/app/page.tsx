@@ -15,9 +15,9 @@ export default function Home() {
     <div>
       <div className="h-screen w-full relative">
         <HeroSection />
-        <div className="absolute bottom-0 left-0 right-0">
-          <Navbar />
-        </div>
+      </div>
+      <div className="sticky top-0 z-50 -mt-15 md:-mt-[64px]">
+        <Navbar />
       </div>
       <div className="pt-15 md:pt-[200px]">
         <MeetSafeFoundation />
