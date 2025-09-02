@@ -19,10 +19,10 @@ const Navbar = () => {
     if (item.dropdown) {
       return (
         <DropdownMenu
-          key={item.name}
+          key={item.id}
           trigger={
             <span className="px-3 py-1 text-sm cursor-pointer">
-              {item.name}
+              {item.title}
             </span>
           }
           items={item.dropdown}
@@ -34,12 +34,12 @@ const Navbar = () => {
     return (
       <a
         href={item.href}
-        key={item.name}
+        key={item.id}
         className="px-3 py-1 text-sm"
         {...(item.target && { target: item.target })}
         {...(item.rel && { rel: item.rel })}
       >
-        {item.name}
+        {item.title}
       </a>
     );
   };
@@ -47,11 +47,11 @@ const Navbar = () => {
   const renderMobileMenuItem = (item: MenuItem) => {
     if (item.dropdown) {
       return (
-        <AccordionItem key={item.name}>
-          <AccordionTrigger id={item.name} className="py-3 px-4">
-            {item.name}
+        <AccordionItem key={item.id}>
+          <AccordionTrigger id={item.id} className="py-3 px-4">
+            {item.title}
           </AccordionTrigger>
-          <AccordionContent id={item.name}>
+          <AccordionContent id={item.id}>
             <div className="space-y-0">
               {item.dropdown.map((dropdownItem) => (
                 <a
@@ -81,13 +81,13 @@ const Navbar = () => {
 
     return (
       <a
-        key={item.name}
+        key={item.id}
         href={item.href}
         className="block px-4 py-3"
         {...(item.target && { target: item.target })}
         {...(item.rel && { rel: item.rel })}
       >
-        {item.name}
+        {item.title}
       </a>
     );
   };

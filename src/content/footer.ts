@@ -56,5 +56,4 @@ export const legalLinks = [
   { name: "Imprint", href: "https://safe.global/imprint" },
   { name: "Trademark", href: "https://safe.global/trademark" },
   { name: "Disclaimer", href: "https://safe.global/disclaimer" },
-  { name: "v1.6.18", href: "#" },
 ];
