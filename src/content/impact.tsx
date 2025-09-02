@@ -52,10 +52,10 @@ export const stats = [
     title: "18+",
     subtitle: "Audits",
     descComponent: () => (
-      <foreignObject x="20" y="740" width="340" height="124">
+      <foreignObject x="20" y="760" width="340" height="124">
         <div className="text-[18px] text-[#000]">
-          A non profit championing cryptographic sovereignty, usable
-          self-custody, and onchain security through public goods and research.
+          <i>Safe</i> Smart Accounts has received several audits for core
+          contracts and other key components and modules
         </div>
       </foreignObject>
     ),
