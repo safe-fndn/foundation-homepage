@@ -11,7 +11,7 @@ export const stats = [
       </foreignObject>
     ),
     d: "M348.573 0H10.1472C4.62432 0 0 4.47715 0 10V490.5C0 496.023 4.47716 500.5 10 500.5H553C558.523 500.5 563 496.023 563 490.5V306.5C563 300.977 558.523 296.5 553 296.5H368.5C362.977 296.5 358.5 292.023 358.5 286.5V10C358.5 4.47715 354.096 0 348.573 0Z",
-    fillOpacity: 0.6,
+    fillOpacity: 0.22,
     labelPosition: { x: 20, y: 80 },
     href: "https://dune.com/safe/all",
   },
@@ -44,7 +44,7 @@ export const stats = [
       />
     ),
     d: "M943 296H588C582.477 296 578 300.477 578 306V624C578 629.523 582.477 634 588 634H943C948.523 634 953 629.523 953 624V306C953 300.477 948.523 296 943 296Z",
-    fillOpacity: 0.6,
+    fillOpacity: 0.22,
     labelPosition: { x: 596, y: 374 },
     href: "https://github.com/safe-global/safe-deployments/tree/main/src/assets",
   },
