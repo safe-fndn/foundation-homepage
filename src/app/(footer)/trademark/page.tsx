@@ -601,7 +601,7 @@ export default function Trademark() {
   return (
     <>
       <h1 className="text-[50px] md:text-[90px] font-normal">{title}</h1>
-      <div>{text}</div>;
+      <div>{text}</div>
     </>
   );
 }
