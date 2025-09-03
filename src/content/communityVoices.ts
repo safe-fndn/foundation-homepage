@@ -29,7 +29,7 @@ export const testimonials: Testimonial[] = [
       "Safe smart accounts represent the most battle-tested smart account solution in the ecosystem. They enabled us to seamlessly extend functionality through modules integrated with Brahma’s orchestration logic, creating the smoothest automated experience for users while ensuring they maintain complete control of their funds at all times.",
     name: "Alessandro Tenconi",
     professionalTitle: "Co-founder, Brahma.fi",
-    imageUrl: "./images/homepage/community/joao.png",
+    imageUrl: "./images/homepage/community/alessandro.png",
   },
   {
     title: "DefiPunk aligned security",
