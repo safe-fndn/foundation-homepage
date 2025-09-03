@@ -96,7 +96,10 @@ const Navbar = () => {
     <nav className="z-50 w-full bg-white border-b border-black/[0.1]">
       <div className="px-[16px] md:px-[50px] py-[10px]">
         <div className="flex justify-between items-center">
-          <div className="flex items-center flex-row gap-1">
+          <div
+            className="flex items-center flex-row gap-1 cursor-pointer"
+            onClick={() => (window.location.href = "/foundation-homepage")}
+          >
             <Image
               src="./images/common/safe-logo.svg"
               alt="Safe Logo"
