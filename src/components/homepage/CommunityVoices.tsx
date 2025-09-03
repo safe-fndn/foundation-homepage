@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SectionTag from "../ui/SectionTag";
 import Button from "../ui/Button";
 import { testimonials } from "@/content/communityVoices";
@@ -19,6 +19,14 @@ export default function CommunityVoices() {
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      goToNext();
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const currentTestimonial = testimonials[currentIndex];
 
