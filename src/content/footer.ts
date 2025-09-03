@@ -2,50 +2,31 @@ export const navigationCards = [
   {
     icon: "./images/footer/ecosystem.svg",
     title: "Safe Ecosystem",
-    href: "#",
+    href: "https://safe.global/ecosystem",
   },
   {
-    icon: "./images/footer/projects.svg",
-    title: "Projects",
-    href: "#",
+    icon: "./images/footer/docs.svg",
+    title: "Docs",
+    href: "https://docs.safe.global",
   },
   {
-    icon: "./images/footer/grants.svg",
-    title: "Grants",
-    href: "#",
-  },
-  {
-    icon: "./images/footer/governance.svg",
-    title: "Governance",
-    href: "#",
-  },
-  {
-    icon: "./images/footer/resources.svg",
-    title: "Resources",
-    href: "#",
+    icon: "./images/navbar/blog.svg",
+    title: "Blog",
+    href: "https://safe.global/blog",
   },
 ];
 
 export const companyLinks = [
-  { name: "About", href: "#" },
-  { name: "Developers", href: "#" },
-  { name: "Governance", href: "#" },
-  { name: "Resources", href: "#" },
+  { name: "Home", href: "#" },
+  { name: "Blog", href: "https://safe.global/blog" },
 ];
 
 export const socialLinks = [
-  { name: "X", href: "#" },
-  { name: "Discord", href: "#" },
-  { name: "LinkedIn", href: "#" },
-  { name: "Newsletter", href: "#" },
-  { name: "Calendar", href: "#" },
-];
-
-export const additionalLinks = [
-  { name: "Policy", href: "#" },
-  { name: "Carrers", href: "#" },
-  { name: "Terms of use", href: "#" },
-  { name: "Twitter", href: "#" },
+  { name: "X", href: "http://x.com/safe" },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/safe-ecosystem/?originalSubdomain=de",
+  },
 ];
 
 export const legalLinks = [

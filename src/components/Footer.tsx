@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import {
-  additionalLinks,
   companyLinks,
   legalLinks,
   navigationCards,
@@ -34,12 +33,14 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="px-4 max-w-[1400px] mx-auto flex flex-col md:flex-row gap-15 md:gap-10 pb-15 md:pb-10">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-[10px] max-w-[940px]">
+      <div className="px-4 max-w-[1400px] mx-auto flex justify-center flex-col md:flex-row gap-15 md:gap-[120px] pb-15 md:pb-[80px]">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-[10px] max-w-[940px]">
           {navigationCards.map((card, index) => (
             <a
               key={index}
               href={card.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#1a1a1a1c] rounded-[10px] p-3 flex flex-col w-[168px] h-fit md:w-[180px]"
             >
               <Image
@@ -55,10 +56,9 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-10">
+        <div className="grid grid-cols-2 gap-3 md:gap-10 w-full max-w-[400px]">
           <FooterLinkSection title="Company" links={companyLinks} />
           <FooterLinkSection title="Socials" links={socialLinks} />
-          <FooterLinkSection title="Company" links={additionalLinks} />
         </div>
       </div>
 

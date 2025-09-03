@@ -20,7 +20,12 @@ export default function FooterLinkSection({
       <ul className="space-y-3">
         {links.map((link, index) => (
           <li key={index}>
-            <a href={link.href} className="text-[#1a1a1a99] text-base">
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#1a1a1a99] text-base"
+            >
               {link.name}
             </a>
           </li>
