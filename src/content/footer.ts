@@ -49,11 +49,11 @@ export const additionalLinks = [
 ];
 
 export const legalLinks = [
-  { name: "Terms", href: "/terms" },
-  { name: "Privacy", href: "/privacy" },
-  { name: "Cookie Policy", href: "/cookie" },
+  { name: "Terms", href: "/foundation-homepage/terms" },
+  { name: "Privacy", href: "/foundation-homepage/privacy" },
+  { name: "Cookie Policy", href: "/foundation-homepage/cookie" },
   { name: "Preferences", href: "#" },
-  { name: "Imprint", href: "/imprint" },
-  { name: "Trademark", href: "/trademark" },
-  { name: "Disclaimer", href: "/disclaimer" },
+  { name: "Imprint", href: "/foundation-homepage/imprint" },
+  { name: "Trademark", href: "/foundation-homepage/trademark" },
+  { name: "Disclaimer", href: "/foundation-homepage/disclaimer" },
 ];
