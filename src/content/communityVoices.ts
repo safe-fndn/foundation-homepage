@@ -20,7 +20,7 @@ export const testimonials: Testimonial[] = [
     subtitle:
       "For anyone who really cares about safety, using Safe is a no-brainer. It's by far the most battle-tested smart account and comes with an incredible ecosystem. For us, it’s the backbone that enables a frictionless and secure UX for our users.",
     name: "João Ferreira",
-    professionalTitle: "CEO / co-founder of Picnic",
+    professionalTitle: "Co-Founder, Picnic",
     imageUrl: "./images/homepage/community/joao.png",
   },
   {
