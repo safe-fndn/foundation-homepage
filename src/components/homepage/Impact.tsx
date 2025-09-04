@@ -3,10 +3,17 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import SectionTag from "../ui/SectionTag";
-import { stats } from "@/content/impact";
+import { createStats } from "@/content/impact";
+import { DuneStats } from "@/lib/fetchStats";
 
-export default function Impact() {
+interface ImpactProps {
+  statsData: DuneStats;
+}
+
+export default function Impact({ statsData }: ImpactProps) {
   const [hoveredStat, setHoveredStat] = useState<string | null>(null);
+  const stats = createStats(statsData);
+
   return (
     <div className="px-[16px] max-w-[953px] w-full text-left mx-auto">
       <SectionTag text="Impact" />

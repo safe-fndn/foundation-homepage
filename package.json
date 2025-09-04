@@ -13,6 +13,7 @@
     "isomorphic-dompurify": "^2.26.0",
     "motion": "12.23.12",
     "next": "15.4.5",
+    "numbro": "^2.5.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "tailwind-merge": "^3.3.1"
@@ -21,6 +22,7 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/numbro": "^1.9.3",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

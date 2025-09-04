@@ -9,8 +9,11 @@ import SafeEcosystem from "@/components/homepage/SafeEcosystem";
 import SafeSmartAccounts from "@/components/homepage/SafeSmartAccounts";
 import Values from "@/components/homepage/Values";
 import Navbar from "@/components/Navbar";
+import { fetchAllStats } from "@/lib/fetchStats";
 
-export default function Home() {
+export default async function Home() {
+  const statsData = await fetchAllStats();
+
   return (
     <div>
       <div className="h-screen w-full relative">
@@ -26,7 +29,7 @@ export default function Home() {
         <SafeEcosystem />
       </div>
       <div className="bg-[#E4EDE6] py-[100px] md:py-[160px] flex flex-col gap-[160px]">
-        <Impact />
+        <Impact statsData={statsData} />
         <Values />
       </div>
       <div className="pt-[60px] md:pt-[160px]">
