@@ -98,7 +98,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div
             className="flex items-center flex-row gap-1 cursor-pointer"
-            onClick={() => (window.location.href = "/foundation-homepage")}
+            onClick={() => (window.location.href = "/")}
           >
             <Image
               src="./images/common/safe-logo.svg"

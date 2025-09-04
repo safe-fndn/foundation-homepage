@@ -30,11 +30,11 @@ export const socialLinks = [
 ];
 
 export const legalLinks = [
-  { name: "Terms", href: "/foundation-homepage/terms" },
-  { name: "Privacy", href: "/foundation-homepage/privacy" },
-  { name: "Cookie Policy", href: "/foundation-homepage/cookie" },
+  { name: "Terms", href: "/terms" },
+  { name: "Privacy", href: "/privacy" },
+  { name: "Cookie Policy", href: "/cookie" },
   { name: "Preferences", href: "#" },
-  { name: "Imprint", href: "/foundation-homepage/imprint" },
-  { name: "Trademark", href: "/foundation-homepage/trademark" },
-  { name: "Disclaimer", href: "/foundation-homepage/disclaimer" },
+  { name: "Imprint", href: "/imprint" },
+  { name: "Trademark", href: "/trademark" },
+  { name: "Disclaimer", href: "/disclaimer" },
 ];
