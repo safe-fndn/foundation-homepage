@@ -10,7 +10,7 @@ export const navigationCards = [
     href: "https://docs.safe.global",
   },
   {
-    icon: "./images/navbar/blog.svg",
+    icon: "./images/footer/scroll.svg",
     title: "Blog",
     href: "https://safe.global/blog",
   },
