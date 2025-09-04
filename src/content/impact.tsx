@@ -1,12 +1,9 @@
-import { FALLBACK_STATS } from "@/constants";
 import { DuneStats } from "@/lib/fetchStats";
 
 export const createStats = (data: DuneStats) =>
   [
     {
-      title:
-        `${data.transferVolume.cumulative_transfer_volume}+` ||
-        FALLBACK_STATS.TRANSFER_VOLUME,
+      title: data.transferVolume.cumulative_transfer_volume,
       subtitle: "Total Volume Processed",
       descComponent: () => (
         <foreignObject x="20" y="380" width="300" height="100">
@@ -22,9 +19,7 @@ export const createStats = (data: DuneStats) =>
       href: "https://dune.com/safe/all",
     },
     {
-      title:
-        `${data.totalValueLocked.total_balance_usd}+` ||
-        FALLBACK_STATS.TOTAL_VALUE_LOCKED,
+      title: data.totalValueLocked.total_balance_usd,
       subtitle: "Total Value Locked",
       descComponent: () => (
         <foreignObject x="392" y="192" width="300" height="60">
@@ -73,7 +68,7 @@ export const createStats = (data: DuneStats) =>
       href: "https://docs.safe.global/advanced/smart-account-bug-bounty",
     },
     {
-      title: `${data.safesCreated.num_safes}+` || FALLBACK_STATS.SAFES_CREATED,
+      title: data.safesCreated.num_safes,
       subtitle: "Accounts",
       descComponent: () => (
         <foreignObject x="612" y="662" width="300" height="60">
