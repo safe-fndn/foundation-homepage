@@ -32,7 +32,7 @@ export const blobContent = [
   {
     content: (
       <>
-        <span className="font-medium">+10</span> Audits
+        <span className="font-medium">10+</span> Audits
       </>
     ),
     position: {
@@ -44,7 +44,7 @@ export const blobContent = [
   {
     content: (
       <>
-        <span className="font-medium">$1M</span> bounty for 5+yr
+        <span className="font-medium">$1M</span> bounty for 5+ yr
       </>
     ),
     position: {

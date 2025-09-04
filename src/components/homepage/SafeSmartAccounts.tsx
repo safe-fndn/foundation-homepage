@@ -119,7 +119,9 @@ export default function SafeSmartAccounts() {
             )
           }
         >
-          <span className="hidden md:inline-block">Start</span> Bug Bounty
+          <div>
+            <span className="hidden md:inline-block">View</span> Bug Bounty
+          </div>
         </Button>
       </div>
     </div>
