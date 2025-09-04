@@ -21,9 +21,7 @@ const Navbar = () => {
         <DropdownMenu
           key={item.id}
           trigger={
-            <span className="px-3 py-1 text-sm cursor-pointer">
-              {item.title}
-            </span>
+            <div className="px-3 py-1 text-sm cursor-pointer">{item.title}</div>
           }
           items={item.dropdown}
           offsetTop={32}
