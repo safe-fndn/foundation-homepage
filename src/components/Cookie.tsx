@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import type { ReactElement } from "react";
 import { useCookieBannerContext } from "@/context/CookieBannerContext";
 import Button from "@/components/ui/Button";
-import { Checkbox } from "./ui/checkbox";
 import Image from "next/image";
+import { Checkbox } from "./ui/CheckboxMenu";
 
 export const enum CookieType {
   NECESSARY = "necessary",
