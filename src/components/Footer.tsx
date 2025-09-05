@@ -10,8 +10,18 @@ import {
 } from "@/content/footer";
 import FooterLinkSection from "@/components/ui/FooterLinkSection";
 import Button from "./ui/Button";
+import { useCookieBannerContext } from "@/context/CookieBannerContext";
+import type { SyntheticEvent } from "react";
 
 export default function Footer() {
+  const { openBanner } = useCookieBannerContext();
+
+  const showBanner = (e: SyntheticEvent) => {
+    // Prevent opening the hash link
+    e.preventDefault();
+    openBanner();
+  };
+
   return (
     <footer className="bg-[#12FF80] w-full">
       <div className="px-4 max-w-[953px] w-full text-left mx-auto pb-[60px] md:pb-[80px] pt-[60px] md:pt-[80px]">
@@ -67,7 +77,12 @@ export default function Footer() {
       <div className="px-4 max-w-[1400px] mx-auto flex flex-col md:flex-row gap-8 md:gap-3 pt-3 justify-between pb-15 md:pb-5">
         <div className="flex flex-row flex-wrap gap-5 md:gap-8">
           {legalLinks.map((link, index) => (
-            <a key={index} href={link.href} className="text-[#1a1a1a66]">
+            <a
+              key={index}
+              href={link.href}
+              className="text-[#1a1a1a66]"
+              onClick={link.name === "Preferences" ? showBanner : undefined}
+            >
               {link.name}
             </a>
           ))}
