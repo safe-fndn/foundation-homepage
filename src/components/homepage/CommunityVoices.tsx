@@ -96,11 +96,11 @@ export default function CommunityVoices() {
             fill="#12FF80"
             fillOpacity="0.4"
           />
-          <foreignObject x={20} y={20} width={480} height={240}>
-            <div className="text-[29px] font-medium text-[#1a1a1acc] transition-all duration-300">
+          <foreignObject x={20} y={20} width={620} height={400}>
+            <div className="text-[40px] md:text-[29px] font-medium text-[#1a1a1acc] transition-all duration-300">
               {currentTestimonial.title}
             </div>
-            <div className="text-[18px] font-light text-[#1a1a1acc] mt-2 max-w-[520px] transition-all duration-300">
+            <div className="text-[26px] md:text-[18px] font-light text-[#1a1a1acc] mt-0 md:mt-2 max-w-[620px] transition-all duration-300">
               {currentTestimonial.subtitle}
             </div>
           </foreignObject>
@@ -109,7 +109,7 @@ export default function CommunityVoices() {
               {currentTestimonial.name}
             </div>
             {currentTestimonial.professionalTitle && (
-              <div className="text-[18px] font-light text-[#1a1a1acc] transition-all duration-300">
+              <div className="text-[26px] md:text-[18px] font-light text-[#1a1a1acc] transition-all duration-300">
                 {currentTestimonial.professionalTitle}
               </div>
             )}

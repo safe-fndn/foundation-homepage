@@ -112,21 +112,6 @@ const WarpDitherCanvas = () => {
       timeout = setTimeout(warp, delay);
     }
 
-    function invert() {
-      expands = !expands;
-    }
-
-    function onMouseMove(event: MouseEvent) {
-      mx = event.clientX + 1;
-    }
-
-    function onTouchMove(event: TouchEvent) {
-      event.preventDefault();
-      if (event.targetTouches[0]) {
-        mx = event.targetTouches[0].clientX + 1;
-      }
-    }
-
     function onResize() {
       if (timeout) clearTimeout(timeout as number);
       init();
@@ -135,24 +120,9 @@ const WarpDitherCanvas = () => {
     init();
 
     window.addEventListener("resize", onResize);
-
-    canvas.addEventListener("mousedown", invert);
-    canvas.addEventListener("mouseup", invert);
-    canvas.addEventListener("touchstart", invert, { passive: false });
-    canvas.addEventListener("touchend", invert, { passive: false });
-
-    canvas.addEventListener("mousemove", onMouseMove);
-    canvas.addEventListener("touchmove", onTouchMove, { passive: false });
-
     return () => {
       if (timeout) clearTimeout(timeout as number);
       window.removeEventListener("resize", onResize);
-      canvas.removeEventListener("mousedown", invert);
-      canvas.removeEventListener("mouseup", invert);
-      canvas.removeEventListener("touchstart", invert as EventListener);
-      canvas.removeEventListener("touchend", invert as EventListener);
-      canvas.removeEventListener("mousemove", onMouseMove);
-      canvas.removeEventListener("touchmove", onTouchMove as EventListener);
     };
   }, []);
 

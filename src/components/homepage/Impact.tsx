@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import SectionTag from "../ui/SectionTag";
 import { createStats } from "@/content/impact";
 import { DuneStats } from "@/lib/fetchStats";
+import { useResponsive } from "@/hooks/useResponsive";
 
 interface ImpactProps {
   statsData: DuneStats;
@@ -13,6 +14,7 @@ interface ImpactProps {
 export default function Impact({ statsData }: ImpactProps) {
   const [hoveredStat, setHoveredStat] = useState<string | null>(null);
   const stats = createStats(statsData);
+  const { isMobile } = useResponsive();
 
   return (
     <div className="px-[16px] max-w-[953px] w-full text-left mx-auto">
@@ -40,7 +42,7 @@ export default function Impact({ statsData }: ImpactProps) {
                 {stat.title}
               </tspan>
               <tspan
-                fontSize="18"
+                fontSize={isMobile ? "26" : "18"}
                 fontWeight={400}
                 x={stat.labelPosition.x}
                 dy="36"
