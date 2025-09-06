@@ -34,7 +34,7 @@ const resourcesDropdownItems: DropdownItem[] = [
   {
     name: "Blogs",
     icon: "./images/navbar/blog.svg",
-    href: "https://safe.global/blog",
+    href: "/blog",
     target: "_blank",
     rel: "noopener noreferrer",
   },

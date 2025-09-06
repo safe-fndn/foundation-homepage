@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Card from "@/components/blog/Card";
 import type { PostEntryCollection } from "@/lib/contentful/types/types";
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { getPage } from "@/lib/getPage";
 import { useAllPosts } from "@/hooks/useAllPosts";
 import { isPressReleasePost } from "@/lib/contentful/isPressRelease";
@@ -10,7 +10,6 @@ import { isSelectedCategory } from "@/lib/contentful/isSelectedCategory";
 import usePostsSearch from "@/hooks/usePostsSearch";
 import { scrollToElement } from "@/lib/scrollSmooth";
 import SearchBar from "./SearchBar";
-import Image from "next/image";
 import CategoryFilter from "../CategoryFilter";
 import ShowMoreButton from "../ShowMoreButton";
 
@@ -24,9 +23,7 @@ const SearchFilterResults = ({
   categories: string[];
 }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  const router = useRouter();
   const searchParams = useSearchParams();
-  const pathname = usePathname();
 
   const selectedCategory = searchParams.get("category");
   const page = getPage(searchParams);
@@ -54,51 +51,24 @@ const SearchFilterResults = ({
     if (searchParams.get("category")) scrollToElement("#results", 250);
   }, [searchParams]);
 
-  const handleToggleCategory = (category: string) => {
-    const params = new URLSearchParams(searchParams.toString());
-
-    if (params.get("category") === category) {
-      params.delete("category");
-    } else {
-      params.set("category", category);
-    }
-
-    router.push(`${pathname}?${params.toString()}`);
-  };
-
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mt-[60px] md:mt-[140px]">
-        <div className="md:col-span-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A]">
-            All posts
-          </h2>
+      <div className="text-[#1A1A1A] text-[64px]">All posts</div>
+
+      <div className="flex flex-col md:flex-row gap-[32px] mt-10">
+        <div className="h-fit w-full overflow-x-auto">
+          <CategoryFilter categories={categories} />
         </div>
-        <div className="md:col-span-8">
+
+        <div className="max-w-[320px] w-full">
           <SearchBar query={searchQuery} setQuery={setSearchQuery} />
-
-          <div className="mt-4">
-            <span className="text-gray-500">Example: </span>
-            {categories.map((category, idx, { length }) => (
-              <span key={category}>
-                <button onClick={() => handleToggleCategory(category)}>
-                  {category}
-                </button>
-                {idx !== length - 1 && ", "}
-              </span>
-            ))}
-          </div>
         </div>
-      </div>
-
-      <div className="mt-[40px]">
-        <CategoryFilter categories={categories} />
       </div>
 
       {visibleResults.length > 0 ? (
-        <>
+        <div className="mb-[108px]">
           <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-x-[30px] gap-y-[30px] mt-[60px]"
+            className="grid grid-cols-1 md:grid-cols-3 gap-x-[30px] gap-y-[30px] mt-[40px]"
             id="results"
           >
             {visibleResults.map((post) => (
@@ -109,7 +79,7 @@ const SearchFilterResults = ({
           </div>
 
           {shouldShowMoreButton && <ShowMoreButton page={page} />}
-        </>
+        </div>
       ) : (
         <NoResults query={searchQuery} />
       )}
@@ -120,13 +90,7 @@ const SearchFilterResults = ({
 export default SearchFilterResults;
 
 const NoResults = ({ query }: { query: string }) => (
-  <div className="mt-[60px] text-center">
-    <Image
-      src="/images/common/search-icon.svg"
-      alt="Search"
-      width={20}
-      height={20}
-    />
+  <div className="mt-[60px] pb-[108px] text-center">
     <h4 className="text-2xl font-bold my-4 text-[#1A1A1A]">
       No results found for {query || "selected filter"}
     </h4>

@@ -7,6 +7,10 @@ import client from "@/lib/contentful/contentfulClient";
 import BlogHome from "@/components/blog/BlogHome";
 import { notFound } from "next/navigation";
 
+function serializeEntry(entry: any) {
+  return JSON.parse(JSON.stringify(entry));
+}
+
 export default async function Blog() {
   const allPosts = await client.getEntries<TypePostSkeleton>({
     content_type: "post",
@@ -35,5 +39,11 @@ export default async function Blog() {
   );
   allPosts.items.forEach((item: any) => delete item.fields.relatedPosts);
 
-  return <BlogHome blogHome={blogHome} allPosts={allPosts} />;
+  // Serialize the data to plain objects before passing to client component
+  const serializedBlogHome = serializeEntry(blogHome);
+  const serializedAllPosts = serializeEntry(allPosts);
+
+  return (
+    <BlogHome blogHome={serializedBlogHome} allPosts={serializedAllPosts} />
+  );
 }

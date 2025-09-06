@@ -7,11 +7,9 @@ import type {
   PostEntryCollection,
 } from "@/lib/contentful/types/types";
 import { useClientEntry } from "@/hooks/useClientEntry";
-import Navbar from "../Navbar";
 import FeaturedPost from "./FeaturesPost";
 import Card from "./Card";
 import SearchFilterResults from "./SearchFilterResults";
-import Footer from "../Footer";
 
 const categories = [
   "Announcements",
@@ -39,8 +37,7 @@ const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
 
   return (
     <div>
-      <Navbar />
-      <div className="pt-[72px] flex flex-col md:flex-row justify-between item-start md:items-end max-w-[1242px] mx-auto">
+      <div className="px-4 pt-[72px] flex flex-col md:flex-row justify-between item-start md:items-end max-w-[1242px] mx-auto">
         <div className="text-[#1A1A1A] text-[64px]">Blog</div>
         <div className="text-black/[0.6] text-xl font-light max-w-[469px]">
           Read the latest from Safe including new releases, use cases and
@@ -49,12 +46,12 @@ const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
       </div>
       <div className="mt-8 bg-[#1a1a1a66] w-full h-px max-w-[1242px] mx-auto mb-[80px]"></div>
       {isEntryTypePost(featured) && (
-        <div className="max-w-[1242px] mx-auto">
+        <div className="max-w-[1242px] mx-auto px-4">
           <FeaturedPost post={featured} />
         </div>
       )}
-      <div className="max-w-[1242px] mx-auto pt-[160px]">
-        <div className="text-[#1A1A1A] text-[64px]">Trending</div>{" "}
+      <div className="max-w-[1242px] mx-auto pt-[108px] px-4">
+        <div className="text-[#1A1A1A] text-[64px]">Trending</div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[30px] gap-y-[30px] mt-[40px]">
           {mostPopular
             .filter(isEntryTypePost)
@@ -66,11 +63,8 @@ const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
             ))}
         </div>
       </div>
-      <div className="max-w-[1242px] mx-auto pt-[160px]">
+      <div className="max-w-[1242px] mx-auto pt-[108px] px-4">
         <SearchFilterResults allPosts={allPosts} categories={categories} />
-      </div>
-      <div>
-        <Footer />
       </div>
     </div>
   );

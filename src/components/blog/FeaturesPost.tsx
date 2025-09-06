@@ -13,8 +13,7 @@ const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
 
   return (
     <div>
-      {/* NOTE: check styling for this with design */}
-      {isPressRelease && <div>Latest Press Release</div>}
+      {isPressRelease && <div className="mb-4">Latest Press Release</div>}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-[30px]">
         <div className="lg:col-span-7">
           {isAsset(coverImage) && coverImage.fields.file?.url ? (
@@ -39,7 +38,7 @@ const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
 
           <p className="text-[#1A1A1A] text-base font-light">{excerpt}</p>
 
-          <div className="mt-auto">
+          <div className="mt-4">
             <Tags tags={tags} />
           </div>
         </div>

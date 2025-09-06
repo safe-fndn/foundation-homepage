@@ -1,12 +1,7 @@
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
-const CategoryFilter = ({
-  categories,
-  isColumn = false,
-}: {
-  categories: string[];
-  isColumn?: boolean;
-}) => {
+const CategoryFilter = ({ categories }: { categories: string[] }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -16,52 +11,39 @@ const CategoryFilter = ({
   const toggleCategory = (category: string) => {
     const params = new URLSearchParams(searchParams.toString());
 
-    if (params.get("category") === category) {
+    if (category === "View All") {
       params.delete("category");
     } else {
       params.set("category", category);
     }
 
-    router.push(`${pathname}?${params.toString()}`);
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
+  const allCategories = ["View All", ...categories];
+
   return (
-    <div className="flex flex-wrap gap-3">
-      {categories.map((category) => {
-        const isSelected = category === selectedCategory;
+    <div className={cn("w-full gap-4 border-b border-[#1a1a1a1a] flex")}>
+      {allCategories.map((category) => {
+        const isSelected =
+          category === "View All"
+            ? !selectedCategory
+            : category === selectedCategory;
         const handleClick = () => toggleCategory(category);
 
         return (
-          <div key={category} className={isColumn ? "w-full" : "w-auto"}>
-            <button
-              className={`
-                inline-flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200
-                ${
-                  isSelected
-                    ? "bg-blue-600 text-white border-blue-600"
-                    : "bg-white text-gray-700 border-gray-300 hover:border-gray-400 hover:bg-gray-50"
-                }
-              `}
-              onClick={handleClick}
-            >
-              {category}
-              {isSelected && (
-                <svg
-                  className="h-4 w-4 ml-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
+          <button
+            key={category}
+            className={cn(
+              "relative py-3 px-1 text-base cursor-pointer font-medium transition-all duration-200 whitespace-nowrap",
+              isSelected
+                ? "text-[#12FF80] border-b-2 border-[#12FF80]"
+                : "text-[#1a1a1a66]"
+            )}
+            onClick={handleClick}
+          >
+            {category}
+          </button>
         );
       })}
     </div>

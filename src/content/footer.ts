@@ -12,13 +12,13 @@ export const navigationCards = [
   {
     icon: "./images/footer/scroll.svg",
     title: "Blog",
-    href: "https://safe.global/blog",
+    href: "/blog",
   },
 ];
 
 export const companyLinks = [
   { name: "Home", href: "#" },
-  { name: "Blog", href: "https://safe.global/blog" },
+  { name: "Blog", href: "/blog" },
 ];
 
 export const socialLinks = [
