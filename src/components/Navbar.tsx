@@ -99,7 +99,7 @@ const Navbar = () => {
             onClick={() => (window.location.href = "/")}
           >
             <Image
-              src="./images/common/safe-logo.svg"
+              src="/images/common/safe-logo.svg"
               alt="Safe Logo"
               width={24}
               height={24}
@@ -122,8 +122,8 @@ const Navbar = () => {
               <Image
                 src={
                   isMobileMenuOpen
-                    ? "./images/common/close.svg"
-                    : "./images/navbar/menu.svg"
+                    ? "/images/common/close.svg"
+                    : "/images/navbar/menu.svg"
                 }
                 alt="Menu"
                 width={24}
@@ -145,7 +145,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
             >
               <Button
-                icon="./images/common/arrow-right.svg"
+                icon="/images/common/arrow-right.svg"
                 iconAlt="Arrow Right"
                 iconHeight={18}
                 iconWidth={18}
@@ -176,7 +176,7 @@ const Navbar = () => {
                 className="block w-full px-4"
               >
                 <Button
-                  icon="./images/common/arrow-right.svg"
+                  icon="/images/common/arrow-right.svg"
                   iconAlt="Arrow Right"
                   iconHeight={18}
                   iconWidth={18}

@@ -36,7 +36,7 @@ export default function CommunityVoices() {
         <SectionTag text="Community voices" />
         <div className="flex flex-row gap-[10px] items-center">
           <Button
-            icon="./images/common/arrow-right-bold.svg"
+            icon="/images/common/arrow-right-bold.svg"
             iconAlt="Previous"
             iconHeight={24}
             iconWidth={24}
@@ -45,7 +45,7 @@ export default function CommunityVoices() {
             onClick={goToPrevious}
           />
           <Button
-            icon="./images/common/arrow-right-bold.svg"
+            icon="/images/common/arrow-right-bold.svg"
             iconAlt="Next"
             iconHeight={24}
             iconWidth={24}

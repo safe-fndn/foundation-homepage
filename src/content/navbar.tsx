@@ -16,14 +16,14 @@ export interface MenuItem {
 const communityDropdownItems: DropdownItem[] = [
   {
     name: "Governance",
-    icon: "./images/navbar/governance.svg",
+    icon: "/images/navbar/governance.svg",
     href: "https://safe.global/governance",
     target: "_blank",
     rel: "noopener noreferrer",
   },
   {
     name: "Safe Token",
-    icon: "./images/navbar/safe-token.svg",
+    icon: "/images/navbar/safe-token.svg",
     href: "https://safe.global/token",
     target: "_blank",
     rel: "noopener noreferrer",
@@ -33,28 +33,28 @@ const communityDropdownItems: DropdownItem[] = [
 const resourcesDropdownItems: DropdownItem[] = [
   {
     name: "Blogs",
-    icon: "./images/navbar/blog.svg",
+    icon: "/images/navbar/blog.svg",
     href: "/blog",
     target: "_blank",
     rel: "noopener noreferrer",
   },
   {
     name: "Careers",
-    icon: "./images/navbar/career.svg",
+    icon: "/images/navbar/career.svg",
     href: "https://safe.global/careers",
     target: "_blank",
     rel: "noopener noreferrer",
   },
   {
     name: "Press Room",
-    icon: "./images/navbar/press.svg",
+    icon: "/images/navbar/press.svg",
     href: "https://safe.global/press",
     target: "_blank",
     rel: "noopener noreferrer",
   },
   {
     name: "Data Room",
-    icon: "./images/navbar/data-room.svg",
+    icon: "/images/navbar/data-room.svg",
     href: "https://safe.global/dataroom",
     target: "_blank",
     rel: "noopener noreferrer",
@@ -68,7 +68,7 @@ export const menuItems: MenuItem[] = [
       <span>
         Safe {"{Wallet}"}
         <Image
-          src="./images/common/arrow-external.svg"
+          src="/images/common/arrow-external.svg"
           alt="External link"
           className="inline ml-1"
           width={18}

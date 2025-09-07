@@ -32,7 +32,7 @@ export default function Footer() {
           <Button
             className="w-full max-w-[340px] text-lg md:text-[32px] px-5 md:px-[30px] text-[#12FF80] font-medium"
             variant="secondary"
-            icon="./images/common/arrow-right-primary.svg"
+            icon="/images/common/arrow-right-primary.svg"
             iconAlt="arrow right"
             iconHeight={24}
             iconWidth={24}

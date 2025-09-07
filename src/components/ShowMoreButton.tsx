@@ -17,7 +17,7 @@ const ShowMoreButton = ({ page }: { page: number }) => {
     <div className="flex justify-center mt-[32px]">
       <Button
         variant="secondary"
-        icon="./images/common/arrow-right-light.svg"
+        icon="/images/common/arrow-right-light.svg"
         iconAlt="arrow right"
         iconHeight={18}
         iconWidth={18}

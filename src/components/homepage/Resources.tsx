@@ -14,7 +14,7 @@ export default function Resources() {
       <div className="flex flex-row items-end">
         <div className="px-4 md:px-[30px] py-[8px] md:py-[14px] font-medium text-sm md:text-base flex flex-row items-center gap-1 bg-[#12ff8014] rounded-t-[10px]">
           <Image
-            src="./images/homepage/resources/frame.svg"
+            src="/images/homepage/resources/frame.svg"
             alt="Safe Smart Accounts"
             width={20}
             height={20}
@@ -39,7 +39,7 @@ export default function Resources() {
             {resourcesFeatures.map((feature, index) => (
               <div key={index} className="flex items-center gap-2">
                 <Image
-                  src="./images/common/check.svg"
+                  src="/images/common/check.svg"
                   alt="Checkmark"
                   width={18}
                   height={18}
@@ -53,7 +53,7 @@ export default function Resources() {
         </div>
         <div>
           <Image
-            src="./images/homepage/resources/building.png"
+            src="/images/homepage/resources/building.png"
             alt="building"
             width={373}
             height={598}
@@ -70,7 +70,7 @@ export default function Resources() {
         <Button
           className="mt-[60px] w-full max-w-[530px] text-lg md:text-[32px] px-[30px]"
           variant="secondary"
-          icon="./images/common/arrow-right-light.svg"
+          icon="/images/common/arrow-right-light.svg"
           iconAlt="arrow right"
           iconHeight={24}
           iconWidth={24}

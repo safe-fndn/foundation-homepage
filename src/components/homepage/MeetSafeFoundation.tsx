@@ -41,7 +41,7 @@ export default function MeetSafeFoundation() {
           <Button
             className="mt-[60px] w-full max-w-[530px] text-lg md:text-[32px] px-[30px]"
             variant="secondary"
-            icon="./images/common/arrow-right-light.svg"
+            icon="/images/common/arrow-right-light.svg"
             iconAlt="arrow right"
             iconHeight={24}
             iconWidth={24}

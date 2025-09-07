@@ -34,7 +34,7 @@ const text = (
         Safe Logo
         <br />
         <img
-          src="./images/trademark/safe-logo-white.png"
+          src="/images/trademark/safe-logo-white.png"
           alt="Safe logo"
           width="150"
           height="150"
@@ -45,7 +45,7 @@ const text = (
         Horizontal Logo
         <br />
         <img
-          src="./images/trademark/horizontal-logo-white.png"
+          src="/images/trademark/horizontal-logo-white.png"
           alt="Safe horizontal logo"
           width="150"
           height="150"
@@ -56,7 +56,7 @@ const text = (
         Vertical Logo
         <br />
         <img
-          src="./images/trademark/vertical-logo-white.png"
+          src="/images/trademark/vertical-logo-white.png"
           alt="Safe vertical logo"
           width="150"
           height="100"
@@ -68,7 +68,7 @@ const text = (
         <br />
         <br />
         <img
-          src="./images/trademark/safe-core-logo-white.svg"
+          src="/images/trademark/safe-core-logo-white.svg"
           alt="Safe Core logo"
           width="150"
           height="150"
@@ -80,7 +80,7 @@ const text = (
         <br />
         <br />
         <img
-          src="./images/trademark/safe-wallet-logo-white.svg"
+          src="/images/trademark/safe-wallet-logo-white.svg"
           alt="Safe Core logo"
           width="150"
           height="150"

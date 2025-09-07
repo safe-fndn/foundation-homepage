@@ -98,7 +98,7 @@ export const AccordionTrigger = ({
       <div className="text-base">{children}</div>
       {showChevron && (
         <Image
-          src="./images/common/chevron-down.svg"
+          src="/images/common/chevron-down.svg"
           alt="Toggle"
           width={18}
           height={18}
