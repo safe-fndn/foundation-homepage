@@ -120,3 +120,22 @@ body {
     @apply text-left;
   }
 }
+
+@layer components {
+  /* Scoped to rich text only */
+  .rich-text p {
+    @apply text-xl my-5;
+  }
+
+  .rich-text ul {
+    @apply list-disc;
+  }
+
+  .rich-text ol {
+    @apply list-decimal;
+  }
+
+  .rich-text ul li + li {
+    @apply mt-6;
+  }
+}
