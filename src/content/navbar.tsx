@@ -1,12 +1,10 @@
 "use client";
 
 import { DropdownItem } from "@/components/ui/DropdownMenu";
-import Image from "next/image";
-import { ReactNode } from "react";
 
 export interface MenuItem {
   id: string;
-  title: ReactNode;
+  title: string;
   href?: string;
   target?: string;
   rel?: string;
@@ -62,24 +60,6 @@ const resourcesDropdownItems: DropdownItem[] = [
 ];
 
 export const menuItems: MenuItem[] = [
-  {
-    id: "safe-wallet",
-    title: (
-      <span>
-        Safe {"{Wallet}"}
-        <Image
-          src="/images/common/arrow-external.svg"
-          alt="External link"
-          className="inline ml-1"
-          width={18}
-          height={18}
-        />
-      </span>
-    ),
-    href: "http://app.safe.global",
-    target: "_blank",
-    rel: "noopener noreferrer",
-  },
   {
     id: "ecosystem",
     title: "Ecosystem",

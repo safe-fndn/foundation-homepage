@@ -1,10 +1,7 @@
-"use client";
-
 import React from "react";
-import { motion } from "motion/react";
 import Button from "../ui/Button";
-import Image from "next/image";
 import { logos } from "@/content/safeEcosystem";
+import LogoCarousel from "./LogoCarousel";
 
 export default function SafeEcosystem() {
   return (
@@ -36,54 +33,7 @@ export default function SafeEcosystem() {
         </a>
       </div>
 
-      <div className="relative overflow-hidden">
-        <motion.div
-          className="flex gap-5"
-          animate={{
-            x: [0, -320 * logos.length],
-          }}
-          transition={{
-            duration: logos.length * 4,
-            ease: "linear",
-            repeat: Infinity,
-          }}
-        >
-          {logos.map((logo, index) => (
-            <a
-              key={`first-${index}`}
-              href={logo.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 w-[300px] h-[150px] bg-[#12ff8038] rounded-[10px] flex items-center justify-center"
-            >
-              <Image
-                src={logo.src}
-                alt={logo.name}
-                width={180}
-                height={42}
-                className="w-[80%] h-auto"
-              />
-            </a>
-          ))}
-          {logos.map((logo, index) => (
-            <a
-              key={`second-${index}`}
-              href={logo.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 w-[300px] h-[150px] bg-[#12ff8038] rounded-[10px] flex items-center justify-center"
-            >
-              <Image
-                src={logo.src}
-                alt={logo.name}
-                width={180}
-                height={42}
-                className="w-[80%] h-auto"
-              />
-            </a>
-          ))}
-        </motion.div>
-      </div>
+      <LogoCarousel logos={logos} duration={30} />
     </div>
   );
 }

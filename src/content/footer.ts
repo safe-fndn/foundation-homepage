@@ -17,7 +17,7 @@ export const navigationCards = [
 ];
 
 export const companyLinks = [
-  { name: "Home", href: "#" },
+  { name: "Home", href: "/" },
   { name: "Blog", href: "/blog" },
 ];
 

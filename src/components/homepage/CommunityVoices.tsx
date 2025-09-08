@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import SectionTag from "../ui/SectionTag";
 import Button from "../ui/Button";
 import { testimonials } from "@/content/communityVoices";
 
 export default function CommunityVoices() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [hasInteracted, setHasInteracted] = useState(false);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
@@ -20,13 +22,33 @@ export default function CommunityVoices() {
     );
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  const handleManualNavigation = (direction: "prev" | "next") => {
+    setHasInteracted(true);
+    if (direction === "prev") {
+      goToPrevious();
+    } else {
       goToNext();
-    }, 10000);
+    }
+  };
 
-    return () => clearInterval(interval);
-  }, []);
+  useEffect(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
+    // Set timer based on interaction state
+    const interval = hasInteracted ? 7000 : 5000;
+
+    intervalRef.current = setInterval(() => {
+      goToNext();
+    }, interval);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [hasInteracted]);
 
   const currentTestimonial = testimonials[currentIndex];
 
@@ -42,7 +64,7 @@ export default function CommunityVoices() {
             iconWidth={24}
             variant="link"
             className="p-0 rotate-180"
-            onClick={goToPrevious}
+            onClick={() => handleManualNavigation("prev")}
           />
           <Button
             icon="/images/common/arrow-right-bold.svg"
@@ -51,7 +73,7 @@ export default function CommunityVoices() {
             iconWidth={24}
             variant="link"
             className="p-0"
-            onClick={goToNext}
+            onClick={() => handleManualNavigation("next")}
           />
         </div>
       </div>

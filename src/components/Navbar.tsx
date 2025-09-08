@@ -11,6 +11,7 @@ import {
   AccordionContent,
 } from "./ui/Accordion";
 import { menuItems, MenuItem } from "@/content/navbar";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -94,9 +95,9 @@ const Navbar = () => {
     <nav className="z-50 w-full bg-white border-b border-black/[0.1]">
       <div className="px-[16px] md:px-[50px] py-[10px]">
         <div className="flex justify-between items-center">
-          <div
+          <Link
+            href="/"
             className="flex items-center flex-row gap-1 cursor-pointer"
-            onClick={() => (window.location.href = "/")}
           >
             <Image
               src="/images/common/safe-logo.svg"
@@ -109,7 +110,7 @@ const Navbar = () => {
               Safe
               <br /> Foundation
             </div>
-          </div>
+          </Link>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">

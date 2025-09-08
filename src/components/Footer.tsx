@@ -10,11 +10,11 @@ import {
 } from "@/content/footer";
 import FooterLinkSection from "@/components/ui/FooterLinkSection";
 import Button from "./ui/Button";
-import { useCookieBannerContext } from "@/context/CookieBannerContext";
+import { useCookieStore } from "@/stores/cookieStore";
 import type { SyntheticEvent } from "react";
 
 export default function Footer() {
-  const { openBanner } = useCookieBannerContext();
+  const openBanner = useCookieStore((state) => state.openBanner);
 
   const showBanner = (e: SyntheticEvent) => {
     // Prevent opening the hash link
@@ -29,17 +29,22 @@ export default function Footer() {
           Champion Usable Self Custody with Safe
         </div>
         <div className="flex justify-end">
-          <Button
-            className="w-full max-w-[340px] text-lg md:text-[32px] px-5 md:px-[30px] text-[#12FF80] font-medium"
-            variant="secondary"
-            icon="/images/common/arrow-right-primary.svg"
-            iconAlt="arrow right"
-            iconHeight={24}
-            iconWidth={24}
-            onClick={() => window.open("http://docs.safe.global", "_blank")}
+          <a
+            href="http://docs.safe.global"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Build with Safe
-          </Button>
+            <Button
+              className="w-full max-w-[340px] gap-8 text-lg md:text-[32px] px-5 md:px-[30px] text-[#12FF80] font-medium"
+              variant="secondary"
+              icon="/images/common/arrow-right-primary.svg"
+              iconAlt="arrow right"
+              iconHeight={24}
+              iconWidth={24}
+            >
+              Build with Safe
+            </Button>
+          </a>
         </div>
       </div>
 

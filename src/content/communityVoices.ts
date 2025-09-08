@@ -38,4 +38,11 @@ export const testimonials: Testimonial[] = [
     professionalTitle: "Co-Director, Ethereum Foundation",
     imageUrl: "/images/homepage/community/wang.png",
   },
+  {
+    title: "DefiPunk aligned security",
+    subtitle: `Re-architecting the open Web away from centralized cloud services would feel like an impossible task if not for technologies like Safe. Fileverse is able to build its Apps middleware and enable community-owned digital spaces thanks to the foundational censorship-resistance of Safe.`,
+    name: "Andreas",
+    professionalTitle: "Co-Founder, Fileverse",
+    imageUrl: "/images/homepage/community/andreas.png",
+  },
 ];

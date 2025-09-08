@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { ReactElement } from "react";
-import { useCookieBannerContext } from "@/context/CookieBannerContext";
+import { useCookieStore } from "@/stores/cookieStore";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 import { Checkbox } from "./ui/CheckboxMenu";
@@ -19,7 +19,8 @@ export const CookieBanner = (): ReactElement | null => {
     setIsAnalyticsEnabled,
     closeBanner,
     isBannerOpen,
-  } = useCookieBannerContext();
+  } = useCookieStore();
+
   const [analytics, setAnalytics] = useState<boolean>(false);
 
   const handleAccept = () => {
