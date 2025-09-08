@@ -13,6 +13,7 @@ import {
   type Heading1,
   type Heading2,
   type Heading3,
+  type Heading4,
   type Heading5,
 } from "@contentful/rich-text-types";
 import { isText } from "@/lib/contentful/typeGaurds";
@@ -23,7 +24,7 @@ import MediaPlayer from "./MediaPlayer";
 import Twitter from "../Twitter";
 
 const generateTextContent = (
-  node: Heading1 | Heading2 | Heading3 | Heading5
+  node: Heading1 | Heading2 | Heading3 | Heading4 | Heading5
 ) => {
   return node.content.filter(isText).map((node, index) => {
     const isBold = node.marks.some((mark) => mark.type === "bold");
@@ -65,7 +66,7 @@ const options: Options = {
     [BLOCKS.HEADING_1]: (node: Heading1) => {
       const content = generateTextContent(node);
       return (
-        <h1 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-6 mt-8">
+        <h1 className="text-[44px] leading-[120%] md:text-[54px] font-bold text-[#1A1A1A] mb-6 mt-8">
           {content}
         </h1>
       );
@@ -73,7 +74,7 @@ const options: Options = {
     [BLOCKS.HEADING_2]: (node: Heading2) => {
       const content = generateTextContent(node);
       return (
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-6 mt-8">
+        <h2 className="text-[44px] leading-[120%] md:text-[54px] font-bold text-[#1A1A1A] mb-6 mt-8">
           {content}
         </h2>
       );
@@ -84,11 +85,19 @@ const options: Options = {
 
       return (
         <h3
-          className="text-2xl md:text-[40px] font-bold text-[#1A1A1A] mb-6 mt-8"
+          className="text-[40px] leading-[120%] md:text-[48px] text-[#1A1A1A] mb-6 mt-8"
           id={kebabCase(textContent)}
         >
           {content}
         </h3>
+      );
+    },
+    [BLOCKS.HEADING_4]: (node: Heading4) => {
+      const content = generateTextContent(node);
+      return (
+        <h5 className="text-lg md:text-xl font-semibold text-[#1A1A1A] mb-4 mt-6">
+          {content}
+        </h5>
       );
     },
     [BLOCKS.HEADING_5]: (node: Heading5) => {

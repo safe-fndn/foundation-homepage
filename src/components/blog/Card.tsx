@@ -22,11 +22,11 @@ const Card = (props: BlogPostEntry) => {
           alt={coverImage.fields.title ?? ""}
           width={coverImage.fields.file.details.image?.width}
           height={coverImage.fields.file.details.image?.height}
-          className="w-full h-auto"
+          className="w-full h-[200px] object-cover object-left"
         />
       ) : undefined}
 
-      <div className="flex h-full flex-col gap-4 p-6">
+      <div className="flex flex-col grow-1 gap-4 p-6">
         <Meta post={props} />
 
         <div className="text-2xl text-[#1A1A1A] leading-[32px] tracking-[0.26px]">

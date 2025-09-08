@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import client from "@/lib/contentful/contentfulClient";
 import { TypePostSkeleton } from "@/lib/contentful/types/TypePost";
 import BlogPost from "@/components/blog/Post";
+import { Suspense } from "react";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -29,7 +30,11 @@ export default async function Page({ params }: BlogPostPageProps) {
     (post: any) => delete post.fields.relatedPosts
   );
 
-  return <BlogPost blogPost={blogPost} />;
+  return (
+    <Suspense fallback={null}>
+      <BlogPost blogPost={blogPost} />
+    </Suspense>
+  );
 }
 
 export async function generateStaticParams() {

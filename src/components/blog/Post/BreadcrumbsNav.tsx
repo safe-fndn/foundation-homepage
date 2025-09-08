@@ -14,7 +14,7 @@ const createBreadcrumb = (
   linkProps: string | UrlObject
 ) => (
   <Link key={key} href={linkProps}>
-    <span className="text-[15px] text-[#A1A3A7]">{text}</span>
+    <span className="text-[15px] text-[#A1A3A7] whitespace-nowrap">{text}</span>
   </Link>
 );
 
@@ -27,16 +27,22 @@ const BreadcrumbsNav = ({ category, title }: BreadcrumbsType) => {
     }),
     <span
       key="3"
-      className="text-[15px] text-[#A1A3A7] w-72 overflow-hidden whitespace-nowrap text-ellipsis"
+      className="text-[15px] text-[#A1A3A7] w-[150px] md:w-72 overflow-hidden whitespace-nowrap text-ellipsis"
     >
       {title}
     </span>,
   ];
 
   return (
-    <nav className="flex items-center space-x-1" aria-label="Breadcrumb">
+    <nav
+      className="flex items-center space-x-1 gap-2 w-full"
+      aria-label="Breadcrumb"
+    >
       {breadcrumbs.map((breadcrumb, index) => (
-        <div key={index} className="flex items-center">
+        <div
+          key={index}
+          className="flex gap-2 shrink-0 justify-center items-center"
+        >
           {breadcrumb}
           {index < breadcrumbs.length - 1 && (
             <Image
@@ -44,7 +50,7 @@ const BreadcrumbsNav = ({ category, title }: BreadcrumbsType) => {
               alt="chevron right"
               width={12}
               height={12}
-              className="mx-2 -rotate-90"
+              className="-rotate-90"
             />
           )}
         </div>

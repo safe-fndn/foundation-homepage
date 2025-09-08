@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from "react";
+import React, { Suspense } from "react";
 import { TypePostSkeleton } from "../../lib/contentful/types/TypePost";
 import { TypeBlogHomeSkeleton } from "../../lib/contentful/types/TypeBlockHome";
 import { isEntryTypePost } from "@/lib/contentful/typeGaurds";
@@ -44,6 +44,8 @@ export default async function Blog() {
   const serializedAllPosts = serializeEntry(allPosts);
 
   return (
-    <BlogHome blogHome={serializedBlogHome} allPosts={serializedAllPosts} />
+    <Suspense fallback={null}>
+      <BlogHome blogHome={serializedBlogHome} allPosts={serializedAllPosts} />
+    </Suspense>
   );
 }
