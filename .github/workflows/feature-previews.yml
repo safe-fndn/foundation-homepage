@@ -8,6 +8,8 @@ on:
 jobs:
   # Build job
   build:
+    environment:
+      name: feature-previews
     runs-on: ubuntu-latest
     env:
       DUNE_API_KEY: ${{ secrets.DUNE_API_KEY }}
