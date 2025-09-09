@@ -23,7 +23,7 @@ jobs:
           npm install -g pnpm
 
       - name: env check
-        run: echo "$NEXT_PUBLIC_CONTENTFUL_SPACE_ID"
+        run: echo $NEXT_PUBLIC_CONTENTFUL_SPACE_ID
 
       - name: Setup Node
         uses: actions/setup-node@v4
