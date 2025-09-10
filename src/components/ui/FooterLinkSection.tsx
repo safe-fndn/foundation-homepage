@@ -8,11 +8,13 @@ interface FooterLink {
 interface FooterLinkSectionProps {
   title: string;
   links: FooterLink[];
+  openInNewTab?: boolean;
 }
 
 export default function FooterLinkSection({
   title,
   links,
+  openInNewTab = false,
 }: FooterLinkSectionProps) {
   return (
     <div>
@@ -22,7 +24,7 @@ export default function FooterLinkSection({
           <li key={index}>
             <a
               href={link.href}
-              target="_blank"
+              target={openInNewTab ? "_blank" : "_self"}
               rel="noopener noreferrer"
               className="text-[#1a1a1a99] text-base"
             >

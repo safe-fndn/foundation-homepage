@@ -118,7 +118,7 @@ export default function CommunityVoices() {
             fill="#12FF80"
             fillOpacity="0.4"
           />
-          <foreignObject x={20} y={20} width={620} height={400}>
+          <foreignObject x={20} y={20} width={680} height={400}>
             <div className="text-[40px] md:text-[29px] font-medium text-[#1a1a1acc] transition-all duration-300">
               {currentTestimonial.title}
             </div>

@@ -40,7 +40,7 @@ export default function Values() {
             ))}
           </div>
           <a
-            href="https://safe.global/blog/safe-research-manifesto?utm_source=safe_dev"
+            href="/blog/safe-research-manifesto?utm_source=foundation_home"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full flex justify-end"

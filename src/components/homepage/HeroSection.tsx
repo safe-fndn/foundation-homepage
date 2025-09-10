@@ -19,7 +19,7 @@ const HeroSection = () => {
         </div>
         <div className="text-[#1a1a1acc]">
           Accelerating self-custody infrastructure ready for the world&apos;s
-          GDP.
+          GDP
         </div>
       </div>
     </div>

@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
         <div className="flex justify-end">
           <a
-            href="http://docs.safe.global"
+            href="https://docs.safe.global"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -54,7 +54,7 @@ export default function Footer() {
             <a
               key={index}
               href={card.href}
-              target="_blank"
+              target={card.openInNewTab ? "_blank" : "_self"}
               rel="noopener noreferrer"
               className="bg-[#1a1a1a1c] rounded-[10px] p-3 flex flex-col w-[168px] h-fit md:w-[180px]"
             >
@@ -73,7 +73,11 @@ export default function Footer() {
         </div>
         <div className="grid grid-cols-2 gap-3 md:gap-10 w-full max-w-[400px]">
           <FooterLinkSection title="Company" links={companyLinks} />
-          <FooterLinkSection title="Socials" links={socialLinks} />
+          <FooterLinkSection
+            title="Socials"
+            links={socialLinks}
+            openInNewTab={true}
+          />
         </div>
       </div>
 

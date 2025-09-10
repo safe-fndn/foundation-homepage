@@ -15,7 +15,7 @@ export default function MeetSafeFoundation() {
   });
 
   const fullText =
-    "A non-profit for accelerating permissionless access to self-custody infrastructure ready for the world's GDP.";
+    "A non-profit for accelerating permissionless access to self-custody infrastructure for the world's GDP.";
   const words = fullText.split(" ");
 
   return (
@@ -34,7 +34,7 @@ export default function MeetSafeFoundation() {
       </div>
       <div className="flex justify-end">
         <a
-          href="http://docs.safe.global"
+          href="https://docs.safe.global"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -2,7 +2,6 @@
 
 import React from "react";
 import SectionTag from "../ui/SectionTag";
-import FloatingToken from "../ui/FloatingToken";
 import Button from "../ui/Button";
 import Image from "next/image";
 
@@ -28,12 +27,20 @@ export default function Governance() {
       <SectionTag text="Governance" />
       <div className="pt-4 md:pt-10">
         <Card className="flex flex-col justify-center items-center mb-[10px]">
-          <FloatingToken image="/images/common/safe-3d-logo.png" />
+          <Image
+            src="/images/common/safe-engraved.png"
+            alt="safe logo"
+            width={220}
+            height={220}
+            className="pb-4"
+          />
           <div className="text-[#1A1A1A] text-xl font-medium pb-1">
             Safe Token
           </div>
           <div className="text-[#1a1a1a99] max-w-[631px] text-sm leading-[120%] text-center pb-7">
-            {`SAFE Token acts as your key to participate in web3's transition to smart accounts. Token holders tap into a diverse and ever-evolving ecosystem and govern the future of Safe.`}
+            SAFE Token acts as your key to participate in web3&apos;s transition
+            to smart accounts. Token holders tap into a diverse and
+            ever-evolving ecosystem and govern the future of <i>Safe.</i>
           </div>
           <a
             href="https://safe.global/token"

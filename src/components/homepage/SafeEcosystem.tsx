@@ -12,7 +12,8 @@ export default function SafeEcosystem() {
             The Safe Ecosystem:
           </div>
           <div className="text-black/[0.6] text-sm font-light">
-            200+ ecosystem project are built on the Safe smart account standard
+            200+ ecosystem project are built on the <i>Safe</i> smart account
+            standard
           </div>
         </div>
         <a
