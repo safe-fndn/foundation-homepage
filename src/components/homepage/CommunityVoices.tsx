@@ -127,7 +127,7 @@ export default function CommunityVoices() {
             </div>
           </foreignObject>
           <foreignObject x={20} y={410} width={380} height={100}>
-            <div className="text-[40px] font-semibold transition-all duration-300">
+            <div className="text-[40px] font-medium transition-all duration-300">
               {currentTestimonial.name}
             </div>
             {currentTestimonial.professionalTitle && (
