@@ -1,4 +1,5 @@
 import { COMMS_EMAIL, SAFE_MEDIA_KIT_LINK } from "@/constants";
+import Image from "next/image";
 
 const text = (
   <>
@@ -33,8 +34,8 @@ const text = (
       <li>
         Safe Logo
         <br />
-        <img
-          src="./images/trademark/safe-logo-white.png"
+        <Image
+          src="/images/trademark/safe-logo-white.png"
           alt="Safe logo"
           width="150"
           height="150"
@@ -44,8 +45,8 @@ const text = (
       <li>
         Horizontal Logo
         <br />
-        <img
-          src="./images/trademark/horizontal-logo-white.png"
+        <Image
+          src="/images/trademark/horizontal-logo-white.png"
           alt="Safe horizontal logo"
           width="150"
           height="150"
@@ -55,8 +56,8 @@ const text = (
       <li>
         Vertical Logo
         <br />
-        <img
-          src="./images/trademark/vertical-logo-white.png"
+        <Image
+          src="/images/trademark/vertical-logo-white.png"
           alt="Safe vertical logo"
           width="150"
           height="100"
@@ -67,8 +68,8 @@ const text = (
         Safe{"{Core}"} Logo
         <br />
         <br />
-        <img
-          src="./images/trademark/safe-core-logo-white.svg"
+        <Image
+          src="/images/trademark/safe-core-logo-white.svg"
           alt="Safe Core logo"
           width="150"
           height="150"
@@ -79,8 +80,8 @@ const text = (
         Safe{"{Wallet}"} Logo
         <br />
         <br />
-        <img
-          src="./images/trademark/safe-wallet-logo-white.svg"
+        <Image
+          src="/images/trademark/safe-wallet-logo-white.svg"
           alt="Safe Core logo"
           width="150"
           height="150"

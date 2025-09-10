@@ -45,8 +45,8 @@ export default function SafeSmartAccounts() {
 
     const src =
       type === 1
-        ? "./images/homepage/safe-smart-accounts/defence-black.svg"
-        : "./images/homepage/safe-smart-accounts/defence-gray.svg";
+        ? "/images/homepage/safe-smart-accounts/defence-black.svg"
+        : "/images/homepage/safe-smart-accounts/defence-gray.svg";
 
     return (
       <div
@@ -89,40 +89,42 @@ export default function SafeSmartAccounts() {
       </div>
 
       <div className="flex flex-row justify-end gap-1 md:gap-3">
-        <Button
-          className="w-full max-w-[274px] text-lg md:text-[32px] px-5 md:px-[30px]"
-          variant="outline"
-          icon="./images/common/arrow-right.svg"
-          iconAlt="arrow right"
-          iconHeight={24}
-          iconWidth={24}
-          onClick={() =>
-            window.open(
-              "https://safe-global.notion.site/Safe-Contract-Audits-f9757c9ffab24ffdac43221b9a970ebc",
-              "_blank"
-            )
-          }
+        <a
+          href="https://safe-global.notion.site/Safe-Contract-Audits-f9757c9ffab24ffdac43221b9a970ebc"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full md:w-fit"
         >
-          View Audits
-        </Button>
-        <Button
-          className="w-full max-w-[340px] text-lg md:text-[32px] px-5 md:px-[30px]"
-          variant="secondary"
-          icon="./images/common/arrow-right-light.svg"
-          iconAlt="arrow right"
-          iconHeight={24}
-          iconWidth={24}
-          onClick={() =>
-            window.open(
-              "https://docs.safe.global/advanced/smart-account-bug-bounty",
-              "_blank"
-            )
-          }
+          <Button
+            className="w-full max-w-[274px] text-lg md:text-[32px] px-5 md:px-[30px]"
+            variant="outline"
+            icon="/images/common/arrow-right.svg"
+            iconAlt="arrow right"
+            iconHeight={24}
+            iconWidth={24}
+          >
+            View Audits
+          </Button>
+        </a>
+        <a
+          href="https://docs.safe.global/advanced/smart-account-bug-bounty"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full md:w-fit"
         >
-          <div>
-            <span className="hidden md:inline-block">View</span> Bug Bounty
-          </div>
-        </Button>
+          <Button
+            className="w-full max-w-[340px] text-lg md:text-[32px] px-5 md:px-[30px]"
+            variant="secondary"
+            icon="/images/common/arrow-right-light.svg"
+            iconAlt="arrow right"
+            iconHeight={24}
+            iconWidth={24}
+          >
+            <div>
+              <span className="hidden md:inline-block">View</span> Bug Bounty
+            </div>
+          </Button>
+        </a>
       </div>
     </div>
   );

@@ -120,3 +120,31 @@ body {
     @apply text-left;
   }
 }
+
+@layer components {
+  /* Scoped to rich text only */
+  .rich-text p {
+    @apply text-xl font-light my-5;
+  }
+
+  .rich-text p > b {
+    @apply font-bold;
+  }
+
+  .rich-text ul {
+    @apply my-5 list-disc pl-8;
+  }
+
+  .rich-text ol {
+    @apply my-5 list-decimal pl-8;
+  }
+
+  .rich-text table th,
+  .rich-text table td {
+    @apply border border-black p-2;
+  }
+
+  .rich-text table th {
+    @apply text-left;
+  }
+}
