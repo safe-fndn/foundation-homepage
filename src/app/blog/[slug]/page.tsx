@@ -26,9 +26,9 @@ export default async function Page({ params }: BlogPostPageProps) {
   }
 
   // Keep one level of relatedPosts to avoid circular references
-  blogPost.fields.relatedPosts?.forEach(
-    (post: any) => delete post.fields.relatedPosts
-  );
+  blogPost.fields.relatedPosts?.forEach((post: any) => {
+    if (post?.fields) delete post.fields.relatedPosts;
+  });
 
   return (
     <Suspense fallback={null}>

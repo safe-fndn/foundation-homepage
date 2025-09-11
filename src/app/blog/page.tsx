@@ -34,10 +34,13 @@ export default async function Blog() {
   if (isEntryTypePost(blogHome.fields.featured)) {
     delete blogHome.fields.featured.fields.relatedPosts;
   }
-  blogHome.fields.mostPopular.forEach(
-    (item: any) => delete item.fields.relatedPosts
-  );
-  allPosts.items.forEach((item: any) => delete item.fields.relatedPosts);
+
+  blogHome.fields.mostPopular.forEach((item: any) => {
+    if (item?.fields) delete item.fields.relatedPosts;
+  });
+  allPosts.items.forEach((item: any) => {
+    if (item?.fields) delete item.fields.relatedPosts;
+  });
 
   // Serialize the data to plain objects before passing to client component
   const serializedBlogHome = serializeEntry(blogHome);
