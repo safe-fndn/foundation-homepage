@@ -2,15 +2,17 @@
 
 on:
   # Runs on pushes targeting feature branches
-  # The main branch is used as our staging environment
   push:
-    branches: ["feat/*", "main"]
+    branches: ["release"]
+  workflow_dispatch:
+  schedule:
+    - cron: '38 7,11 * * 1-5' # 9:38 AM and 1:38 PM UTC time, Monday to Friday
 
 jobs:
   # Build job
   build:
     environment:
-      name: feature-previews
+      name: release
     runs-on: ubuntu-latest
     env:
       DUNE_API_KEY: ${{ secrets.DUNE_API_KEY }}
@@ -19,6 +21,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: release # This should always be the release branch
 
       - name: Setup Package Manager
         run: |
@@ -56,7 +60,7 @@ jobs:
   # Deployment job
   deploy:
     environment:
-      name: feature-previews
+      name: release
     runs-on: ubuntu-latest
     needs: build
     name: Deploy
@@ -65,6 +69,8 @@ jobs:
       deployments: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: release # This should always be the release branch
 
       - name: Download artifact
         uses: actions/download-artifact@v4
@@ -80,6 +86,4 @@ jobs:
           packageManager: npm
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./out --project-name=foundation-homepage
-          # Optional: Enable this if you want to have GitHub Deployments triggered
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          command: pages deploy ./out --project-name=foundation-homepage --branch release
