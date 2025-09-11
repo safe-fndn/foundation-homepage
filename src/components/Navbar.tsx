@@ -141,7 +141,7 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
             <a
-              href="http://docs.safe.global"
+              href="https://docs.safe.global"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -171,7 +171,7 @@ const Navbar = () => {
             {/* Mobile CTA Button */}
             <div className="py-6 border-t border-[#E9EAEB]">
               <a
-                href="http://docs.safe.global"
+                href="https://docs.safe.global"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full px-4"

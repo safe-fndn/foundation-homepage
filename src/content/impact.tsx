@@ -6,10 +6,9 @@ export const createStats = (data: DuneStats) =>
       title: data.transferVolume.cumulative_transfer_volume,
       subtitle: "Total Volume Processed",
       descComponent: () => (
-        <foreignObject x="20" y="380" width="300" height="100">
-          <div className="text-[18px] text-[#000]">
-            Total volume processed is the total value that has originated IN or
-            OUT a Safe smart account.
+        <foreignObject x="20" y="380" width="360" height="100">
+          <div className="text-[26px] md:text-[18px] text-[#000]">
+            Total volume processed IN and OUT a <i>Safe</i> smart account
           </div>
         </foreignObject>
       ),
@@ -22,9 +21,9 @@ export const createStats = (data: DuneStats) =>
       title: data.totalValueLocked.total_balance_usd,
       subtitle: "Total Value Locked",
       descComponent: () => (
-        <foreignObject x="392" y="192" width="300" height="60">
-          <div className="text-[18px] text-[#000]">
-            Total dollar value of all assets on Safe smart accounts across all
+        <foreignObject x="392" y="192" width="400" height="80">
+          <div className="text-[26px] md:text-[18px] text-[#000]">
+            Total value of all assets on <i>Safe</i> smart accounts across all
             networks
           </div>
         </foreignObject>
@@ -55,10 +54,10 @@ export const createStats = (data: DuneStats) =>
       title: "18+",
       subtitle: "Audits",
       descComponent: () => (
-        <foreignObject x="20" y="760" width="340" height="124">
-          <div className="text-[18px] text-[#000]">
-            <i>Safe</i> Smart Accounts has received several audits for core
-            contracts and other key components and modules
+        <foreignObject x="20" y="750" width="355" height="124">
+          <div className="text-[24px] md:text-[18px] text-[#000]">
+            Audits received for core contracts and other key components and
+            modules
           </div>
         </foreignObject>
       ),
@@ -71,9 +70,10 @@ export const createStats = (data: DuneStats) =>
       title: data.safesCreated.num_safes,
       subtitle: "Accounts",
       descComponent: () => (
-        <foreignObject x="612" y="662" width="300" height="60">
-          <div className="text-[18px] text-[#000]">
-            Total number of Safe smart accounts deployed across all networks
+        <foreignObject x="612" y="662" width="300" height="100">
+          <div className="text-[24px] md:text-[18px] text-[#000]">
+            Total number of <i>Safe</i> smart accounts deployed across all
+            networks
           </div>
         </foreignObject>
       ),

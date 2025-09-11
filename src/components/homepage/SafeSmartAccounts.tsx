@@ -19,8 +19,8 @@ export default function SafeSmartAccounts() {
 
       setTimeout(() => {
         setShowBlobs(false);
-      }, 3500);
-    }, 6000);
+      }, 3000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
@@ -75,7 +75,7 @@ export default function SafeSmartAccounts() {
 
   return (
     <div className="px-[16px] max-w-[953px] w-full text-left mx-auto">
-      <SectionTag text="Safe Smart Accounts" />
+      <SectionTag text="Security" />
       <div className="text-[#1A1A1A] text-[36px] max-w-[408px] md:max-w-full leading-[120%] pt-2 pb-4 md:pt-5 md:pb-[40px] md:text-[64px]">
         Most audited and battle-tested smart contracts
       </div>

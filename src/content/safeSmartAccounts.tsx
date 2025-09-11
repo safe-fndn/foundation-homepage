@@ -37,7 +37,7 @@ export const blobContent = [
     ),
     position: {
       desktop: { top: "0px", left: "0px" },
-      mobile: { top: "80px", left: "-160px" },
+      mobile: { top: "30px", left: "-160px" },
     },
     showOnMobile: true,
   },
@@ -49,8 +49,8 @@ export const blobContent = [
     ),
     position: {
       desktop: { top: "0px", left: "0px" },
-      mobile: { top: "-70px", left: "-50px" },
+      mobile: { top: "-20px", left: "-100px" },
     },
-    showOnMobile: false,
+    showOnMobile: true,
   },
 ];

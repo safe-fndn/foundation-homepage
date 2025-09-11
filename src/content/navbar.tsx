@@ -30,11 +30,9 @@ const communityDropdownItems: DropdownItem[] = [
 
 const resourcesDropdownItems: DropdownItem[] = [
   {
-    name: "Blogs",
+    name: "Blog",
     icon: "/images/navbar/blog.svg",
     href: "/blog",
-    target: "_blank",
-    rel: "noopener noreferrer",
   },
   {
     name: "Careers",
@@ -80,7 +78,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "research",
     title: "Research",
-    href: "http://safe.dev",
+    href: "https://safe.dev",
     target: "_blank",
     rel: "noopener noreferrer",
   },

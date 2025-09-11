@@ -19,7 +19,7 @@ export default function Resources() {
             width={20}
             height={20}
           />
-          Safe Smart Accounts
+          Account Infrastructure
         </div>
         <div className="h-[26px] w-[26px] bg-[#12ff8014] relative">
           <div className="h-full w-full bg-white absolute top-0 left-0 rounded-[0_0_0_20px]"></div>
@@ -31,9 +31,9 @@ export default function Resources() {
             Safe Smart Accounts
           </div>
           <div className="text-[#1a1a1acc] text-xl md:text-base font-light md:font-normal pb-[30px] md:pb-[50px] md:max-w-[304px]">
-            {`The Safe smart contract accounts are the standard used by top
-            projects like Safe{Wallet}, Worldcoin and Polymarket for multi-sig
-            based self-custody and account abstraction.`}
+            The <i>Safe</i> smart contract accounts are the standard used by top
+            projects like {`Safe{Wallet}`}, Worldcoin and Polymarket for
+            multi-sig based self-custody and account abstraction.
           </div>
           <div className="grid grid-cols-2 gap-2 max-w-[280px]">
             {resourcesFeatures.map((feature, index) => (
@@ -62,7 +62,7 @@ export default function Resources() {
         </div>
       </div>
       <a
-        href="http://docs.safe.global"
+        href="https://docs.safe.global"
         target="_blank"
         rel="noopener noreferrer"
         className="w-full flex justify-end"

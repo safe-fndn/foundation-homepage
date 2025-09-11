@@ -3,16 +3,19 @@ export const navigationCards = [
     icon: "/images/footer/ecosystem.svg",
     title: "Safe Ecosystem",
     href: "https://safe.global/ecosystem",
+    openInNewTab: true,
   },
   {
     icon: "/images/footer/docs.svg",
     title: "Docs",
     href: "https://docs.safe.global",
+    openInNewTab: true,
   },
   {
     icon: "/images/footer/scroll.svg",
     title: "Blog",
     href: "/blog",
+    openInNewTab: false,
   },
 ];
 
@@ -22,7 +25,7 @@ export const companyLinks = [
 ];
 
 export const socialLinks = [
-  { name: "X", href: "http://x.com/safe" },
+  { name: "X", href: "https://x.com/safefndn" },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/company/safe-ecosystem/?originalSubdomain=de",

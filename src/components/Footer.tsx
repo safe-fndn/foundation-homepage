@@ -25,12 +25,12 @@ export default function Footer() {
   return (
     <footer className="bg-[#12FF80] w-full">
       <div className="px-4 max-w-[953px] w-full text-left mx-auto pb-[60px] md:pb-[80px] pt-[60px] md:pt-[80px]">
-        <div className="text-[#1A1A1A] text-[48px] leading-[120%] md:text-[82px] pb-10 font-medium">
+        <div className="text-[#1A1A1A] text-[48px] leading-[120%] md:text-[82px] pb-10 font-normal">
           Champion Usable Self Custody with Safe
         </div>
         <div className="flex justify-end">
           <a
-            href="http://docs.safe.global"
+            href="https://docs.safe.global"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -54,7 +54,7 @@ export default function Footer() {
             <a
               key={index}
               href={card.href}
-              target="_blank"
+              target={card.openInNewTab ? "_blank" : "_self"}
               rel="noopener noreferrer"
               className="bg-[#1a1a1a1c] rounded-[10px] p-3 flex flex-col w-[168px] h-fit md:w-[180px]"
             >
@@ -73,7 +73,11 @@ export default function Footer() {
         </div>
         <div className="grid grid-cols-2 gap-3 md:gap-10 w-full max-w-[400px]">
           <FooterLinkSection title="Company" links={companyLinks} />
-          <FooterLinkSection title="Socials" links={socialLinks} />
+          <FooterLinkSection
+            title="Socials"
+            links={socialLinks}
+            openInNewTab={true}
+          />
         </div>
       </div>
 

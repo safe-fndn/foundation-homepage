@@ -37,7 +37,7 @@ const CategoryFilter = ({ categories }: { categories: string[] }) => {
             className={cn(
               "relative py-3 px-1 text-base cursor-pointer font-medium transition-all duration-200 whitespace-nowrap",
               isSelected
-                ? "text-[#12FF80] border-b-2 border-[#12FF80]"
+                ? "text-[#1A1A1A] border-b-2 border-[#1A1A1A]"
                 : "text-[#1a1a1a66]"
             )}
             onClick={handleClick}
