@@ -44,12 +44,12 @@ export const blobContent = [
   {
     content: (
       <>
-        <span className="font-medium">$1M</span> bounty for 5+ yr
+        <span className="font-medium">$1M</span> in bounties over 5+ years
       </>
     ),
     position: {
-      desktop: { top: "0px", left: "0px" },
-      mobile: { top: "-20px", left: "-100px" },
+      desktop: { top: "0px", left: "-80px" },
+      mobile: { top: "-20px", left: "-150px" },
     },
     showOnMobile: true,
   },

@@ -12,6 +12,7 @@ import FooterLinkSection from "@/components/ui/FooterLinkSection";
 import Button from "./ui/Button";
 import { useCookieStore } from "@/stores/cookieStore";
 import type { SyntheticEvent } from "react";
+import { SAFE_DOCS_LINK } from "@/constants";
 
 export default function Footer() {
   const openBanner = useCookieStore((state) => state.openBanner);
@@ -26,14 +27,10 @@ export default function Footer() {
     <footer className="bg-[#12FF80] w-full">
       <div className="px-4 max-w-[953px] w-full text-left mx-auto pb-[60px] md:pb-[80px] pt-[60px] md:pt-[80px]">
         <div className="text-[#1A1A1A] text-[48px] leading-[120%] md:text-[82px] pb-10 font-normal">
-          Champion Usable Self Custody with Safe
+          Champion Usable Self-Custody with Safe
         </div>
         <div className="flex justify-end">
-          <a
-            href="https://docs.safe.global"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={SAFE_DOCS_LINK} target="_blank" rel="noopener noreferrer">
             <Button
               className="w-full max-w-[340px] gap-8 text-lg md:text-[32px] px-5 md:px-[30px] text-[#12FF80] font-medium"
               variant="secondary"

@@ -3,6 +3,7 @@ import SectionTag from "../ui/SectionTag";
 import Image from "next/image";
 import Button from "../ui/Button";
 import { resourcesFeatures } from "../../content/resources";
+import { SAFE_DOCS_LINK } from "@/constants";
 
 export default function Resources() {
   return (
@@ -62,7 +63,7 @@ export default function Resources() {
         </div>
       </div>
       <a
-        href="https://docs.safe.global"
+        href={SAFE_DOCS_LINK}
         target="_blank"
         rel="noopener noreferrer"
         className="w-full flex justify-end"

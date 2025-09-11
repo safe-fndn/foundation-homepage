@@ -12,6 +12,7 @@ import {
 } from "./ui/Accordion";
 import { menuItems, MenuItem } from "@/content/navbar";
 import Link from "next/link";
+import { SAFE_DOCS_LINK } from "@/constants";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -140,11 +141,7 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <a
-              href="https://docs.safe.global"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={SAFE_DOCS_LINK} target="_blank" rel="noopener noreferrer">
               <Button
                 icon="/images/common/arrow-right.svg"
                 iconAlt="Arrow Right"
@@ -171,7 +168,7 @@ const Navbar = () => {
             {/* Mobile CTA Button */}
             <div className="py-6 border-t border-[#E9EAEB]">
               <a
-                href="https://docs.safe.global"
+                href={SAFE_DOCS_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full px-4"
