@@ -8,7 +8,7 @@ import Button from "../ui/Button";
 import { gridPattern, blobContent } from "@/content/safeSmartAccounts";
 import { Blob } from "./Blob";
 import { useResponsive } from "@/hooks/useResponsive";
-import { SAFE_DOCS_LINK } from "@/constants";
+import { AUDITS_LINK, SAFE_DOCS_LINK } from "@/constants";
 
 export default function SafeSmartAccounts() {
   const [showBlobs, setShowBlobs] = useState(true);
@@ -91,7 +91,7 @@ export default function SafeSmartAccounts() {
 
       <div className="flex flex-row justify-end gap-1 md:gap-3">
         <a
-          href="https://audits.safefoundation.org"
+          href={AUDITS_LINK}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full md:w-fit"

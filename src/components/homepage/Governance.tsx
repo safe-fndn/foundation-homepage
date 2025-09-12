@@ -4,6 +4,7 @@ import React from "react";
 import SectionTag from "../ui/SectionTag";
 import Button from "../ui/Button";
 import Image from "next/image";
+import { GOVERNANCE_HUB_LINK } from "@/constants";
 
 const Card = ({
   children,
@@ -75,7 +76,7 @@ export default function Governance() {
               {`This hub is designed to provide you with easy access to essential resources dedicated to different aspects of SafeDAO's governance and operations.`}
             </div>
             <a
-              href="https://gov.safefoundation.org"
+              href={GOVERNANCE_HUB_LINK}
               target="_blank"
               rel="noopener noreferrer"
             >
