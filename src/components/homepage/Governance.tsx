@@ -4,6 +4,7 @@ import React from "react";
 import SectionTag from "../ui/SectionTag";
 import Button from "../ui/Button";
 import Image from "next/image";
+import { GOVERNANCE_HUB_LINK } from "@/constants";
 
 const Card = ({
   children,
@@ -38,7 +39,7 @@ export default function Governance() {
             Safe Token
           </div>
           <div className="text-[#1a1a1a99] max-w-[631px] text-sm leading-[120%] text-center pb-7">
-            SAFE Token acts as your key to participate in web3&apos;s transition
+            SAFE Token acts as your key to participate in Web3&apos;s transition
             to smart accounts. Token holders tap into a diverse and
             ever-evolving ecosystem and govern the future of <i>Safe.</i>
           </div>
@@ -75,7 +76,7 @@ export default function Governance() {
               {`This hub is designed to provide you with easy access to essential resources dedicated to different aspects of SafeDAO's governance and operations.`}
             </div>
             <a
-              href="https://www.notion.so/safe-global/SafeDAO-Governance-Hub-6a7368cc72554c8d94b05fcc47f246d5"
+              href={GOVERNANCE_HUB_LINK}
               target="_blank"
               rel="noopener noreferrer"
             >

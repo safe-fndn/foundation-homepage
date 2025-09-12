@@ -14,7 +14,7 @@ const HeroSection = () => {
       />
       <div className="z-10 max-w-[408px] md:max-w-[860px] text-center px-4">
         <div className="text-4xl md:text-7xl pb-2 md:pb-5">
-          Self Custody is a <span className="italic font-bold">Right*</span> Not
+          Self-Custody is a <span className="italic font-bold">Right*</span> Not
           a Feature.
         </div>
         <div className="text-[#1a1a1acc]">
