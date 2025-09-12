@@ -8,6 +8,7 @@ import Button from "../ui/Button";
 import { gridPattern, blobContent } from "@/content/safeSmartAccounts";
 import { Blob } from "./Blob";
 import { useResponsive } from "@/hooks/useResponsive";
+import { AUDITS_LINK, SAFE_DOCS_LINK } from "@/constants";
 
 export default function SafeSmartAccounts() {
   const [showBlobs, setShowBlobs] = useState(true);
@@ -90,7 +91,7 @@ export default function SafeSmartAccounts() {
 
       <div className="flex flex-row justify-end gap-1 md:gap-3">
         <a
-          href="https://safe-global.notion.site/Safe-Contract-Audits-f9757c9ffab24ffdac43221b9a970ebc"
+          href={AUDITS_LINK}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full md:w-fit"
@@ -107,7 +108,7 @@ export default function SafeSmartAccounts() {
           </Button>
         </a>
         <a
-          href="https://docs.safe.global/advanced/smart-account-bug-bounty"
+          href={`${SAFE_DOCS_LINK}/advanced/smart-account-bug-bounty`}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full md:w-fit"

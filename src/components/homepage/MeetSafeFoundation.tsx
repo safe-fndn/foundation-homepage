@@ -5,6 +5,7 @@ import { useScroll } from "motion/react";
 import SectionTag from "../ui/SectionTag";
 import Button from "../ui/Button";
 import AnimatedWord from "../ui/AnimatedWord";
+import { SAFE_DOCS_LINK } from "@/constants";
 
 export default function MeetSafeFoundation() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,11 +34,7 @@ export default function MeetSafeFoundation() {
         ))}
       </div>
       <div className="flex justify-end">
-        <a
-          href="https://docs.safe.global"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={SAFE_DOCS_LINK} target="_blank" rel="noopener noreferrer">
           <Button
             className="mt-[60px] w-full max-w-[530px] text-lg md:text-[32px] px-[30px]"
             variant="secondary"

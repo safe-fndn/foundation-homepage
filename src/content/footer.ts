@@ -1,3 +1,5 @@
+import { SAFE_DOCS_LINK } from "@/constants";
+
 export const navigationCards = [
   {
     icon: "/images/footer/ecosystem.svg",
@@ -8,7 +10,7 @@ export const navigationCards = [
   {
     icon: "/images/footer/docs.svg",
     title: "Docs",
-    href: "https://docs.safe.global",
+    href: SAFE_DOCS_LINK,
     openInNewTab: true,
   },
   {
