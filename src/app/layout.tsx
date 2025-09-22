@@ -10,11 +10,18 @@ const defaultMetaTags = {
   site: "Safe",
 };
 
+const isProduction = process.env.NODE_ENV === "production";
+
 export const metadata: Metadata = {
   title: defaultMetaTags.pageTitle,
   description: defaultMetaTags.description,
 
   applicationName: defaultMetaTags.site,
+
+  robots: {
+    follow: isProduction,
+    index: isProduction,
+  },
 
   openGraph: {
     title: defaultMetaTags.pageTitle,
