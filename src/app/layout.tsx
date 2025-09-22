@@ -10,7 +10,7 @@ const defaultMetaTags = {
   site: "Safe",
 };
 
-const isProduction = process.env.NODE_ENV === "production";
+const isProduction = process.env.NEXT_PUBLIC_IS_PROD === "true";
 
 export const metadata: Metadata = {
   title: defaultMetaTags.pageTitle,
