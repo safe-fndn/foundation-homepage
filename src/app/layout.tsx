@@ -6,7 +6,7 @@ const defaultMetaTags = {
   pageTitle: "Safe",
   description:
     "Safe is the most trusted platform to manage digital assets on Ethereum",
-  image: "/images/og.jpg",
+  image: `${process.env.NEXT_PUBLIC_PROD_URL}/images/og.jpg`,
   site: "Safe",
 };
 
