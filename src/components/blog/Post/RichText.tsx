@@ -15,6 +15,7 @@ import {
   type Heading3,
   type Heading4,
   type Heading5,
+  type Table,
 } from "@contentful/rich-text-types";
 import { isText } from "@/lib/contentful/typeGaurds";
 import kebabCase from "lodash/kebabCase";
@@ -43,7 +44,7 @@ const options: Options = {
   renderMark: {
     [MARKS.CODE]: (text: string) => {
       return (
-        <code className="leading-[18px] px-[6px] py-[2px] text-base text-orange-600 border border-gray-200 rounded-md bg-gray-50">
+        <code className="break-words leading-[18px] px-[6px] py-[2px] text-base text-orange-600 border border-gray-200 rounded-md bg-gray-50">
           {text}
         </code>
       );
@@ -160,6 +161,15 @@ const options: Options = {
       ) : isTwitterUrl(entryUrl) ? (
         <Twitter url={entryUrl} />
       ) : null;
+    },
+    [BLOCKS.TABLE]: (node: Table, children: React.ReactNode) => {
+      return (
+        <div className="overflow-scroll">
+          <table>
+            <tbody>{children}</tbody>
+          </table>
+        </div>
+      );
     },
   },
 } as unknown as RenderNode;
