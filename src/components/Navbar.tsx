@@ -35,11 +35,19 @@ const Navbar = () => {
       <a
         href={item.href}
         key={item.id}
-        className="px-3 py-1 text-sm"
+        className="px-3 py-1 text-sm flex flex-row items-center gap-1"
         {...(item.target && { target: item.target })}
         {...(item.rel && { rel: item.rel })}
       >
         {item.title}
+        {item.showExternalIcon && (
+          <Image
+            src="/images/common/arrow-external.svg"
+            alt="External Link"
+            width={16}
+            height={16}
+          />
+        )}
       </a>
     );
   };
