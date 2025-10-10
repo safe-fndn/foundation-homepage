@@ -43,7 +43,7 @@ export default function Governance() {
             to smart accounts. Token holders tap into a diverse and
             ever-evolving ecosystem and govern the future of <i>Safe.</i>
           </div>
-          <a
+          {/* <a
             href="https://safe.global/token"
             target="_blank"
             rel="noopener noreferrer"
@@ -58,7 +58,7 @@ export default function Governance() {
             >
               Learn More
             </Button>
-          </a>
+          </a> */}
         </Card>
         <div className="flex flex-col md:flex-row gap-[10px]">
           <Card className="flex-1 flex justify-between flex-col">
