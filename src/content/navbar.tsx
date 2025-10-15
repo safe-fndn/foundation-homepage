@@ -86,7 +86,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "safe labs",
     title: "Safe Labs",
-    href: "",
+    href: "https://safe.global",
     target: "_blank",
     rel: "noopener noreferrer",
     showExternalIcon: true,
