@@ -16,7 +16,7 @@ export default function SafeEcosystem() {
             standard
           </div>
         </div>
-        <a
+        {/* <a
           href="https://safe.global/ecosystem"
           target="_blank"
           rel="noopener noreferrer"
@@ -31,7 +31,7 @@ export default function SafeEcosystem() {
           >
             Explore Ecosystem
           </Button>
-        </a>
+        </a> */}
       </div>
 
       <LogoCarousel logos={logos} duration={30} />
