@@ -1,12 +1,12 @@
 import { SAFE_DOCS_LINK } from "@/constants";
 
 export const navigationCards = [
-  {
-    icon: "/images/footer/ecosystem.svg",
-    title: "Safe Ecosystem",
-    href: "https://safe.global/ecosystem",
-    openInNewTab: true,
-  },
+  // {
+  //   icon: "/images/footer/ecosystem.svg",
+  //   title: "Safe Ecosystem",
+  //   href: "https://safe.global/ecosystem",
+  //   openInNewTab: true,
+  // },
   {
     icon: "/images/footer/docs.svg",
     title: "Docs",

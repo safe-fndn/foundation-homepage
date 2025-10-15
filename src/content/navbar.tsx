@@ -9,24 +9,25 @@ export interface MenuItem {
   target?: string;
   rel?: string;
   dropdown?: DropdownItem[];
+  showExternalIcon?: boolean;
 }
 
-const communityDropdownItems: DropdownItem[] = [
-  {
-    name: "Governance",
-    icon: "/images/navbar/governance.svg",
-    href: "https://safe.global/governance",
-    target: "_blank",
-    rel: "noopener noreferrer",
-  },
-  {
-    name: "Safe Token",
-    icon: "/images/navbar/safe-token.svg",
-    href: "https://safe.global/token",
-    target: "_blank",
-    rel: "noopener noreferrer",
-  },
-];
+// const communityDropdownItems: DropdownItem[] = [
+//   {
+//     name: "Governance",
+//     icon: "/images/navbar/governance.svg",
+//     href: "https://safe.global/governance",
+//     target: "_blank",
+//     rel: "noopener noreferrer",
+//   },
+//   {
+//     name: "Safe Token",
+//     icon: "/images/navbar/safe-token.svg",
+//     href: "https://safe.global/token",
+//     target: "_blank",
+//     rel: "noopener noreferrer",
+//   },
+// ];
 
 const resourcesDropdownItems: DropdownItem[] = [
   {
@@ -34,42 +35,42 @@ const resourcesDropdownItems: DropdownItem[] = [
     icon: "/images/navbar/blog.svg",
     href: "/blog",
   },
-  {
-    name: "Careers",
-    icon: "/images/navbar/career.svg",
-    href: "https://safe.global/careers",
-    target: "_blank",
-    rel: "noopener noreferrer",
-  },
-  {
-    name: "Press Room",
-    icon: "/images/navbar/press.svg",
-    href: "https://safe.global/press",
-    target: "_blank",
-    rel: "noopener noreferrer",
-  },
-  {
-    name: "Data Room",
-    icon: "/images/navbar/data-room.svg",
-    href: "https://safe.global/dataroom",
-    target: "_blank",
-    rel: "noopener noreferrer",
-  },
+  // {
+  //   name: "Careers",
+  //   icon: "/images/navbar/career.svg",
+  //   href: "https://safe.global/careers",
+  //   target: "_blank",
+  //   rel: "noopener noreferrer",
+  // },
+  // {
+  //   name: "Press Room",
+  //   icon: "/images/navbar/press.svg",
+  //   href: "https://safe.global/press",
+  //   target: "_blank",
+  //   rel: "noopener noreferrer",
+  // },
+  // {
+  //   name: "Data Room",
+  //   icon: "/images/navbar/data-room.svg",
+  //   href: "https://safe.global/dataroom",
+  //   target: "_blank",
+  //   rel: "noopener noreferrer",
+  // },
 ];
 
 export const menuItems: MenuItem[] = [
-  {
-    id: "ecosystem",
-    title: "Ecosystem",
-    href: "https://safe.global/ecosystem",
-    target: "_blank",
-    rel: "noopener noreferrer",
-  },
-  {
-    id: "community",
-    title: "Community",
-    dropdown: communityDropdownItems,
-  },
+  // {
+  //   id: "ecosystem",
+  //   title: "Ecosystem",
+  //   href: "https://safe.global/ecosystem",
+  //   target: "_blank",
+  //   rel: "noopener noreferrer",
+  // },
+  // {
+  //   id: "community",
+  //   title: "Community",
+  //   dropdown: communityDropdownItems,
+  // },
   {
     id: "resources",
     title: "Resources",
@@ -81,5 +82,13 @@ export const menuItems: MenuItem[] = [
     href: "https://safe.dev",
     target: "_blank",
     rel: "noopener noreferrer",
+  },
+  {
+    id: "safe labs",
+    title: "Safe Labs",
+    href: "",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    showExternalIcon: true,
   },
 ];
