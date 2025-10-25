@@ -1,4 +1,5 @@
 import BackedBy from "@/components/token/BackedBy";
+import Governance from "@/components/token/Governance";
 import HeroSection from "@/components/token/HeroSection";
 import SafeHolders from "@/components/token/SafeHolders";
 import SafeInMedia from "@/components/token/SafeInMedia";
@@ -23,6 +24,9 @@ export default async function Home() {
       </div>
       <div className="pb-[160px]">
         <SafeInMedia />
+      </div>
+      <div className="pb-[160px]">
+        <Governance />
       </div>
     </div>
   );
