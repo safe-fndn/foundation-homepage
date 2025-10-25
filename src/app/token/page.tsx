@@ -28,6 +28,21 @@ export default async function Home() {
       <div className="pb-[160px]">
         <Governance />
       </div>
+      <div className="mt-0 md:mt-[160px] max-w-[1312px] mx-auto flex flex-col gap-2 px-4 pb-[10px] md:pb-5">
+        <div className="text-sm font-medium uppercase leading-[24px] tracking-[2.1px]">
+          Legal Disclaimer
+        </div>
+        <div className="text-[15px] font-light text-[#A1A3A7]">
+          This is not an offer to sell or the solicitation of an offer to
+          purchase any safe, and is not an offering, advertisement,
+          solicitation, confirmation, statement or any financial promotion that
+          can be construed as an invitation or inducement to engage in any
+          investment activity or similar. you should not rely on the content
+          herein for advice of any kind, including legal, investment, financial,
+          tax or other professional advice, and such content is not a substitute
+          for advice from a qualified professional.
+        </div>
+      </div>
     </div>
   );
 }
