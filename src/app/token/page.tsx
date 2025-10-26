@@ -3,6 +3,7 @@ import Governance from "@/components/token/Governance";
 import HeroSection from "@/components/token/HeroSection";
 import SafeHolders from "@/components/token/SafeHolders";
 import SafeInMedia from "@/components/token/SafeInMedia";
+import SafetyInNumbers from "@/components/token/SafetyInNumbers";
 import Tokenomics from "@/components/token/Tokenomics";
 import WhatIsSafe from "@/components/token/WhatIsSafe";
 
@@ -18,6 +19,9 @@ export default async function Home() {
       <div className="mt-[100px] md:mt-[160px] bg-[#E4EDE6] py-[100px] md:py-[160px]">
         <Tokenomics />
         <SafeHolders />
+      </div>
+      <div className="pt-[160px]">
+        <SafetyInNumbers />
       </div>
       <div className="py-[160px]">
         <BackedBy />
