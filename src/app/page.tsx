@@ -4,6 +4,7 @@ import Governance from "@/components/homepage/Governance";
 import HeroSection from "@/components/homepage/HeroSection";
 import Impact from "@/components/homepage/Impact";
 import MeetSafeFoundation from "@/components/homepage/MeetSafeFoundation";
+import NoGas from "@/components/homepage/NoGas";
 import Resources from "@/components/homepage/Resources";
 import SafeEcosystem from "@/components/homepage/SafeEcosystem";
 import SafeSmartAccounts from "@/components/homepage/SafeSmartAccounts";
@@ -29,6 +30,7 @@ export default async function Home() {
         <SafeEcosystem />
       </div>
       <div className="bg-[#E4EDE6] py-[100px] md:py-[160px] flex flex-col gap-[160px]">
+        <NoGas />
         <Impact statsData={statsData} />
         <Values />
       </div>
