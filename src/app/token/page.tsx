@@ -1,6 +1,7 @@
 import BackedBy from "@/components/token/BackedBy";
 import Governance from "@/components/token/Governance";
 import HeroSection from "@/components/token/HeroSection";
+import NoGas from "@/components/token/NoGas";
 import SafeHolders from "@/components/token/SafeHolders";
 import SafeInMedia from "@/components/token/SafeInMedia";
 import SafetyInNumbers from "@/components/token/SafetyInNumbers";
@@ -17,6 +18,7 @@ export default async function Home() {
         <WhatIsSafe />
       </div>
       <div className="mt-[100px] md:mt-[160px] bg-[#E4EDE6] py-[100px] md:py-[160px]">
+        <NoGas />
         <Tokenomics />
         <SafeHolders />
       </div>
