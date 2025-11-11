@@ -12,22 +12,20 @@ export interface MenuItem {
   showExternalIcon?: boolean;
 }
 
-// const communityDropdownItems: DropdownItem[] = [
-//   {
-//     name: "Governance",
-//     icon: "/images/navbar/governance.svg",
-//     href: "https://safe.global/governance",
-//     target: "_blank",
-//     rel: "noopener noreferrer",
-//   },
-//   {
-//     name: "Safe Token",
-//     icon: "/images/navbar/safe-token.svg",
-//     href: "https://safe.global/token",
-//     target: "_blank",
-//     rel: "noopener noreferrer",
-//   },
-// ];
+const communityDropdownItems: DropdownItem[] = [
+  // {
+  //   name: "Governance",
+  //   icon: "/images/navbar/governance.svg",
+  //   href: "https://safe.global/governance",
+  //   target: "_blank",
+  //   rel: "noopener noreferrer",
+  // },
+  {
+    name: "Safe Token",
+    icon: "/images/navbar/safe-token.svg",
+    href: "/token",
+  },
+];
 
 const resourcesDropdownItems: DropdownItem[] = [
   {
@@ -66,15 +64,15 @@ export const menuItems: MenuItem[] = [
   //   target: "_blank",
   //   rel: "noopener noreferrer",
   // },
-  // {
-  //   id: "community",
-  //   title: "Community",
-  //   dropdown: communityDropdownItems,
-  // },
   {
     id: "resources",
     title: "Resources",
     dropdown: resourcesDropdownItems,
+  },
+  {
+    id: "ventures",
+    title: "Ventures",
+    href: "/ventures",
   },
   {
     id: "research",
@@ -82,6 +80,11 @@ export const menuItems: MenuItem[] = [
     href: "https://safe.dev",
     target: "_blank",
     rel: "noopener noreferrer",
+  },
+  {
+    id: "community",
+    title: "Community",
+    dropdown: communityDropdownItems,
   },
   {
     id: "safe labs",
