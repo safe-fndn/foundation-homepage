@@ -11,10 +11,13 @@ export default function Projects() {
       <div className="text-[#1a1a1a99] text-xl pb-[40px]">
         Safe ventures backed startups and SAFE Token aligned projects
       </div>
-      <div className="flex flex-row flex-wrap gap-4 md:gap-[32px]">
+      <div className="flex flex-row flex-wrap gap-4 md:gap-[26px]">
         {projects.map((project, index) => (
-          <div key={index} className="max-w-[180px] group cursor-pointer">
-            <div className="relative pb-[10px] w-[170px] h-[170px] rounded-[10px] bg-[#12ff800f] flex justify-center items-center">
+          <div
+            key={index}
+            className="max-w-[160px] md:max-w-[180px] group cursor-pointer"
+          >
+            <div className="relative pb-[10px] w-full h-[170px] rounded-[10px] bg-[#12ff800f] flex justify-center items-center">
               <Image
                 src="/images/ventures/safe-fndn-logo.svg"
                 alt="logo"
