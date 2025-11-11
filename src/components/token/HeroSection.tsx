@@ -29,9 +29,11 @@ const HeroSection = () => {
           Govern the future of ownership and infrastructure that powers the Safe
           smart accounts
         </div>
-        <Button variant="secondary" className="mt-[30px] mx-auto">
-          Learn More
-        </Button>
+        <a href="https://safefoundation.org/blog/safe-tokenomics">
+          <Button variant="secondary" className="mt-[30px] mx-auto">
+            Learn More
+          </Button>
+        </a>
       </div>
     </div>
   );

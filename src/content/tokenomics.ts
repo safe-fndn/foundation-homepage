@@ -9,7 +9,7 @@ export const tokenomicsData = [
   },
   {
     label: "Fixed Total Supply",
-    value: "1,000,000,000",
+    value: "1,000,000,000 (1 billion) ",
   },
   {
     label: "Initial Circulating Supply",

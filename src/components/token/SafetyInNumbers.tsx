@@ -10,12 +10,12 @@ const statsData = [
     ratio: [3, 2],
     cards: [
       {
-        label: "Value Stored",
-        value: "$100B+",
+        label: "Total Volume",
+        value: "$1.2T+",
       },
       {
         label: "SAFE ACCOUNTS DEPLOYED",
-        value: "8M+",
+        value: "50M+",
       },
     ],
   },
@@ -24,11 +24,11 @@ const statsData = [
     cards: [
       {
         label: "TOTAL TRANSACTIONS",
-        value: "40M+",
+        value: "700M+",
       },
       {
-        label: "Partners",
-        value: "200+",
+        label: "Ecosystem",
+        value: "200+ Apps",
       },
     ],
   },
@@ -37,7 +37,7 @@ const statsData = [
     cards: [
       {
         label: "Value Stored",
-        value: "$100B+",
+        value: "$60B+",
       },
       {
         label: "fundraised",

@@ -27,7 +27,11 @@ export default function Tokenomics() {
               <Info key={item.label} label={item.label} value={item.value} />
             ))}
           </div>
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://safefoundation.org/blog/safe-tokenomics"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button
               className="mt-[30px] w-full max-w-[530px] text-lg md:text-[32px] px-[30px]"
               variant="secondary"
