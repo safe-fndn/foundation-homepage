@@ -4,6 +4,7 @@ import { projects } from "@/content/projects";
 import Image from "next/image";
 import Button from "../ui/Button";
 import Link from "next/link";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "../ui/HoverCard";
 
 export default function Projects() {
   return (
@@ -23,13 +24,25 @@ export default function Projects() {
           >
             <div className="relative pb-[10px] w-full h-[170px] rounded-[10px] bg-[#12ff800f] flex justify-center items-center">
               {project.isSafeAligned && (
-                <Image
-                  src="/images/ventures/safe-fndn-logo.svg"
-                  alt="logo"
-                  width={20}
-                  height={20}
-                  className="absolute rounded-full top-2 right-2"
-                />
+                <HoverCard openDelay={300}>
+                  <HoverCardTrigger asChild>
+                    <div className="absolute rounded-full top-2 right-2">
+                      <Image
+                        src="/images/ventures/safe-fndn-logo.svg"
+                        alt="logo"
+                        width={20}
+                        height={20}
+                        className="rounded-full"
+                      />
+                    </div>
+                  </HoverCardTrigger>
+                  <HoverCardContent
+                    side="top"
+                    className="bg-[#1A1A1A] w-fit rounded-lg p-2 px-4 text-white text-xs font-medium z-10"
+                  >
+                    Safe token alligned
+                  </HoverCardContent>
+                </HoverCard>
               )}
               <Image
                 src={project.image}
