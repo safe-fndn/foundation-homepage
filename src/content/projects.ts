@@ -1,0 +1,86 @@
+export const projects = [
+  {
+    name: "Bitpanda",
+    desc: "Stablecoin first, exchange connected wallets for everyone",
+    image: "/images/ventures/bitpanda.png",
+    link: "",
+  },
+  {
+    name: "Brahma",
+    desc: "G**gle Docs, Sheets and more in a decentralised, censorship resistant manner",
+    image: "/images/ventures/brahma.png",
+    link: "",
+  },
+  {
+    name: "Candide Labs",
+    desc: "Developers from across the globe use Candide to build secure non-custodial safe digital wallets without the hassle of seed phrases or gas management to ultimately supercharge their user growth",
+    image: "/images/ventures/candide.png",
+    link: "",
+  },
+  {
+    name: "Cometh",
+    desc: "Cometh offers a DeFi-native Banking-as-a-Service (BaaS) infrastructure for Europe: Full Account Abstration stack built on Safe, one API to integrate DeFi custody, staking, trading and payments. Enterprise-grade compliance (MiCA ready), Web3 flexibility.",
+    image: "/images/ventures/cometh.png",
+    link: "",
+  },
+  {
+    name: "Defi Saver",
+    desc: "One-stop dashboard for creating, managing and tracking your DeFi positions",
+    image: "/images/ventures/defi-saver.png",
+    link: "",
+  },
+  {
+    name: "Fileverse",
+    desc: "G**gle Docs, Sheets and more in a decentralised, censorship resistant manner",
+    image: "/images/ventures/fileverse.png",
+    link: "",
+  },
+  {
+    name: "Fluidkey",
+    desc: "Privacy first wallets through stealth addresses for crypto power users",
+    image: "/images/ventures/fluidkey.png",
+    link: "",
+  },
+  {
+    name: "Gnosis Pay",
+    desc: "Spend directly from your Safe with Gnosis Pay card infrastructure",
+    image: "/images/ventures/gnosis.png",
+    link: "",
+  },
+  {
+    name: "Openfort",
+    desc: "An open-source alternative to wallet infrastructure solutions. Supercharge your project with authentication, user management and payments.",
+    image: "/images/ventures/openfort.png",
+    link: "",
+  },
+  {
+    name: "Picnic",
+    desc: "Web2 like experience for the Latam market",
+    image: "/images/ventures/picnic.png",
+    link: "",
+  },
+  {
+    name: "Pimlico",
+    desc: "Pimlico is the most advanced smart account infrastructure platform, providing developer APIs and tooling to build with smart accounts. Built on top of the ERC-4337 standard and are fully compatible with EIP-7702 - the emerging direction of native account abstraction.",
+    image: "/images/ventures/pimlico.png",
+    link: "",
+  },
+  {
+    name: "Rhinestone",
+    desc: "Rhinestone enables developers to achieve the endgame onchain UX with one simple API. Intent-powered, smart account-based.",
+    image: "/images/ventures/rhinestone.png",
+    link: "",
+  },
+  {
+    name: "Safe {Wallet}",
+    desc: "Enterprise grade mutli-sig with cypherpunk values for all of Ethereum",
+    image: "/images/ventures/safe-wallet.png",
+    link: "",
+  },
+  {
+    name: "World",
+    desc: "Proof of personhood & universal basic income",
+    image: "/images/ventures/world.png",
+    link: "",
+  },
+];
