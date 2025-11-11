@@ -3,6 +3,7 @@ import SectionTag from "../ui/SectionTag";
 import { projects } from "@/content/projects";
 import Image from "next/image";
 import Button from "../ui/Button";
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -13,18 +14,23 @@ export default function Projects() {
       </div>
       <div className="flex flex-row flex-wrap gap-4 md:gap-[26px]">
         {projects.map((project, index) => (
-          <div
+          <Link
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
             key={index}
             className="max-w-[160px] md:max-w-[180px] group cursor-pointer"
           >
             <div className="relative pb-[10px] w-full h-[170px] rounded-[10px] bg-[#12ff800f] flex justify-center items-center">
-              <Image
-                src="/images/ventures/safe-fndn-logo.svg"
-                alt="logo"
-                width={20}
-                height={20}
-                className="absolute rounded-full top-2 right-2"
-              />
+              {project.isSafeAligned && (
+                <Image
+                  src="/images/ventures/safe-fndn-logo.svg"
+                  alt="logo"
+                  width={20}
+                  height={20}
+                  className="absolute rounded-full top-2 right-2"
+                />
+              )}
               <Image
                 src={project.image}
                 alt={project.name}
@@ -49,7 +55,7 @@ export default function Projects() {
             <div className="text-black/[0.6] text-xs font-light">
               {project.desc}
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
