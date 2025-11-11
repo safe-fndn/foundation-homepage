@@ -1,6 +1,7 @@
 import React from "react";
 import { WarpDitherCanvas } from "../WrapDitherCanvas";
 import Button from "../ui/Button";
+import { INVESTMENT_EMAIL } from "@/constants";
 
 const HeroSection = () => {
   return (
@@ -20,9 +21,11 @@ const HeroSection = () => {
         <div className="text-[#1a1a1acc]">
           Through capital, alignment, and infra support.
         </div>
-        <Button variant="secondary" className="mx-auto mt-5">
-          Get in touch
-        </Button>
+        <a href={`mailto:${INVESTMENT_EMAIL}`} target="_blank" rel="noreferrer">
+          <Button variant="secondary" className="mx-auto mt-5">
+            Get in touch
+          </Button>
+        </a>
       </div>
     </div>
   );

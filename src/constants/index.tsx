@@ -1,4 +1,5 @@
 export const COMMS_EMAIL = "comms@safefoundation.org";
+export const INVESTMENT_EMAIL = "investments@safefoundation.org";
 export const SAFE_MEDIA_KIT_LINK = "https://press.safefoundation.org";
 export const SAFE_DOCS_LINK = "https://docs.safefoundation.org";
 export const GOVERNANCE_HUB_LINK = "https://gov.safefoundation.org";
