@@ -30,8 +30,7 @@ export default function NoGas() {
     <div className="px-[16px] pb-[100px] md:pb-[160px] max-w-[953px] w-full text-left mx-auto">
       <SectionTag text="No-Fees November" />
       <div className="text-[#1A1A1A] text-[36px] max-w-[408px] md:max-w-full leading-[120%] pt-2 pb-4 md:pt-5 md:pb-[40px] md:text-[64px]">
-        This November, Safe covers your ETH gas fees. If you hold{" "}
-        <span className="italic">$SAFE.</span>
+        This November, Safe covers your ETH gas fees if you hold SAFE.
       </div>
 
       <div className="relative grid grid-cols-7 w-fit mx-auto">

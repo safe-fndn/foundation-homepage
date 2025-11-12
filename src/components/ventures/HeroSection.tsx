@@ -19,7 +19,8 @@ const HeroSection = () => {
           We back teams pushing self-custody forward
         </div>
         <div className="text-[#1a1a1acc]">
-          Through capital, alignment, and infra support.
+          Safe Ventures helps teams win through capital, alignment and
+          infrastructure support
         </div>
         <a href={`mailto:${INVESTMENT_EMAIL}`} target="_blank" rel="noreferrer">
           <Button variant="secondary" className="mx-auto mt-5">
