@@ -80,7 +80,7 @@ export const projects = [
   },
   {
     name: "Mezzanine",
-    desc: "App Store for global businesses with enterprise features",
+    desc: "Onchain banking-like application for payments, accounting, and more",
     image: "/images/ventures/mezzanine.png",
     link: "https://www.mezzanine.xyz/",
   },
