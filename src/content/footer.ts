@@ -1,17 +1,23 @@
 import { SAFE_DOCS_LINK } from "@/constants";
 
 export const navigationCards = [
-  // {
-  //   icon: "/images/footer/ecosystem.svg",
-  //   title: "Safe Ecosystem",
-  //   href: "https://safe.global/ecosystem",
-  //   openInNewTab: true,
-  // },
   {
     icon: "/images/footer/docs.svg",
     title: "Docs",
     href: SAFE_DOCS_LINK,
     openInNewTab: true,
+  },
+  {
+    icon: "/images/footer/ecosystem.svg",
+    title: "Safe Ventures",
+    href: "/ventures",
+    openInNewTab: false,
+  },
+  {
+    icon: "/images/footer/safe-token.svg",
+    title: "Safe Token",
+    href: "/token",
+    openInNewTab: false,
   },
   {
     icon: "/images/footer/scroll.svg",
@@ -24,6 +30,7 @@ export const navigationCards = [
 export const companyLinks = [
   { name: "Home", href: "/" },
   { name: "Blog", href: "/blog" },
+  { name: "Brand", href: "https://press.safefoundation.org" },
 ];
 
 export const socialLinks = [

@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../ui/Button";
 import { logos } from "@/content/safeEcosystem";
 import LogoCarousel from "./LogoCarousel";
 
