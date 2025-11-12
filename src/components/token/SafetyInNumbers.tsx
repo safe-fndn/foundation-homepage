@@ -24,7 +24,7 @@ const statsData = [
     cards: [
       {
         label: "TOTAL TRANSACTIONS",
-        value: "700M+",
+        value: "800M+",
       },
       {
         label: "Ecosystem",

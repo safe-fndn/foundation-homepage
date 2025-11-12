@@ -54,18 +54,18 @@ export const projects = [
     link: "https://www.hoprnet.org/",
   },
   {
-    name: "Interfacer",
+    name: "Interface",
     desc: "Social trading network for markets and copy trading",
     image: "/images/ventures/interfacer.png",
     link: "https://interface.social",
   },
-  {
-    name: "Join",
-    desc: "Unified crypto ecosystem bridging retail and institutional DeFi",
-    image: "/images/ventures/join.png",
-    link: "https://getjoin.io",
-    isSafeAligned: true,
-  },
+  // {
+  //   name: "Join",
+  //   desc: "Unified crypto ecosystem bridging retail and institutional DeFi",
+  //   image: "/images/ventures/join.png",
+  //   link: "https://getjoin.io",
+  //   isSafeAligned: true,
+  // },
   {
     name: "Karpatkey",
     desc: "Onchain asset management and liquidity network platform",
@@ -73,16 +73,16 @@ export const projects = [
     link: "https://kpk.io/",
   },
   {
-    name: "Mezzanine",
-    desc: "App Store for global businesses with enterprise features",
-    image: "/images/ventures/mezzanine.png",
-    link: "https://www.mezzanine.xyz/",
-  },
-  {
     name: "Metal",
     desc: "Token presale launch platform on Base",
     image: "/images/ventures/metal.png",
     link: "https://metal.build/",
+  },
+  {
+    name: "Mezzanine",
+    desc: "App Store for global businesses with enterprise features",
+    image: "/images/ventures/mezzanine.png",
+    link: "https://www.mezzanine.xyz/",
   },
   {
     name: "Onit",
@@ -133,7 +133,7 @@ export const projects = [
     link: "https://sablier.com",
   },
   {
-    name: "Safe {Wallet}",
+    name: "Safe Labs",
     desc: "Gold standard for self-custodial treasury management",
     image: "/images/ventures/safe-wallet.png",
     link: "https://safe.global",
@@ -150,24 +150,24 @@ export const projects = [
     image: "/images/ventures/wildcat.png",
     link: "https://app.wildcat.finance/",
   },
-  {
-    name: "World",
-    desc: "Proof of personhood & universal basic income",
-    image: "/images/ventures/world.png",
-    link: "https://world.org/",
-    isSafeAligned: true,
-  },
+  // {
+  //   name: "World",
+  //   desc: "Proof of personhood & universal basic income",
+  //   image: "/images/ventures/world.png",
+  //   link: "https://world.org/",
+  //   isSafeAligned: true,
+  // },
   {
     name: "Zodiac",
     desc: "Composable DAO tooling built on open standards",
     image: "/images/ventures/zodiac.png",
     link: "https://www.zodiac.wiki/",
   },
-  {
-    name: "ZKsync foundation",
-    desc: "Zk based Ethereum L2 building Incorruptible financial infra",
-    image: "/images/ventures/zksync.png",
-    link: "https://www.zksync.io/",
-    isSafeAligned: true,
-  },
+  // {
+  //   name: "ZKsync foundation",
+  //   desc: "Zk based Ethereum L2 building Incorruptible financial infra",
+  //   image: "/images/ventures/zksync.png",
+  //   link: "https://www.zksync.io/",
+  //   isSafeAligned: true,
+  // },
 ];

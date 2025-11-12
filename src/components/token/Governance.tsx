@@ -1,22 +1,23 @@
 import React from "react";
 import SectionTag from "../ui/SectionTag";
 import Image from "next/image";
+import Link from "next/link";
 
 const content = [
   {
-    title: "About Safe{DAO}",
+    title: "Forum",
     desc: "Be part of a community",
-    link: "",
+    link: "https://forum.safe.global/",
   },
   {
     title: "Latest Proposals",
     desc: "JOIN THE CONVERSATION",
-    link: "",
+    link: "https://snapshot.box/#/s:safe.eth",
   },
   {
     title: "Governance Hub",
     desc: "LEARN MORE",
-    link: "",
+    link: "http://gov.safefoundation.org",
   },
 ];
 
@@ -51,7 +52,10 @@ export default function Governance() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {content.map((item) => (
-          <div
+          <Link
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
             key={item.title}
             className="bg-[#12ff800f] cursor-pointer border h-[240px] flex flex-col relative justify-between border-[#12ff8038] rounded-[10px] p-4 md:p-8"
           >
@@ -68,7 +72,7 @@ export default function Governance() {
                 className="-rotate-45"
               />
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

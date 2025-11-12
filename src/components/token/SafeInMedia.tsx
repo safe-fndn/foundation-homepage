@@ -6,17 +6,17 @@ const content = [
   {
     image: "/images/token/safe.png",
     title: "A Call to Build Smarter Self-Custody",
-    href: "",
+    href: "https://safe.mirror.xyz/nsKIREptDQPBv_JlgeVRRDH2p2-nJm1KUpSoZEYuB_0",
   },
   {
     image: "/images/token/yahoo.png",
     title: "Gnosis Safe rebrands to Safe, Raises $100M",
-    href: "",
+    href: "https://finance.yahoo.com/news/gnosis-safe-raises-100m-rebrands-015807256.html",
   },
   {
     image: "/images/token/decrypt.png",
     title: "Gnosis Safe launches SafeDAO and Safe Token",
-    href: "",
+    href: "https://decrypt.co/110781/gnosis-safe-launches-safedao-safe-token",
   },
 ];
 

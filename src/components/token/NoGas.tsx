@@ -14,10 +14,13 @@ export default function NoGas() {
 
   useEffect(() => {
     const generateAnimations = () => {
-      return Array.from({ length: 35 }).map(() => ({
-        duration: Math.random() * 4 + 4,
-        delay: Math.random() * 4,
-      }));
+      return Array.from({ length: 35 }).map(() => {
+        const shouldHaveNoDelay = Math.random() < 0.3;
+        return {
+          duration: Math.random() * 4 + 4,
+          delay: shouldHaveNoDelay ? 0 : Math.random() * 4,
+        };
+      });
     };
 
     setCellAnimations(generateAnimations());

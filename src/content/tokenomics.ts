@@ -12,10 +12,6 @@ export const tokenomicsData = [
     value: "1,000,000,000 (1 billion) ",
   },
   {
-    label: "Initial Circulating Supply",
-    value: "450,000,000",
-  },
-  {
     label: "Token Format",
     value: "Native ERC20",
   },

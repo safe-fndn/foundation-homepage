@@ -9,9 +9,9 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "../ui/HoverCard";
 export default function Projects() {
   return (
     <div className="px-[16px] max-w-[1242px] mx-auto">
-      <SectionTag text="Ventures and SAFE Aligned Projects" />
+      <SectionTag text="Portfolio" />
       <div className="text-[#1a1a1a99] text-xl pb-[40px]">
-        Safe ventures backed startups and SAFE Token aligned projects
+        Projects backed by Save Ventures
       </div>
       <div className="flex flex-row flex-wrap gap-4 md:gap-[26px]">
         {projects.map((project, index) => (
@@ -23,7 +23,7 @@ export default function Projects() {
             className="max-w-[160px] md:max-w-[180px] group cursor-pointer"
           >
             <div className="relative pb-[10px] w-full h-[170px] rounded-[10px] bg-[#12ff800f] flex justify-center items-center">
-              {project.isSafeAligned && (
+              {false && (
                 <HoverCard openDelay={300}>
                   <HoverCardTrigger asChild>
                     <div className="absolute rounded-full top-2 right-2">

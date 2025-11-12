@@ -14,7 +14,7 @@ export default function WhatIsSafe() {
   });
 
   const fullText =
-    "The SAFE token distributes ownership to govern Safe and tap into a diverse ecosystem powering over 60M onchain accounts.";
+    "The SAFE token distributes ownership to govern Safe and tap into a diverse ecosystem powering over 50M onchain accounts.";
   const words = fullText.split(" ");
 
   return (
