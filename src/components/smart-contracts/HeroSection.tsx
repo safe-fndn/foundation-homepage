@@ -7,7 +7,7 @@ const HeroSection = () => {
     <div className="relative w-full max-w-[1242px] mx-auto h-full flex gap-[60px] flex-col-reverse md:flex-row justify-between items-center">
       <div className="z-10 max-w-[600px] text-center md:text-left px-4">
         <div className="text-4xl md:text-7xl pb-2 md:pb-5">
-          Integrate the Safe Smart Account
+          Integrate the <i>Safe</i> Smart Account
         </div>
         <div className="text-[#1a1a1acc]">
           The most trusted and battle-tested smart account contracts, built for
