@@ -1,3 +1,4 @@
+import BuildLike from "@/components/smart-contracts/BuildLike";
 import BuildOnSafe from "@/components/smart-contracts/BuildOnSafe";
 import BuiltWith from "@/components/smart-contracts/BuiltWith";
 import ChainStack from "@/components/smart-contracts/ChainStack";
@@ -24,6 +25,9 @@ export default function SmartContracts() {
       </div>
       <div className="py-[160px]">
         <BuiltWith />
+      </div>
+      <div className="pb-[160px]">
+        <BuildLike />
       </div>
     </div>
   );
