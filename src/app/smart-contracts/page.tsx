@@ -1,4 +1,5 @@
 import BuildOnSafe from "@/components/smart-contracts/BuildOnSafe";
+import BuiltWith from "@/components/smart-contracts/BuiltWith";
 import ChainStack from "@/components/smart-contracts/ChainStack";
 import HeroSection from "@/components/smart-contracts/HeroSection";
 import SafeContracts from "@/components/smart-contracts/SafeContracts";
@@ -20,6 +21,9 @@ export default function SmartContracts() {
       <div className="bg-[#E4EDE6] py-[160px] flex flex-col gap-[160px]">
         <ChainStack />
         <SafeContracts />
+      </div>
+      <div className="py-[160px]">
+        <BuiltWith />
       </div>
     </div>
   );
