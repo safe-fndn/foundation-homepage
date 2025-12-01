@@ -7,6 +7,7 @@ import SafeInMedia from "@/components/token/SafeInMedia";
 import SafetyInNumbers from "@/components/token/SafetyInNumbers";
 import Tokenomics from "@/components/token/Tokenomics";
 import WhatIsSafe from "@/components/token/WhatIsSafe";
+import Button from "@/components/ui/Button";
 
 export default async function Home() {
   return (
@@ -47,6 +48,14 @@ export default async function Home() {
           herein for advice of any kind, including legal, investment, financial,
           tax or other professional advice, and such content is not a substitute
           for advice from a qualified professional.
+        </div>
+        <div className="pt-2">
+          <a
+            href="/docs/whitepaper.xlsx"
+            download="SAFE-Token-MiCA-White-Paper.xlsx"
+          >
+            <Button variant="outline">SAFE Token MiCA White Paper</Button>
+          </a>
         </div>
       </div>
     </div>
