@@ -1,3 +1,4 @@
+import Footer from "@/components/smart-contracts/Footer";
 import BuildLike from "@/components/smart-contracts/BuildLike";
 import BuildOnSafe from "@/components/smart-contracts/BuildOnSafe";
 import BuiltWith from "@/components/smart-contracts/BuiltWith";
@@ -28,6 +29,9 @@ export default function SmartContracts() {
       </div>
       <div className="pb-[160px]">
         <BuildLike />
+      </div>
+      <div className="py-[160px]">
+        <Footer />
       </div>
     </div>
   );
