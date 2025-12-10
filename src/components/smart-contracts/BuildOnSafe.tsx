@@ -11,37 +11,39 @@ function italicizeSafe(text: string) {
 const features = [
   {
     icon: "/images/smart-contracts/build-icon1.svg",
-    title: "Native Multisig capability",
+    title: "Native Multisig Capability",
     description:
-      "Safe smart contracts have native multisig capabilities built in",
+      "Safe contracts come with built-in multisig feature, making it easy to secure assets with multiple signers out-of-the-box",
   },
   {
     icon: "/images/smart-contracts/build-icon2.svg",
-    title: "400+ EVM networks",
-    description: "Safe is one of the most deployed contracts across the EVM",
+    title: "400+ EVM Networks",
+    description:
+      "Safe is one of the most widely deployed smart contracts across the EVM ecosystem, trusted across hundreds of chains",
   },
   {
     icon: "/images/smart-contracts/build-icon3.svg",
-    title: "Modular architecture",
+    title: "Modular Architecture",
     description:
-      "Safe accounts have additional modules and guards that extend funtionality",
+      "Customize your Safe account with optional modules and guard contracts, enabling features like spending limits, recovery, and more",
   },
   {
     icon: "/images/smart-contracts/build-icon4.svg",
-    title: "Live since 2019",
-    description: "Every release undergoes public audit before mainnet use.",
+    title: "Live Since 2019",
+    description:
+      "Battle-tested over years and audited before every release. Safe has secured billions over 6+ years",
   },
   {
     icon: "/images/smart-contracts/build-icon5.svg",
     title: "Formally Verified and Audited",
     description:
-      "Supports rollups, appchains, L1s across the multichain stack.",
+      "All core contracts and key components are audited and formally verified. Safe is built for secure deployment across rollups and L1 stacks",
   },
   {
     icon: "/images/smart-contracts/build-icon6.svg",
     title: "EVM Smart Account",
     description:
-      "Enables features like gasless sponsored transactions, ERC4337, ERC7702, passkey logins and more",
+      "Full support for modern smart account features like sponsored gas, ERC-4337, passkey logins, and more.",
   },
 ];
 

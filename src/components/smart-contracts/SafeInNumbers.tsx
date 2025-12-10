@@ -23,9 +23,10 @@ const stats = [
 export default function SafeInNumbers() {
   return (
     <div className="px-[16px] max-w-[1242px] mx-auto">
-      <SectionTag text="Safe smart account in number" />
+      <SectionTag text="Safe Smart Account at Scale" />
       <div className="text-black/[0.6] font-light text-sm pt-2 pb-5">
-        Safe is one of the most used stacks on the EVM.
+        Safe smart accounts are deployed widely, making them one of the most
+        used stacks on the EVM.
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {stats.map((stat) => (

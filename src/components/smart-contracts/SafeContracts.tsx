@@ -2,23 +2,29 @@ import React from "react";
 import SectionTag from "../ui/SectionTag";
 import Image from "next/image";
 import Button from "../ui/Button";
+import { cn } from "@/lib/utils";
 
 export const data = [
   {
     label: "Contracts",
     value: "Safe Account Deployments",
+    externalLink: "https://github.com/safe-fndn/safe-smart-account",
   },
   {
     label: "Latest release",
     value: "v1.5.0",
+    externalLink:
+      "https://github.com/safe-fndn/safe-smart-account/releases/tag/v1.5.0",
   },
   {
-    label: "Audit",
-    value: "latest 4 months ago",
+    label: "Audits",
+    value: "Over 10 Audits",
+    externalLink:
+      "https://safefoundation.notion.site/Safe-Contract-Audits-286a8a34f3b881979c7ce07089814ea8",
   },
   {
     label: "Usage",
-    value: "Smart Accounts Infrastructure, Account Abstraction ",
+    value: "Smart Accounts Infrastructure, Account Abstraction",
   },
 ];
 
@@ -41,7 +47,12 @@ export default function SafeContracts() {
         <div>
           <div className="flex flex-col gap-6">
             {data.map((item) => (
-              <Info key={item.label} label={item.label} value={item.value} />
+              <Info
+                key={item.label}
+                label={item.label}
+                value={item.value}
+                externalLink={item.externalLink}
+              />
             ))}
           </div>
           <a
@@ -66,11 +77,41 @@ export default function SafeContracts() {
   );
 }
 
-const Info = ({ label, value }: { label: string; value: string }) => {
+const Info = ({
+  label,
+  value,
+  externalLink,
+}: {
+  label: string;
+  value: string;
+  externalLink: string | undefined;
+}) => {
   return (
     <div className="flex flex-col">
       <div className="text-black/[0.6] text-sm break-words">{label}</div>
-      <div className="text-xl break-words">{value}</div>
+      <a
+        href={externalLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cn("flex flex-row items-center w-fit gap-1")}
+      >
+        <div
+          className={cn(
+            "text-xl break-words",
+            externalLink && "hover:underline underline-offset-2"
+          )}
+        >
+          {value}
+        </div>
+        {externalLink && (
+          <Image
+            src="/images/common/arrow-external.svg"
+            alt="arrow right"
+            width={20}
+            height={20}
+          />
+        )}
+      </a>
     </div>
   );
 };

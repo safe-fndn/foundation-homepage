@@ -53,7 +53,7 @@ export default function ChainStack() {
         {chains.map((feature, index) => (
           <div
             key={index}
-            className="bg-[#12ff800f] rounded-[10px] flex h-fit p-5 flex-col"
+            className="bg-[#12ff800f] cursor-pointer hover:bg-[#12ff8080] rounded-[10px] flex h-fit p-5 flex-col transition-colors duration-200 border border-transparent hover:border-[#12ff8038]"
           >
             <Image
               src={feature.icon}
@@ -64,9 +64,9 @@ export default function ChainStack() {
             <h3 className="text-[#1A1A1A] text-2xl font-normal pt-15 mb-1">
               {italicizeSafe(feature.title)}
             </h3>
-            <p className="text-black/[0.6] text-lg font-light leading-relaxed">
+            {/* <p className="text-black/[0.6] text-lg font-light leading-relaxed">
               {italicizeSafe(feature.description)}
-            </p>
+            </p> */}
           </div>
         ))}
       </div>
