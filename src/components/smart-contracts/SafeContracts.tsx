@@ -17,14 +17,21 @@ export const data = [
       "https://github.com/safe-fndn/safe-smart-account/releases/tag/v1.5.0",
   },
   {
+    label: "Latest in production",
+    value: "v1.4.0",
+    externalLink:
+      "https://github.com/safe-fndn/safe-smart-account/releases/tag/v1.4.0",
+  },
+  {
     label: "Audits",
     value: "Over 10 Audits",
     externalLink:
       "https://safefoundation.notion.site/Safe-Contract-Audits-286a8a34f3b881979c7ce07089814ea8",
   },
   {
-    label: "Usage",
-    value: "Smart Accounts Infrastructure, Account Abstraction",
+    label: "Release process",
+    value:
+      "New contracts are only used in Safe{Wallet} after a rigorous developer review period has passed.",
   },
 ];
 
@@ -97,7 +104,7 @@ const Info = ({
       >
         <div
           className={cn(
-            "text-xl break-words",
+            "text-xl break-words max-w-[425px]",
             externalLink && "hover:underline underline-offset-2"
           )}
         >

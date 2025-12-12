@@ -29,7 +29,7 @@ const chains = [
   },
   {
     icon: "/images/smart-contracts/surge.png",
-    title: "Surge Rollups",
+    title: "Surge Rollups (coming soon)",
     description:
       "Spend directly from your Safe with Gnosis Pay card infrastructure.",
   },
@@ -38,6 +38,11 @@ const chains = [
     title: "zkSync Elastic Chain",
     description:
       "Spend directly from your Safe with Gnosis Pay card infrastructure.",
+  },
+  {
+    icon: "/images/smart-contracts/custom-network.svg",
+    title: "Deploy on custom network",
+    showExternalIcon: true,
   },
 ];
 
@@ -61,9 +66,19 @@ export default function ChainStack() {
               width={60}
               height={60}
             />
-            <h3 className="text-[#1A1A1A] text-2xl font-normal pt-15 mb-1">
-              {italicizeSafe(feature.title)}
-            </h3>
+            <div className="flex flex-row items-center pt-15 justify-between">
+              <h3 className="text-[#1A1A1A] text-2xl font-normal mb-1">
+                {italicizeSafe(feature.title)}
+              </h3>
+              {feature.showExternalIcon && (
+                <Image
+                  src="/images/common/arrow-right.svg"
+                  alt="arrow right"
+                  width={32}
+                  height={32}
+                />
+              )}
+            </div>
             {/* <p className="text-black/[0.6] text-lg font-light leading-relaxed">
               {italicizeSafe(feature.description)}
             </p> */}

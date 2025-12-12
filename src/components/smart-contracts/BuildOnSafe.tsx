@@ -43,7 +43,7 @@ const features = [
     icon: "/images/smart-contracts/build-icon6.svg",
     title: "EVM Smart Account",
     description:
-      "Full support for modern smart account features like sponsored gas, ERC-4337, passkey logins, and more.",
+      "Full support for modern smart account features like sponsored gas, ERC-4337, passkey logins, and more",
   },
 ];
 
