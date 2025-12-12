@@ -11,14 +11,14 @@ const data = [
     twitter: "",
     web: "",
   },
-  {
-    image: "/images/smart-contracts/gnosis-pay.png",
-    name: "Gnosis Pay",
-    tags: ["SDK", "Utility"],
-    desc: "Spend directly from your Safe with Gnosis Pay card infrastructure",
-    twitter: "",
-    web: "",
-  },
+  // {
+  //   image: "/images/smart-contracts/gnosis-pay.png",
+  //   name: "Gnosis Pay",
+  //   tags: ["SDK", "Utility"],
+  //   desc: "Spend directly from your Safe with Gnosis Pay card infrastructure",
+  //   twitter: "",
+  //   web: "",
+  // },
   {
     image: "/images/smart-contracts/openfort.png",
     name: "Openfort",
