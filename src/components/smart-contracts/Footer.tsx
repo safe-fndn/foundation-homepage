@@ -1,0 +1,35 @@
+import React from "react";
+import Button from "../ui/Button";
+
+export default function Footer() {
+  return (
+    <div className="flex flex-col justify-center items-center text-center px-4">
+      <div className="text-[#1a1a1a] text-[36px] leading-[120%] font-medium pb-5">
+        Start building with Safe Contracts
+      </div>
+      <div className="max-w-[496px] text-[#1a1a1a99] text-xl pb-8 leading-[150%]">
+        Explore our tools, docs, and ecosystem to build apps trusted by
+        thousands of teams
+      </div>
+      <div className="flex flex-row items-center gap-5">
+        <Button
+          variant="outline"
+          className="w-[140px] md:w-[200px] justify-center"
+        >
+          Learn
+        </Button>
+        <Button
+          variant="secondary"
+          className="w-[140px] justify-center"
+          icon="/images/smart-contracts/github.svg"
+          iconAlt="github logo"
+          iconHeight={24}
+          iconWidth={24}
+          iconPosition="left"
+        >
+          Build
+        </Button>
+      </div>
+    </div>
+  );
+}

@@ -26,23 +26,26 @@ export default function Footer() {
   return (
     <footer className="bg-[#12FF80] w-full">
       <div className="px-4 max-w-[953px] w-full text-left mx-auto pb-[60px] md:pb-[80px] pt-[60px] md:pt-[80px]">
-        <div className="text-[#1A1A1A] text-[48px] leading-[120%] md:text-[82px] pb-10 font-normal">
+        <div className="text-[#1A1A1A] text-[60px] leading-[120%] md:text-[82px] pb-10 font-normal">
           Champion Usable Self-Custody with Safe
         </div>
-        <div className="flex justify-end">
-          <a href={SAFE_DOCS_LINK} target="_blank" rel="noopener noreferrer">
-            <Button
-              className="w-full max-w-[340px] gap-8 text-lg md:text-[32px] px-5 md:px-[30px] text-[#12FF80] font-medium"
-              variant="secondary"
-              icon="/images/common/arrow-right-primary.svg"
-              iconAlt="arrow right"
-              iconHeight={24}
-              iconWidth={24}
-            >
-              Build with Safe
-            </Button>
-          </a>
-        </div>
+        <a
+          href={SAFE_DOCS_LINK}
+          className="flex justify-end"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button
+            className="w-full max-w-[340px] gap-8 text-lg md:text-[32px] px-5 md:px-[30px] text-[#12FF80] font-medium"
+            variant="secondary"
+            icon="/images/common/arrow-right-primary.svg"
+            iconAlt="arrow right"
+            iconHeight={24}
+            iconWidth={24}
+          >
+            Build with Safe
+          </Button>
+        </a>
       </div>
 
       <div className="px-4 max-w-[1400px] mx-auto flex justify-center flex-col md:flex-row gap-15 md:gap-[120px] pb-15 md:pb-[80px]">
@@ -53,7 +56,7 @@ export default function Footer() {
               href={card.href}
               target={card.openInNewTab ? "_blank" : "_self"}
               rel="noopener noreferrer"
-              className="bg-[#1a1a1a1c] rounded-[10px] p-3 flex flex-col h-fit w-[150px]"
+              className="bg-[#1a1a1a1c] rounded-[10px] p-3 flex flex-col h-fit w-full md:w-[150px]"
             >
               <Image
                 src={card.icon}
