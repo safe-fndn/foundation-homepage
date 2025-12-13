@@ -63,7 +63,7 @@ export default function SafeContracts() {
             ))}
           </div>
           <a
-            href="https://safefoundation.org/blog/safe-tokenomics"
+            href="https://docs.safe.global/home/what-is-safe"
             target="_blank"
             rel="noopener noreferrer"
           >

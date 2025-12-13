@@ -13,13 +13,19 @@ const HeroSection = () => {
           The most trusted and battle-tested smart account contracts, built for
           scale, flexibility and security
         </div>
-        <Button
-          variant="secondary"
-          className="mx-auto mt-10 md:float-left"
-          icon="/images/common/arrow-right-light.svg"
+        <a
+          href="https://docs.safe.global/home/what-is-safe"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Build on Safe
-        </Button>
+          <Button
+            variant="secondary"
+            className="mx-auto mt-10 md:float-left"
+            icon="/images/common/arrow-right-light.svg"
+          >
+            Build on Safe
+          </Button>
+        </a>
       </div>
       <div>
         <Image

@@ -12,36 +12,42 @@ const chains = [
   {
     icon: "/images/smart-contracts/arbitrum.png",
     title: "Arbitrum (coming soon)",
+    href: "",
     description:
       "Spend directly from your Safe with Gnosis Pay card infrastructure.",
   },
   {
     icon: "/images/smart-contracts/avalanche.png",
     title: "Avalanche L1 stack",
+    href: "https://build.avax.network/blog/builder-console-safe-support",
     description:
       "Spend directly from your Safe with Gnosis Pay card infrastructure.",
   },
   {
     icon: "/images/smart-contracts/op.png",
     title: "OP Stack",
+    href: "https://docs.optimism.io/chain-operators/reference/features/preinstalls",
     description:
       "Spend directly from your Safe with Gnosis Pay card infrastructure.",
   },
   {
     icon: "/images/smart-contracts/surge.png",
     title: "Surge Rollups (coming soon)",
+    href: "",
     description:
       "Spend directly from your Safe with Gnosis Pay card infrastructure.",
   },
   {
     icon: "/images/smart-contracts/zksync.png",
     title: "zkSync Elastic Chain",
+    href: "https://docs.zksync.io/zksync-protocol/era-vm/evm-interpreter/pre-deployed-contracts",
     description:
       "Spend directly from your Safe with Gnosis Pay card infrastructure.",
   },
   {
     icon: "/images/smart-contracts/custom-network.svg",
     title: "Deploy on custom network",
+    href: "https://github.com/safe-global/safe-deployments?tab=readme-ov-file#deployments-overview",
     showExternalIcon: true,
   },
 ];
@@ -56,7 +62,10 @@ export default function ChainStack() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {chains.map((feature, index) => (
-          <div
+          <a
+            href={feature.href}
+            target="_blank"
+            rel="noopener noreferrer"
             key={index}
             className="bg-[#12ff800f] cursor-pointer hover:bg-[#12ff8080] rounded-[10px] flex h-fit p-5 flex-col transition-colors duration-200 border border-transparent hover:border-[#12ff8038]"
           >
@@ -82,7 +91,7 @@ export default function ChainStack() {
             {/* <p className="text-black/[0.6] text-lg font-light leading-relaxed">
               {italicizeSafe(feature.description)}
             </p> */}
-          </div>
+          </a>
         ))}
       </div>
     </div>

@@ -4,6 +4,22 @@ import Image from "next/image";
 
 const data = [
   {
+    image: "/images/smart-contracts/brahma.png",
+    name: "Brahma",
+    tags: ["Payments", "Automation", "Accounts"],
+    desc: "Powering autonomous systems that manage capital and automate actions across chains and into the real world.",
+    twitter: "",
+    web: "",
+  },
+  {
+    image: "/images/smart-contracts/candide.png",
+    name: "Candide Lab",
+    tags: ["Passkeys", "Recovery", "Spend permissions"],
+    desc: "Developers from across the globe use Candide to build secure non-custodial safe digital wallets without the hassle of seed phrases or gas management to ultimately supercharge their user growth",
+    twitter: "",
+    web: "",
+  },
+  {
     image: "/images/smart-contracts/cometh.png",
     name: "Cometh",
     tags: ["Custody", "Onramp", "Offramp"],
@@ -46,22 +62,6 @@ const data = [
     name: "Rhinestone",
     tags: ["Crosschain Intents", "Gas sponsorship", "Session keys"],
     desc: "Rhinestone enables developers to achieve the endgame onchain UX with one simple API. Intent-powered, smart account-based.",
-    twitter: "",
-    web: "",
-  },
-  {
-    image: "/images/smart-contracts/candide.png",
-    name: "Candide Lab",
-    tags: ["Passkeys", "Recovery", "Spend permissions"],
-    desc: "Developers from across the globe use Candide to build secure non-custodial safe digital wallets without the hassle of seed phrases or gas management to ultimately supercharge their user growth",
-    twitter: "",
-    web: "",
-  },
-  {
-    image: "/images/smart-contracts/brahma.png",
-    name: "Brahma",
-    tags: ["Payments", "Automation", "Accounts"],
-    desc: "Powering autonomous systems that manage capital and automate actions across chains and into the real world.",
     twitter: "",
     web: "",
   },
