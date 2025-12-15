@@ -8,8 +8,8 @@ const data = [
     name: "BitPanda",
     tags: ["Wallet", "Yield"],
     desc: "Stablecoin first, exchange connected wallets for everyone",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/Bitpanda_global",
+    web: "https://www.bitpanda.com/en/web3/defi-wallet",
   },
   {
     image: "/images/smart-contracts/defi-saver.png",
@@ -22,8 +22,8 @@ const data = [
       "Stablecoin",
     ],
     desc: "One-stop dashboard for creating, managing and tracking your DeFi positions",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/DeFiSaver",
+    web: "https://defisaver.com/",
   },
   {
     image: "/images/smart-contracts/fileverse.png",
@@ -37,16 +37,16 @@ const data = [
       "Collaboration",
     ],
     desc: "G**gle Docs, Sheets and more in a decentralised, censorship resistant manner",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/fileverse",
+    web: "https://fileverse.io/",
   },
   {
     image: "/images/smart-contracts/fluidkey.png",
     name: "Fluidkey",
     tags: ["Privacy", "Wallet", "Yield", "IBAN"],
     desc: "Privacy first wallets through stealth addresses for crypto power users",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/fluidkey",
+    web: "https://www.fluidkey.com/",
   },
   {
     image: "/images/smart-contracts/gnosis-pay.png",
@@ -60,8 +60,8 @@ const data = [
       "IBAN",
     ],
     desc: "Spend directly from your Safe with Gnosis Pay card infrastructure",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/gnosispay",
+    web: "https://gnosispay.com",
   },
   {
     image: "/images/smart-contracts/picnic.png",
@@ -75,24 +75,24 @@ const data = [
       "Swaps",
     ],
     desc: "Web2 like experience for the Latam market",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/usePicnicBR",
+    web: "https://usepicnic.com/en",
   },
   {
     image: "/images/smart-contracts/safe-labs.png",
     name: "Safe {Wallet}",
     tags: ["Wallet", "Yield", "Enterprise"],
     desc: "Enterprise grade mutli-sig with cypherpunk values for all of Ethereum",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/safe",
+    web: "https://app.safe.global/welcome",
   },
   {
     image: "/images/smart-contracts/world.png",
     name: "World",
     tags: ["Indentity", "Wallet", "Yield"],
     desc: "Proof of personhood & universal basic income",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/worldcoin",
+    web: "https://world.org/",
   },
 ];
 
@@ -128,20 +128,24 @@ export default function BuiltLike() {
               </div>
             </div>
             <div className="flex flex-row items-center gap-2">
-              <Image
-                src="/images/smart-contracts/x.svg"
-                alt="x"
-                width={24}
-                height={24}
-                className="cursor-pointer"
-              />
-              <Image
-                src="/images/smart-contracts/web.svg"
-                alt="web"
-                width={24}
-                height={24}
-                className="cursor-pointer"
-              />
+              <a href={item.twitter} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/images/smart-contracts/x.svg"
+                  alt="x"
+                  width={24}
+                  height={24}
+                  className="cursor-pointer"
+                />
+              </a>
+              <a href={item.web} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/images/smart-contracts/web.svg"
+                  alt="web"
+                  width={24}
+                  height={24}
+                  className="cursor-pointer"
+                />
+              </a>
             </div>
           </div>
         ))}

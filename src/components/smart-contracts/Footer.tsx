@@ -12,23 +12,35 @@ export default function Footer() {
         thousands of teams
       </div>
       <div className="flex flex-row items-center gap-5">
-        <Button
-          variant="outline"
-          className="w-[140px] md:w-[200px] justify-center"
+        <a
+          href="https://docs.safe.global/resource-hub"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Learn
-        </Button>
-        <Button
-          variant="secondary"
-          className="w-[140px] justify-center"
-          icon="/images/smart-contracts/github.svg"
-          iconAlt="github logo"
-          iconHeight={24}
-          iconWidth={24}
-          iconPosition="left"
+          <Button
+            variant="outline"
+            className="w-[140px] md:w-[200px] justify-center"
+          >
+            Learn
+          </Button>
+        </a>
+        <a
+          href="https://docs.safe.global/home/what-is-safe"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Build
-        </Button>
+          <Button
+            variant="secondary"
+            className="w-[140px] justify-center"
+            icon="/images/smart-contracts/github.svg"
+            iconAlt="github logo"
+            iconHeight={24}
+            iconWidth={24}
+            iconPosition="left"
+          >
+            Build
+          </Button>
+        </a>
       </div>
     </div>
   );

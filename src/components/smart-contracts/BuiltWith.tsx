@@ -8,24 +8,24 @@ const data = [
     name: "Brahma",
     tags: ["Payments", "Automation", "Accounts"],
     desc: "Powering autonomous systems that manage capital and automate actions across chains and into the real world.",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/BrahmaFi",
+    web: "https://brahma.fi/",
   },
   {
     image: "/images/smart-contracts/candide.png",
     name: "Candide Lab",
     tags: ["Passkeys", "Recovery", "Spend permissions"],
     desc: "Developers from across the globe use Candide to build secure non-custodial safe digital wallets without the hassle of seed phrases or gas management to ultimately supercharge their user growth",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/candidelabs",
+    web: "http://candide.dev/",
   },
   {
     image: "/images/smart-contracts/cometh.png",
     name: "Cometh",
     tags: ["Custody", "Onramp", "Offramp"],
     desc: "Cometh offers a DeFi-native Banking-as-a-Service infrastructure for Europe: Full Account Abstration stack built on Safe, one API to integrate DeFi custody, staking, trading and payments.",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/Cometh",
+    web: "https://cometh.io",
   },
   // {
   //   image: "/images/smart-contracts/gnosis-pay.png",
@@ -46,32 +46,32 @@ const data = [
       "spend permissions",
     ],
     desc: "An open-source alternative to wallet infrastructure solutions. Supercharge your project with authentication, user management and payments.",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/openfort_hq",
+    web: "https://www.openfort.io",
   },
   {
     image: "/images/smart-contracts/pimlico.png",
     name: "Pimlico",
     tags: ["Bundler", "Paymaster", "Authentication"],
     desc: "Pimlico is the most advanced smart account infrastructure platform, providing developer APIs and tooling to build with smart accounts.",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/pimlicoHQ",
+    web: "https://www.pimlico.io/",
   },
   {
     image: "/images/smart-contracts/rhinestone.png",
     name: "Rhinestone",
     tags: ["Crosschain Intents", "Gas sponsorship", "Session keys"],
     desc: "Rhinestone enables developers to achieve the endgame onchain UX with one simple API. Intent-powered, smart account-based.",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/rhinestonewtf",
+    web: "https://www.rhinestone.dev/",
   },
   {
     image: "/images/smart-contracts/safe-labs.png",
     name: "Safe Labs API & SDK",
     tags: ["Self Custody", "Passkeys", "Multichain"],
     desc: "The most secure and robust tooling and infrastructure to integrate Safe Smart Account and leverage account abstraction into your product.",
-    twitter: "",
-    web: "",
+    twitter: "https://x.com/safe",
+    web: "https://safe.global",
   },
 ];
 
@@ -107,20 +107,24 @@ export default function BuiltWith() {
               </div>
             </div>
             <div className="flex flex-row items-center gap-2">
-              <Image
-                src="/images/smart-contracts/x.svg"
-                alt="x"
-                width={24}
-                height={24}
-                className="cursor-pointer"
-              />
-              <Image
-                src="/images/smart-contracts/web.svg"
-                alt="web"
-                width={24}
-                height={24}
-                className="cursor-pointer"
-              />
+              <a href={item.twitter} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/images/smart-contracts/x.svg"
+                  alt="x"
+                  width={24}
+                  height={24}
+                  className="cursor-pointer"
+                />
+              </a>
+              <a href={item.web} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/images/smart-contracts/web.svg"
+                  alt="web"
+                  width={24}
+                  height={24}
+                  className="cursor-pointer"
+                />
+              </a>
             </div>
           </div>
         ))}

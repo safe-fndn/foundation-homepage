@@ -15,7 +15,7 @@ const stats = [
     label: "Networks",
   },
   {
-    value: "56M+",
+    value: "58M+",
     label: "Accounts Deployed",
   },
 ];
