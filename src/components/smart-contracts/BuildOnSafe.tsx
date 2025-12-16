@@ -13,37 +13,37 @@ const features = [
     icon: "/images/smart-contracts/build-icon1.svg",
     title: "Native Multisig Capability",
     description:
-      "Safe contracts come with built-in multisig feature, making it easy to secure assets with multiple signers out-of-the-box",
+      "Safe contracts come with built-in multisig feature, making it easy to secure assets with multiple signers out-of-the-box.",
   },
   {
     icon: "/images/smart-contracts/build-icon2.svg",
     title: "400+ EVM Networks",
     description:
-      "Safe is one of the most widely deployed smart contracts across the EVM ecosystem, trusted across hundreds of chains",
+      "Safe is one of the most widely deployed smart contracts across the EVM ecosystem, trusted across hundreds of chains.",
   },
   {
     icon: "/images/smart-contracts/build-icon3.svg",
     title: "Modular Architecture",
     description:
-      "Customize your Safe account with optional modules and guard contracts, enabling features like spending limits, recovery, and more",
+      "Customize your Safe account with optional modules and guard contracts, enabling features like spending limits, recovery, and more.",
   },
   {
     icon: "/images/smart-contracts/build-icon4.svg",
     title: "Live Since 2019",
     description:
-      "Battle-tested over years and audited before every release. Safe has secured billions over 6+ years",
+      "Battle-tested over years and audited before every release. Safe has secured billions over 6+ years.",
   },
   {
     icon: "/images/smart-contracts/build-icon5.svg",
     title: "Formally Verified and Audited",
     description:
-      "All core contracts and key components are audited and formally verified. Safe is built for secure deployment across rollups and L1 stacks",
+      "All core contracts and key components are audited and formally verified. Safe is built for secure deployment across rollups and L1 stacks.",
   },
   {
     icon: "/images/smart-contracts/build-icon6.svg",
     title: "EVM Smart Account",
     description:
-      "Full support for modern smart account features like sponsored gas, ERC-4337, passkey logins, and more",
+      "Full support for modern smart account features like sponsored gas, ERC-4337, passkey logins, and more.",
   },
 ];
 

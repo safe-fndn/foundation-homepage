@@ -17,10 +17,10 @@ export const data = [
       "https://github.com/safe-fndn/safe-smart-account/releases/tag/v1.5.0",
   },
   {
-    label: "Latest in production",
-    value: "v1.4.0",
+    label: "Latest compatible with Safe{Wallet}",
+    value: "v1.4.1",
     externalLink:
-      "https://github.com/safe-fndn/safe-smart-account/releases/tag/v1.4.0",
+      "https://github.com/safe-fndn/safe-smart-account/releases/tag/v1.4.1",
   },
   {
     label: "Audits",

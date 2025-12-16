@@ -15,7 +15,7 @@ const data = [
     image: "/images/smart-contracts/candide.png",
     name: "Candide Lab",
     tags: ["Passkeys", "Recovery", "Spend permissions"],
-    desc: "Developers from across the globe use Candide to build secure non-custodial safe digital wallets without the hassle of seed phrases or gas management to ultimately supercharge their user growth",
+    desc: "Developers from across the globe use Candide to build secure non-custodial safe digital wallets without the hassle of seed phrases or gas management to ultimately supercharge their user growth.",
     twitter: "https://x.com/candidelabs",
     web: "http://candide.dev/",
   },
