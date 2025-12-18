@@ -102,7 +102,7 @@ export default function BuiltLike() {
       <SectionTag text="Build like:" />
       <div className="text-black/[0.6] font-light text-sm pt-2 pb-5">
         Get inspired by the best that build on the Safe smart account
-        infrastructure.
+        infrastructure
       </div>
       <div className="p-4 rounded-[16px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 bg-[#E4EDE6] justify-items-center">
         {data.map((item) => (
