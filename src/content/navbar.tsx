@@ -70,6 +70,11 @@ export const menuItems: MenuItem[] = [
     dropdown: resourcesDropdownItems,
   },
   {
+    id: "build",
+    title: "Build",
+    href: "/smart-contracts",
+  },
+  {
     id: "ventures",
     title: "Ventures",
     href: "/ventures",

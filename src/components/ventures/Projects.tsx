@@ -11,7 +11,7 @@ export default function Projects() {
     <div className="px-[16px] max-w-[1242px] mx-auto">
       <SectionTag text="Portfolio" />
       <div className="text-[#1a1a1a99] text-xl pb-[40px]">
-        Projects backed by Save Ventures
+        Projects backed by Safe Ventures
       </div>
       <div className="flex flex-row flex-wrap gap-4 md:gap-[26px]">
         {projects.map((project, index) => (

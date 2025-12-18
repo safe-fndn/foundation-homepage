@@ -19,7 +19,7 @@
     "isomorphic-dompurify": "2.26.0",
     "lodash": "4.17.21",
     "motion": "12.23.12",
-    "next": "15.4.5",
+    "next": "15.4.10",
     "next-plausible": "^3.12.4",
     "numbro": "2.5.0",
     "react": "19.1.0",
