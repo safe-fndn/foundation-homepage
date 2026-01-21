@@ -5,7 +5,11 @@ export const tokenomicsData = [
   },
   {
     label: "Contract Address",
-    value: "0x5aFE3855358E112B5647B952709E6165e1c1eEEe",
+    value: "eth:0x5aFE3855358E112B5647B952709E6165e1c1eEEe",
+  },
+  {
+    label: "Network",
+    value: "Ethereum Mainnet only",
   },
   {
     label: "Fixed Total Supply",
