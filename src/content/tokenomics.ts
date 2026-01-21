@@ -8,6 +8,10 @@ export const tokenomicsData = [
     value: "0x5aFE3855358E112B5647B952709E6165e1c1eEEe",
   },
   {
+    label: "Network",
+    value: "Ethereum Network only",
+  },
+  {
     label: "Fixed Total Supply",
     value: "1,000,000,000 (1 billion) ",
   },
