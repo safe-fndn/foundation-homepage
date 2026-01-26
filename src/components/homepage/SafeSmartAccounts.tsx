@@ -108,7 +108,7 @@ export default function SafeSmartAccounts() {
           </Button>
         </a>
         <a
-          href={`${SAFE_DOCS_LINK}/advanced/smart-account-bug-bounty`}
+          href={`${SAFE_DOCS_LINK}/bug-bounty/overview`}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full md:w-fit"
