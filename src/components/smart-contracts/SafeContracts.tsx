@@ -63,7 +63,7 @@ export default function SafeContracts() {
             ))}
           </div>
           <a
-            href="https://docs.safe.global/home/what-is-safe"
+            href={`${SAFE_DOCS_LINK}/smart-account/overview`}
             target="_blank"
             rel="noopener noreferrer"
           >
