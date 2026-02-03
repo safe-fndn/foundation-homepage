@@ -65,7 +65,7 @@ export const createStats = (data: DuneStats) =>
       d: "M551 515.5H10C4.47715 515.5 0 519.977 0 525.5V863.5C0 869.023 4.47715 873.5 10 873.5H380C385.523 873.5 390 869.023 390 863.5V713C390 707.477 394.477 703 400 703H551C556.523 703 561 698.523 561 693V525.5C561 519.977 556.523 515.5 551 515.5Z",
       fillOpacity: 0.22,
       labelPosition: { x: 20, y: 594 },
-      href: `${SAFE_DOCS_LINK}/advanced/smart-account-bug-bounty`,
+      href: `${SAFE_DOCS_LINK}/security/bug-bounty`,
     },
     {
       title: data.safesCreated.num_safes,
