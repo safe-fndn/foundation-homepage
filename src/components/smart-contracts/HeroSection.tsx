@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../ui/Button";
 import Image from "next/image";
+import { SAFE_DOCS_LINK } from "@/constants";
 
 const HeroSection = () => {
   return (
@@ -14,7 +15,7 @@ const HeroSection = () => {
           scale, flexibility and security
         </div>
         <a
-          href="https://docs.safe.global/home/what-is-safe"
+          href={SAFE_DOCS_LINK}
           target="_blank"
           rel="noopener noreferrer"
         >

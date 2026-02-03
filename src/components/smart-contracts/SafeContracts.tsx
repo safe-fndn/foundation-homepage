@@ -3,6 +3,7 @@ import SectionTag from "../ui/SectionTag";
 import Image from "next/image";
 import Button from "../ui/Button";
 import { cn } from "@/lib/utils";
+import { SAFE_DOCS_LINK } from "@/constants";
 
 export const data = [
   {
@@ -63,7 +64,7 @@ export default function SafeContracts() {
             ))}
           </div>
           <a
-            href="https://docs.safe.global/home/what-is-safe"
+            href={SAFE_DOCS_LINK}
             target="_blank"
             rel="noopener noreferrer"
           >

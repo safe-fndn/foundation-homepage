@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../ui/Button";
+import { SAFE_DOCS_LINK } from "@/constants";
 
 export default function Footer() {
   return (
@@ -25,7 +26,7 @@ export default function Footer() {
           </Button>
         </a>
         <a
-          href="https://docs.safe.global/home/what-is-safe"
+          href={SAFE_DOCS_LINK}
           target="_blank"
           rel="noopener noreferrer"
         >
