@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { CookieBanner } from "@/components/Cookie";
 import PlausibleProvider from "next-plausible";
 
 const defaultMetaTags = {
@@ -58,7 +57,6 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         {children}
-        <CookieBanner />
       </body>
     </html>
   );

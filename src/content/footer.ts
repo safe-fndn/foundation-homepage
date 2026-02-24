@@ -44,8 +44,6 @@ export const socialLinks = [
 export const legalLinks = [
   { name: "Terms", href: "/terms" },
   { name: "Privacy", href: "/privacy" },
-  { name: "Cookie Policy", href: "/cookie" },
-  { name: "Preferences", href: "#" },
   { name: "Imprint", href: "/imprint" },
   { name: "Trademark", href: "/trademark" },
   { name: "Disclaimer", href: "/disclaimer" },
