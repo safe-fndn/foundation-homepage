@@ -33,6 +33,13 @@ const resourcesDropdownItems: DropdownItem[] = [
     icon: "/images/navbar/blog.svg",
     href: "/blog",
   },
+  {
+    name: "Forum",
+    icon: "/images/navbar/chat.svg",
+    href: "https://forum.safefoundation.org/",
+    target: "_blank",
+    rel: "noopener noreferrer",
+  },
   // {
   //   name: "Careers",
   //   icon: "/images/navbar/career.svg",
