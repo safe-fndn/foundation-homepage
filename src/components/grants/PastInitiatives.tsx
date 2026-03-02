@@ -45,15 +45,15 @@ const initiatives: Initiative[] = [
     status: "ongoing",
     description:
       "Since launch, Safe's bug bounty program has paid out rewards to security researchers who identified vulnerabilities in Safe smart contracts. The program has been a critical part of Safe's security posture and continues today.",
-    stats: "6 bounties paid · $41,500 in rewards",
+    stats: "Up to $1M up for grabs · 6 bounties worth $41,500 paid out",
     links: [
       {
         label: "Bug Bounty Program",
-        href: "https://docs.safefoundation.org/security/bug-bounty",
+        href: "https://docs.safefoundation.org/security/bug-bounty?utm_source=foundation-homepage",
       },
       {
         label: "Past Bounties",
-        href: "https://docs.safefoundation.org/security/past-bounties",
+        href: "https://docs.safefoundation.org/security/past-bounties?utm_source=foundation-homepage",
       },
     ],
   },
@@ -63,7 +63,7 @@ const initiatives: Initiative[] = [
     status: "ongoing",
     description:
       "The Foundation sponsors prizes and mentorship at major Ethereum hackathons including ETHGlobal events, and runs its own online hackathons to encourage developers to build on Safe smart accounts. Hackathons have helped onboard new builders and led to several projects that later received full grants.",
-    stats: null,
+    stats: "100+ winner teams · $250K prizes distributed",
     links: [
       {
         label: "March for Account Abstraction",
@@ -81,7 +81,7 @@ const initiatives: Initiative[] = [
     status: "concluded",
     description:
       "The Foundation funded the development of the Ethereum Gas Station Network, an open protocol enabling gasless meta-transactions. GSN lets users interact with dApps without holding ETH for gas, removing a major onboarding barrier.",
-    stats: null,
+    stats: "$250K gas credits available",
     links: [
       {
         label: "Read the blog post",
@@ -103,7 +103,7 @@ const initiatives: Initiative[] = [
 export default function PastInitiatives() {
   return (
     <div className="px-[16px] max-w-[1242px] mx-auto">
-      <SectionTag text="Past Initiatives" />
+      <SectionTag text="All Initiatives" />
       <div className="text-[#1a1a1a99] text-xl max-w-[800px] mt-4 mb-[60px] leading-[150%]">
         Since its founding, the Safe Ecosystem Foundation — alongside SafeDAO —
         has supported the ecosystem through a variety of funding mechanisms.
