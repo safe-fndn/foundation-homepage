@@ -4,6 +4,7 @@ import React from "react";
 import SectionTag from "../ui/SectionTag";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
+import { SAFE_STATS } from "@/constants";
 
 const statsData = [
   {
@@ -11,11 +12,11 @@ const statsData = [
     cards: [
       {
         label: "Total Volume Processed",
-        value: "$1T+",
+        value: SAFE_STATS.TRANSFER_VOLUME,
       },
       {
         label: "Safe accounts deployed",
-        value: "59.9M",
+        value: SAFE_STATS.ACCOUNTS,
       },
     ],
   },
@@ -24,11 +25,11 @@ const statsData = [
     cards: [
       {
         label: "Total Transactions",
-        value: "800M+",
+        value: SAFE_STATS.TOTAL_TRANSACTIONS,
       },
       {
         label: "Ecosystem",
-        value: "200+ Apps",
+        value: SAFE_STATS.ECOSYSTEM_APPS,
       },
     ],
   },
@@ -37,11 +38,11 @@ const statsData = [
     cards: [
       {
         label: "Value Stored",
-        value: "$41.7B",
+        value: SAFE_STATS.TOTAL_VALUE_LOCKED,
       },
       {
         label: "Fundraised",
-        value: "$100M",
+        value: SAFE_STATS.FUNDRAISED,
       },
     ],
   },
