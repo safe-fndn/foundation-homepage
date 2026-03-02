@@ -130,6 +130,11 @@ export default function PastInitiatives() {
                   Paused
                 </span>
               )}
+              {initiative.status === "ongoing" && (
+                <span className="shrink-0 text-xs font-medium text-[#166534] bg-[#dcfce7] rounded-full px-3 py-1">
+                  Ongoing
+                </span>
+              )}
             </div>
             <div className="text-[#1a1a1a66] text-sm pb-4">
               {initiative.period}
