@@ -30,6 +30,7 @@ export const navigationCards = [
 export const companyLinks = [
   { name: "Home", href: "/" },
   { name: "Blog", href: "/blog" },
+  { name: "Grants", href: "/grants" },
   { name: "Brand", href: "https://press.safefoundation.org" },
 ];
 

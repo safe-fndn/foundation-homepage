@@ -34,6 +34,11 @@ const resourcesDropdownItems: DropdownItem[] = [
     href: "/blog",
   },
   {
+    name: "Grants",
+    icon: "/images/navbar/grants.svg",
+    href: "/grants",
+  },
+  {
     name: "Forum",
     icon: "/images/navbar/chat.svg",
     href: "https://forum.safefoundation.org/",
