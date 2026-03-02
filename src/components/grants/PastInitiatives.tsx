@@ -1,7 +1,9 @@
 import React from "react";
+import Image from "next/image";
 import SectionTag from "../ui/SectionTag";
 
 type Initiative = {
+  icon: string;
   title: string;
   period: string;
   status: "concluded" | "paused" | "ongoing";
@@ -12,6 +14,7 @@ type Initiative = {
 
 const initiatives: Initiative[] = [
   {
+    icon: "/images/smart-contracts/build-icon1.svg",
     title: "SafeDAO Grants Program — Wave 1",
     period: "Concluded (Aug 2023 – Jan 2024)",
     status: "concluded",
@@ -26,6 +29,7 @@ const initiatives: Initiative[] = [
     ],
   },
   {
+    icon: "/images/smart-contracts/build-icon5.svg",
     title: "SafeDAO OBRA",
     period: "Temporarily paused",
     status: "paused",
@@ -40,6 +44,7 @@ const initiatives: Initiative[] = [
     ],
   },
   {
+    icon: "/images/smart-contracts/build-icon4.svg",
     title: "Bug Bounty Payouts",
     period: "Ongoing",
     status: "ongoing",
@@ -58,6 +63,7 @@ const initiatives: Initiative[] = [
     ],
   },
   {
+    icon: "/images/smart-contracts/build-icon3.svg",
     title: "Hackathons",
     period: "Ongoing",
     status: "ongoing",
@@ -76,11 +82,12 @@ const initiatives: Initiative[] = [
     ],
   },
   {
-    title: "Safe Gas Station Program",
+    icon: "/images/smart-contracts/build-icon2.svg",
+    title: "Safe{Core} Gas Station",
     period: "Concluded",
     status: "concluded",
     description:
-      "The Foundation funded the development of the Ethereum Gas Station Network, an open protocol enabling gasless meta-transactions. GSN lets users interact with dApps without holding ETH for gas, removing a major onboarding barrier.",
+      "The Safe{Core} Gas Station provided developers with free gas credits across Polygon and Gnosis Chain to sponsor user transaction fees through ERC-4337 paymasters, reducing barriers for early-stage developers building gasless applications.",
     stats: "$250K gas credits available",
     links: [
       {
@@ -90,13 +97,19 @@ const initiatives: Initiative[] = [
     ],
   },
   {
+    icon: "/images/smart-contracts/build-icon6.svg",
     title: "Other Ecosystem Funding",
     period: "Ongoing",
     status: "ongoing",
     description:
       "Beyond formal programs, the Foundation has provided ad-hoc funding for ecosystem needs including developer tooling, audit grants, documentation efforts, and community initiatives.",
     stats: null,
-    links: [],
+    links: [
+      {
+        label: "Apply for spontaneous grant",
+        href: "mailto:grants@safefoundation.org",
+      },
+    ],
   },
 ];
 
@@ -116,6 +129,13 @@ export default function PastInitiatives() {
             key={index}
             className="bg-[#12ff800f] rounded-[16px] p-8 flex flex-col"
           >
+            <Image
+              src={initiative.icon}
+              alt={initiative.title}
+              width={60}
+              height={60}
+              className="mb-5"
+            />
             <div className="flex items-start justify-between gap-4 pb-2">
               <div className="text-[#1A1A1A] text-xl font-medium">
                 {initiative.title}
