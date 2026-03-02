@@ -5,8 +5,13 @@ export const SAFE_DOCS_LINK = "https://docs.safefoundation.org";
 export const GOVERNANCE_HUB_LINK = "https://gov.safefoundation.org";
 export const AUDITS_LINK = "https://audits.safefoundation.org";
 
-export const FALLBACK_STATS = {
-  TOTAL_VALUE_LOCKED: "$60B+",
-  SAFES_CREATED: "50M+",
+export const SAFE_STATS = {
   TRANSFER_VOLUME: "$1T+",
+  TOTAL_VALUE_LOCKED: "$41.7B",
+  ACCOUNTS: "59.9M",
+  NETWORKS: "300+",
+  AUDITS: "18+",
+  TOTAL_TRANSACTIONS: "800M+",
+  ECOSYSTEM_APPS: "200+ Apps",
+  FUNDRAISED: "$100M",
 } as const;
