@@ -4,16 +4,11 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import SectionTag from "../ui/SectionTag";
 import { createStats } from "@/content/impact";
-import { DuneStats } from "@/lib/fetchStats";
 import { useResponsive } from "@/hooks/useResponsive";
 
-interface ImpactProps {
-  statsData: DuneStats;
-}
-
-export default function Impact({ statsData }: ImpactProps) {
+export default function Impact() {
   const [hoveredStat, setHoveredStat] = useState<string | null>(null);
-  const stats = createStats(statsData);
+  const stats = createStats();
   const { isMobile } = useResponsive();
 
   return (

@@ -1,10 +1,9 @@
 import { SAFE_DOCS_LINK } from "@/constants";
-import { DuneStats } from "@/lib/fetchStats";
 
-export const createStats = (data: DuneStats) =>
+export const createStats = () =>
   [
     {
-      title: data.transferVolume.cumulative_transfer_volume,
+      title: "$1T+",
       subtitle: "Total Volume Processed",
       descComponent: () => (
         <foreignObject x="20" y="380" width="360" height="100">
@@ -19,7 +18,7 @@ export const createStats = (data: DuneStats) =>
       href: "https://dune.com/safe/all",
     },
     {
-      title: data.totalValueLocked.total_balance_usd,
+      title: "$41.7B",
       subtitle: "Total Value Locked",
       descComponent: () => (
         <foreignObject x="392" y="192" width="400" height="80">
@@ -68,7 +67,7 @@ export const createStats = (data: DuneStats) =>
       href: `${SAFE_DOCS_LINK}/security/bug-bounty`,
     },
     {
-      title: data.safesCreated.num_safes,
+      title: "59.9M",
       subtitle: "Accounts",
       descComponent: () => (
         <foreignObject x="612" y="662" width="300" height="100">
