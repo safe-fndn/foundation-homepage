@@ -29,6 +29,11 @@ const communityDropdownItems: DropdownItem[] = [
 
 const resourcesDropdownItems: DropdownItem[] = [
   {
+    name: "About",
+    icon: "/images/navbar/about.svg",
+    href: "/about",
+  },
+  {
     name: "Blog",
     icon: "/images/navbar/blog.svg",
     href: "/blog",
