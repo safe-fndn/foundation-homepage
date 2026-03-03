@@ -9,11 +9,11 @@ import {
 const features = [
   {
     title: "Community-Adopted Constitution",
-    desc: "The SafeDAO Constitution (SEP-4) was adopted by the community in 2023, defining the mission, goals, and principles that guide the Foundation.",
+    desc: "The SafeDAO Constitution (SEP-4) was adopted by the community in 2023, defining the mission, goals, and principles that guide the Safe DAO and impact the Foundation.",
   },
   {
     title: "OBRA",
-    desc: "The Onchain Budget & Resource Allocation (OBRA) framework enables the DAO to allocate budgets and resources to initiatives through transparent, onchain governance processes.",
+    desc: "The Onchain Budget & Resource Allocation (OBRA) framework enables the Safe DAO to allocate budgets and resources to initiatives through transparent, onchain governance processes.",
   },
   {
     title: "DAO Commissions",
@@ -32,9 +32,9 @@ export default function CommunityGovernance() {
     <div className="px-[16px] max-w-[1242px] mx-auto">
       <SectionTag text="Community Governance" />
       <p className="text-[#1a1a1a99] text-base md:text-lg mt-3 font-light max-w-[700px]">
-        The SafeDAO provides SAFE token holders with formal participation rights
-        in the governance of the Foundation, ensuring community voice in
-        strategic decisions.
+        The SafeDAO provides SAFE token holders with participation rights in the
+        governance of the Safe Ecosystem, ensuring community voice in strategic
+        decisions.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-[40px] md:mt-[60px]">

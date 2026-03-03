@@ -4,8 +4,6 @@ import WhatAreSafeAccounts from "@/components/about/WhatAreSafeAccounts";
 import EcosystemImpact from "@/components/about/EcosystemImpact";
 import FoundationCouncil from "@/components/about/FoundationCouncil";
 // import ExecutiveManagement from "@/components/about/ExecutiveManagement";
-import GovernanceFramework from "@/components/about/GovernanceFramework";
-
 import CommunityGovernance from "@/components/about/CommunityGovernance";
 
 import AuditorAuthority from "@/components/about/AuditorAuthority";
@@ -37,9 +35,6 @@ export default function About() {
       {/* <div className="pt-[60px] md:pt-[100px]">
         <ExecutiveManagement />
       </div> */}
-      <div className="pt-[100px] md:pt-[160px]">
-        <GovernanceFramework />
-      </div>
       <div className="pt-[100px] md:pt-[160px]">
         <CommunityGovernance />
       </div>
