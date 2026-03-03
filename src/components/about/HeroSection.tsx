@@ -8,11 +8,11 @@ export default function HeroSection() {
           Advancing open-source technology for secure digital asset management
         </h1>
         <p className="text-[#1a1a1acc] text-xl md:text-2xl leading-[140%] mt-5 md:mt-8 max-w-[800px] font-light">
-          The Safe Ecosystem Foundation is a Swiss foundation based in Zug,
-          dedicated to developing, promoting, and making publicly accessible
-          open-source technology for secure digital asset management. Safe Smart
-          Accounts are the most widely used infrastructure of their kind in the
-          Ethereum ecosystem, securing digital assets worth billions of dollars.
+          The Safe Ecosystem Foundation is a non-profit Swiss foundation based
+          in Zug, dedicated to developing and making accessible open-source
+          technology for secure digital asset management. Safe Smart Accounts
+          are the most widely used infrastructure of their kind on Ethereum,
+          securing over $60B in digital assets across hundreds of networks.
         </p>
       </div>
       <div className="hidden md:block absolute right-0 top-0 bottom-0 w-[50%] opacity-70">

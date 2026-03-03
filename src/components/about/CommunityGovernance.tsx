@@ -21,7 +21,7 @@ const features = [
   },
   {
     title: "On-Chain Governance",
-    desc: "Governance decisions via Snapshot can be executed onchain without active support of the foundation, as happened for the token transferability proposal.",
+    desc: "Governance decisions via Snapshot can be executed onchain without active support of the Foundation, as demonstrated by the SAFE token transferability proposal.",
     href: SEP22_LINK,
     linkText: "View SEP-22",
   },

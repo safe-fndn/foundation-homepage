@@ -5,21 +5,21 @@ const councilMembers = [
     name: "Lukas Schor",
     role: "President of the Foundation Council",
     description:
-      "Founder of the Safe Ecosystem Foundation and leader of its strategic direction since inception. Lukas spearheaded the development of the Safe ecosystem from its Gnosis spin-off to an independent foundation. Under his leadership, Safe reached significant milestones including over $60B in total value secured and market leadership in smart accounts.",
+      "Co-founder of Safe and President of the Safe Ecosystem Foundation since its inception. Lukas led the development of the Safe ecosystem from its Gnosis spin-off to an independent foundation, and under his leadership Safe has grown to secure over $60B in digital assets and become the market leader in smart account infrastructure.",
     expertise: "Ecosystem Growth, Operations",
   },
   {
     name: "Stefan George",
     role: "Vice President of the Foundation Council",
     description:
-      "Co-founder of Gnosis (2015) and author of the original multi-signature wallet code (2017) that evolved into Safe. Stefan brings strategic vision and a long-term perspective in digital asset security, self-custody, and Ethereum infrastructure. He is widely recognized in the early Ethereum community, DAOs, and infrastructure projects.",
+      "Co-founder of Gnosis (2015) and author of the original multi-signature wallet code (2017) that evolved into Safe. Stefan brings deep expertise in digital asset security, self-custody, and Ethereum infrastructure, and is a recognized figure in the Ethereum community, DAOs, and decentralized infrastructure projects.",
     expertise: "Business Strategy, Technical",
   },
   {
     name: "Richard Meissner",
     role: "Member of the Foundation Council",
     description:
-      "Co-founder of Safe and author of the original Safe smart contracts. Richard is the most experienced maintainer of the smart contract codebase and leads the Safe Research initiative. He brings comprehensive insight spanning contracts, product, and infrastructure, along with strong ties to the Ethereum security community and audit networks.",
+      "Co-founder of Safe and author of the Safe smart contracts in use today. Richard is the most experienced maintainer of the core codebase and leads the Safe Research initiative. He has deep expertise spanning contracts, protocol design, and infrastructure, with strong connections to the Ethereum security and audit community.",
     expertise: "Technical, Protocol",
   },
 ];

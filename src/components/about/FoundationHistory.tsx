@@ -4,7 +4,7 @@ const milestones = [
   {
     year: "2018",
     title: "Gnosis Safe Launches",
-    desc: "Safe begins as an open-source project within Gnosis, establishing the foundation for secure digital asset management.",
+    desc: "Safe launches as an open-source project within Gnosis, laying the groundwork for programmable, secure digital asset management.",
   },
   {
     year: "2022",
@@ -19,12 +19,12 @@ const milestones = [
   {
     year: "2024",
     title: "SAFE Token Transferability",
-    desc: "SAFE Token transferability enabled, marking a key milestone for the ecosystem.",
+    desc: "SAFE token transferability approved via onchain governance, opening the door to broader ecosystem participation and decentralized coordination.",
   },
   {
     year: "2024",
     title: "Hecate Ventures AG Established",
-    desc: "Hecate Ventures AG founded as a subsidiary to manage the foundation\u2019s treasury and related activities.",
+    desc: "Hecate Ventures AG established as a subsidiary to manage the foundation\u2019s treasury and investment activities.",
   },
   {
     year: "2025",
