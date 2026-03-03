@@ -13,9 +13,9 @@ import FoundationHistory from "@/components/about/FoundationHistory";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | Safe Ecosystem Foundation",
+  title: "About | Safe Ecosystem Foundation",
   description:
-    "The Safe Ecosystem Foundation is a Swiss foundation dedicated to advancing open-source technology for secure digital asset management.",
+    "The Safe Ecosystem Foundation is a non-profit Swiss foundation advancing open-source technology for secure digital asset management, securing over $60B across hundreds of networks.",
 };
 
 export default function About() {

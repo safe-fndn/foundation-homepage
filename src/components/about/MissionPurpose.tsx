@@ -3,7 +3,7 @@ import SectionTag from "../ui/SectionTag";
 const strategicPillars = [
   {
     title: "Foster a Vibrant Ecosystem",
-    desc: "Supporting projects and teams that build on Safe infrastructure to expand the ecosystem.",
+    desc: "Supporting projects and teams building on Safe infrastructure to grow a thriving, diverse ecosystem.",
   },
   {
     title: "Resilience Through Decentralization",
@@ -18,7 +18,7 @@ const strategicPillars = [
 const foundationPurpose = [
   {
     title: "Technology Development",
-    desc: "Managing and advancing Safe technology to ensure security, reliability, and innovation.",
+    desc: "Developing and maintaining Safe technology to ensure security, reliability, and ongoing innovation.",
   },
   {
     title: "Ecosystem Applications",
