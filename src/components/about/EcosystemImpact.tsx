@@ -4,12 +4,14 @@ const stats = [
   {
     value: "50M+",
     label: "Deployed Smart Accounts",
-    source: "Dune Analytics",
+    href: "https://dune.com/safe/all",
+    linkText: "Dune Analytics",
   },
   {
     value: "$60B+",
     label: "Total Value Secured",
-    source: "Dune Analytics",
+    href: "https://dune.com/safe/all",
+    linkText: "Dune Analytics",
   },
   {
     value: "12+",
@@ -22,8 +24,6 @@ const stats = [
   {
     value: "250+",
     label: "Teams Funded",
-    href: "/grants",
-    linkText: "View grants program",
   },
 ];
 
@@ -42,11 +42,6 @@ export default function EcosystemImpact() {
               <div className="text-[#1A1A1A] text-base md:text-lg leading-[140%] mt-2">
                 {stat.label}
               </div>
-              {stat.source && (
-                <div className="text-[#1a1a1a66] text-sm mt-1 font-light">
-                  {stat.source}
-                </div>
-              )}
               {stat.href && (
                 <a
                   href={stat.href}

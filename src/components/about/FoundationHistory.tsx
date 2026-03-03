@@ -52,7 +52,7 @@ export default function FoundationHistory() {
               <div className="hidden md:block absolute left-[-4px] top-1 w-[9px] h-[9px] rounded-full bg-[#12FF80]" />
 
               <div className="flex flex-col md:flex-row md:gap-8">
-                <div className="text-[#12FF80] text-2xl md:text-3xl font-medium shrink-0 md:w-[80px]">
+                <div className="text-[#1A1A1A] text-2xl md:text-3xl font-medium shrink-0 md:w-[80px]">
                   {milestone.year}
                 </div>
                 <div className={index < milestones.length - 1 ? "border-b border-[#1a1a1a1a] pb-8 md:border-0 md:pb-0" : ""}>

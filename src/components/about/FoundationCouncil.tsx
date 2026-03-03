@@ -40,7 +40,7 @@ export default function FoundationCouncil() {
             <div className="text-[#1A1A1A] text-xl md:text-2xl leading-[120%]">
               {member.name}
             </div>
-            <div className="text-[#12FF80] text-base mt-1 font-medium">
+            <div className="text-[#1A1A1A] text-base mt-1 font-medium">
               {member.role}
             </div>
             <p className="text-[#1a1a1a99] text-base leading-[150%] mt-3 font-light">
