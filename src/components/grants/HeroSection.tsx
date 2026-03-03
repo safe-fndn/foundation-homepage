@@ -1,12 +1,20 @@
 import React from "react";
-import { WarpDitherCanvas } from "../WrapDitherCanvas";
 import Button from "../ui/Button";
 import { GRANTS_EMAIL } from "@/constants";
 
 const HeroSection = () => {
   return (
     <div className="relative w-full h-full flex justify-center items-center">
-      <WarpDitherCanvas />
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 block"
+        style={{ width: "100%", height: "75%", objectFit: "cover" }}
+      >
+        <source src="/videos/dthr-export.mp4" type="video/mp4" />
+      </video>
       <div
         className="absolute bottom-0 left-0 right-0 h-full pointer-events-none"
         style={{
