@@ -48,4 +48,5 @@ export const legalLinks = [
   { name: "Imprint", href: "/imprint" },
   { name: "Trademark", href: "/trademark" },
   { name: "Disclaimer", href: "/disclaimer" },
+  { name: "MiCA Whitepaper", href: "/docs/whitepaper.xlsx" },
 ];
