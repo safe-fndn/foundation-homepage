@@ -31,11 +31,6 @@ const milestones = [
     title: "Safe Labs Established",
     desc: "Safe Labs founded as a for-profit subsidiary to commercialize Safe technology and drive enterprise adoption.",
   },
-  {
-    year: "2026",
-    title: "Safenet Launch",
-    desc: "Launch of Safenet, driving further ecosystem growth and infrastructure expansion.",
-  },
 ];
 
 export default function FoundationHistory() {
