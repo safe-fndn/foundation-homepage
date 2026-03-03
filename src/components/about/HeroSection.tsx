@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 export default function HeroSection() {
@@ -19,7 +18,7 @@ export default function HeroSection() {
       <div className="hidden md:block absolute right-0 top-0 bottom-0 w-[50%] opacity-70">
         <Image
           src="/images/about/hero.png"
-          alt=""
+          alt="Swiss mountain landscape"
           fill
           className="object-cover object-center"
           priority

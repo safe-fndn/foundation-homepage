@@ -1,4 +1,3 @@
-import React from "react";
 import SectionTag from "../ui/SectionTag";
 
 const strategicPillars = [

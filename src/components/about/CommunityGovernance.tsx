@@ -1,6 +1,10 @@
-import React from "react";
 import SectionTag from "../ui/SectionTag";
 import Button from "../ui/Button";
+import {
+  SAFEDAO_FORUM_LINK,
+  SNAPSHOT_LINK,
+  SEP22_LINK,
+} from "@/constants";
 
 const features = [
   {
@@ -18,7 +22,7 @@ const features = [
   {
     title: "On-Chain Governance",
     desc: "Governance decisions via Snapshot can be executed onchain without active support of the foundation, as happened for the token transferability proposal.",
-    href: "https://forum.safe.global/t/sep-22-unpause-safe-token-contract-enabling-transferability/4892",
+    href: SEP22_LINK,
     linkText: "View SEP-22",
   },
 ];
@@ -61,14 +65,14 @@ export default function CommunityGovernance() {
 
       <div className="flex flex-wrap gap-3 mt-8">
         <a
-          href="https://forum.safe.global"
+          href={SAFEDAO_FORUM_LINK}
           target="_blank"
           rel="noopener noreferrer"
         >
           <Button variant="outline">SafeDAO Forum</Button>
         </a>
         <a
-          href="https://snapshot.box/#/s:safe.eth"
+          href={SNAPSHOT_LINK}
           target="_blank"
           rel="noopener noreferrer"
         >

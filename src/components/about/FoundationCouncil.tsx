@@ -1,11 +1,9 @@
-import React from "react";
 import SectionTag from "../ui/SectionTag";
 
 const councilMembers = [
   {
     name: "Lukas Schor",
     role: "President of the Foundation Council",
-    since: "Member since founding (2022)",
     description:
       "Founder of the Safe Ecosystem Foundation and leader of its strategic direction since inception. Lukas spearheaded the development of the Safe ecosystem from its Gnosis spin-off to an independent foundation. Under his leadership, Safe reached significant milestones including over $60B in total value secured and market leadership in smart accounts.",
     expertise: "Ecosystem Growth, Operations",
@@ -13,7 +11,6 @@ const councilMembers = [
   {
     name: "Stefan George",
     role: "Vice President of the Foundation Council",
-    since: "Member since founding (2022)",
     description:
       "Co-founder of Gnosis (2015) and author of the original multi-signature wallet code (2017) that evolved into Safe. Stefan brings strategic vision and a long-term perspective in digital asset security, self-custody, and Ethereum infrastructure. He is widely recognized in the early Ethereum community, DAOs, and infrastructure projects.",
     expertise: "Business Strategy, Technical",
@@ -21,7 +18,6 @@ const councilMembers = [
   {
     name: "Richard Meissner",
     role: "Member of the Foundation Council",
-    since: "Member since February 2026",
     description:
       "Co-founder of Safe and author of the original Safe smart contracts. Richard is the most experienced maintainer of the smart contract codebase and leads the Safe Research initiative. He brings comprehensive insight spanning contracts, product, and infrastructure, along with strong ties to the Ethereum security community and audit networks.",
     expertise: "Technical, Protocol",

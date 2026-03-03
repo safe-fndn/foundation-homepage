@@ -22,7 +22,7 @@ export default function About() {
   return (
     <div>
       <HeroSection />
-      <div className="pt-15 md:pt-[160px]">
+      <div className="pt-[60px] md:pt-[160px]">
         <MissionPurpose />
       </div>
       <div className="pt-[100px] md:pt-[160px]">

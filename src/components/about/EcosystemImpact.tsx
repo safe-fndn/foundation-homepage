@@ -1,6 +1,4 @@
-import React from "react";
 import SectionTag from "../ui/SectionTag";
-
 
 const stats = [
   {
@@ -52,8 +50,7 @@ export default function EcosystemImpact() {
               {stat.href && (
                 <a
                   href={stat.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...(stat.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="text-[#1a1a1a99] text-sm mt-1 font-light underline hover:text-[#1A1A1A]"
                 >
                   {stat.linkText}
