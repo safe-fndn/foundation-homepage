@@ -27,6 +27,19 @@ const communityDropdownItems: DropdownItem[] = [
   },
 ];
 
+const fundingDropdownItems: DropdownItem[] = [
+  {
+    name: "Grants",
+    icon: "/images/navbar/grants.svg",
+    href: "/grants",
+  },
+  {
+    name: "Ventures",
+    icon: "/images/navbar/ventures.svg",
+    href: "/ventures",
+  },
+];
+
 const resourcesDropdownItems: DropdownItem[] = [
   {
     name: "About",
@@ -87,9 +100,9 @@ export const menuItems: MenuItem[] = [
     href: "/smart-contracts",
   },
   {
-    id: "ventures",
-    title: "Ventures",
-    href: "/ventures",
+    id: "funding",
+    title: "Funding",
+    dropdown: fundingDropdownItems,
   },
   {
     id: "research",
