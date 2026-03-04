@@ -1,0 +1,4 @@
+# Sensitive config files — require admin (code owner) review
+package.json         @lukasschor @rmeissner
+pnpm-lock.yaml       @lukasschor @rmeissner
+.github/workflows/   @lukasschor @rmeissner

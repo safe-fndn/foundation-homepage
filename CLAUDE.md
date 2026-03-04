@@ -72,10 +72,25 @@ public/images/        # Static images organized by page/section
 - **Static export**: Build uses `output: "export"` — all dynamic routes need `generateStaticParams()`
 
 ## Git Workflow
+- **No direct pushes to `main`** — all changes must go through a pull request
 - Feature branches should be named `feat/<feature-name>`
 - Push feature branches directly to `safe-fndn/foundation-homepage` for automatic Cloudflare preview deployments
 - Create PRs from `feat/*` → `main` within the main repo
 - To release: create a PR from `main` → `release` (include staging link https://main.foundation-homepage.pages.dev/ in PR description for reviewers)
+- **Merge strategy**: Squash merge only — keeps a clean, linear commit history
+- **Branches are auto-deleted** after merge
+
+## Pull Request Conventions
+- **Approvals**: PRs → `main` require **1 approval**; PRs `main` → `release` require **2 approvals**
+- Stale approvals are dismissed when new commits are pushed
+- **Big changes should be split into smaller, focused PRs** — easier to review, less risk per merge
+- **Every PR description must start with a Motivation section** explaining *why* the change exists (not just *what* changed). This can be a short paragraph or a link to a Notion page / GitHub issue. This context is preserved in git history via squash merge and is critical for understanding decisions later.
+- Use the PR template (`.github/PULL_REQUEST_TEMPLATE.md`) which enforces: Motivation, Changes, and Screenshots sections
+- Do not leave commented-out code in PRs — either include it or remove it (git history preserves deleted code)
+
+## Code Ownership
+- Changes to `package.json`, `pnpm-lock.yaml`, and `.github/workflows/` require approval from a code owner (see `.github/CODEOWNERS`)
+- Code owners: @lukasschor, @rmeissner
 
 ## Contentful Build Notes
 - Blog pages require Contentful credentials to build successfully
