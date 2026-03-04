@@ -3,9 +3,7 @@ import MissionPurpose from "@/components/about/MissionPurpose";
 import WhatAreSafeAccounts from "@/components/about/WhatAreSafeAccounts";
 import EcosystemImpact from "@/components/about/EcosystemImpact";
 import FoundationCouncil from "@/components/about/FoundationCouncil";
-// import ExecutiveManagement from "@/components/about/ExecutiveManagement";
 import CommunityGovernance from "@/components/about/CommunityGovernance";
-
 import AuditorAuthority from "@/components/about/AuditorAuthority";
 import FoundationHistory from "@/components/about/FoundationHistory";
 import type { Metadata } from "next";
@@ -32,9 +30,6 @@ export default function About() {
       <div className="pt-[100px] md:pt-[160px]">
         <FoundationCouncil />
       </div>
-      {/* <div className="pt-[60px] md:pt-[100px]">
-        <ExecutiveManagement />
-      </div> */}
       <div className="pt-[100px] md:pt-[160px]">
         <CommunityGovernance />
       </div>
