@@ -2,9 +2,17 @@
 
 ## Releasing a new version
 
-The `release` branch is automatically released to `safefoundation.org`. To update the branch it is required to create a [pull request](https://github.com/safe-global/foundation-homepage/compare/release...main) that merges the latest changes from `main` to `release`. This PR has to be approved by a user with write access to this repo.
+The `release` branch is automatically released to `safefoundation.org`. To update the branch it is required to create a [pull request](https://github.com/safe-fndn/foundation-homepage/compare/release...main) that merges the latest changes from `main` to `release`. This PR has to be approved by a user with write access to this repo.
 
-To trigger a re-release of the current state it is possible to trigger the release flow in the [Actions](https://github.com/safe-global/foundation-homepage/actions/workflows/release.yml) section of this repository. This will also be automatically triggered twice a day.
+To trigger a re-release of the current state it is possible to trigger the release flow in the [Actions](https://github.com/safe-fndn/foundation-homepage/actions/workflows/release.yml) section of this repository. This will also be automatically triggered twice a day.
+
+## Staging
+
+Every push to `main` triggers a Cloudflare Pages deployment to the staging environment:
+
+**Staging URL**: https://main.foundation-homepage.pages.dev/
+
+Use this to verify changes before creating a release PR. Deployment status can be tracked in the [Actions tab](https://github.com/safe-fndn/foundation-homepage/actions/workflows/feature-previews.yml).
 
 ## Getting started with development
 
