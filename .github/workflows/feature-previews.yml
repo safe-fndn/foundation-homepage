@@ -5,9 +5,6 @@ on:
   # The main branch is used as our staging environment
   push:
     branches: ["feat/*", "main"]
-  # Build check for PRs targeting release
-  pull_request:
-    branches: ["release"]
 
 jobs:
   # Build job
@@ -58,9 +55,8 @@ jobs:
           name: homepage-bundle
           path: ./out
 
-  # Deployment job (only on push, not on PRs)
+  # Deployment job
   deploy:
-    if: github.event_name == 'push'
     environment:
       name: feature-previews
     runs-on: ubuntu-latest

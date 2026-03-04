@@ -65,7 +65,8 @@ public/images/        # Static images organized by page/section
 - `Navbar` / `Footer` — Site-wide navigation
 
 ## Deployment & Previews
-- **Production**: Pushes to `main` trigger Cloudflare Pages deployment
+- **Production** (`safefoundation.org`): The `release` branch is deployed via `.github/workflows/release.yml` (also auto-triggered twice daily)
+- **Staging**: https://main.foundation-homepage.pages.dev/ — every push to `main` auto-deploys here
 - **Feature previews**: Pushes to `feat/*` branches trigger preview deployments (requires `feature-previews` environment with Contentful and Cloudflare secrets)
 - **Workflow file**: `.github/workflows/feature-previews.yml` (line 1 `name:` is commented out but workflow is functional)
 - **Static export**: Build uses `output: "export"` — all dynamic routes need `generateStaticParams()`
@@ -74,6 +75,7 @@ public/images/        # Static images organized by page/section
 - Feature branches should be named `feat/<feature-name>`
 - Push feature branches directly to `safe-fndn/foundation-homepage` for automatic Cloudflare preview deployments
 - Create PRs from `feat/*` → `main` within the main repo
+- To release: create a PR from `main` → `release` (include staging link https://main.foundation-homepage.pages.dev/ in PR description for reviewers)
 
 ## Contentful Build Notes
 - Blog pages require Contentful credentials to build successfully
