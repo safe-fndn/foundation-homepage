@@ -27,7 +27,25 @@ const communityDropdownItems: DropdownItem[] = [
   },
 ];
 
+const fundingDropdownItems: DropdownItem[] = [
+  {
+    name: "Grants",
+    icon: "/images/navbar/grants.svg",
+    href: "/grants",
+  },
+  {
+    name: "Ventures",
+    icon: "/images/navbar/ventures.svg",
+    href: "/ventures",
+  },
+];
+
 const resourcesDropdownItems: DropdownItem[] = [
+  {
+    name: "About",
+    icon: "/images/navbar/about.svg",
+    href: "/about",
+  },
   {
     name: "Blog",
     icon: "/images/navbar/blog.svg",
@@ -82,9 +100,9 @@ export const menuItems: MenuItem[] = [
     href: "/smart-contracts",
   },
   {
-    id: "ventures",
-    title: "Ventures",
-    href: "/ventures",
+    id: "funding",
+    title: "Funding",
+    dropdown: fundingDropdownItems,
   },
   {
     id: "research",

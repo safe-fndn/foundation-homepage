@@ -1,9 +1,9 @@
-import { SAFE_DOCS_LINK } from "@/constants";
+import { SAFE_DOCS_LINK, SAFE_STATS } from "@/constants";
 
 export const createStats = () =>
   [
     {
-      title: "$1T+",
+      title: SAFE_STATS.TRANSFER_VOLUME,
       subtitle: "Total Volume Processed",
       descComponent: () => (
         <foreignObject x="20" y="380" width="360" height="100">
@@ -18,7 +18,7 @@ export const createStats = () =>
       href: "https://dune.com/safe/all",
     },
     {
-      title: "$41.7B",
+      title: SAFE_STATS.TOTAL_VALUE_LOCKED,
       subtitle: "Total Value Locked",
       descComponent: () => (
         <foreignObject x="392" y="192" width="400" height="80">
@@ -34,7 +34,7 @@ export const createStats = () =>
       href: "https://dune.com/safe/all",
     },
     {
-      title: "300+",
+      title: SAFE_STATS.NETWORKS,
       subtitle: "Networks Supported",
       descComponent: () => (
         <image
@@ -51,7 +51,7 @@ export const createStats = () =>
       href: "https://github.com/safe-global/safe-deployments/tree/main/src/assets",
     },
     {
-      title: "18+",
+      title: SAFE_STATS.AUDITS,
       subtitle: "Audits",
       descComponent: () => (
         <foreignObject x="20" y="750" width="355" height="124">
@@ -67,7 +67,7 @@ export const createStats = () =>
       href: `${SAFE_DOCS_LINK}/security/bug-bounty`,
     },
     {
-      title: "59.9M",
+      title: SAFE_STATS.ACCOUNTS,
       subtitle: "Accounts",
       descComponent: () => (
         <foreignObject x="612" y="662" width="300" height="100">
