@@ -25,6 +25,13 @@ const communityDropdownItems: DropdownItem[] = [
     icon: "/images/navbar/safe-token.svg",
     href: "/token",
   },
+  {
+    name: "Forum",
+    icon: "/images/navbar/chat.svg",
+    href: "https://forum.safefoundation.org/",
+    target: "_blank",
+    rel: "noopener noreferrer",
+  },
 ];
 
 const fundingDropdownItems: DropdownItem[] = [
@@ -50,13 +57,6 @@ const resourcesDropdownItems: DropdownItem[] = [
     name: "Blog",
     icon: "/images/navbar/blog.svg",
     href: "/blog",
-  },
-  {
-    name: "Forum",
-    icon: "/images/navbar/chat.svg",
-    href: "https://forum.safefoundation.org/",
-    target: "_blank",
-    rel: "noopener noreferrer",
   },
   // {
   //   name: "Careers",
