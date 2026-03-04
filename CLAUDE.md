@@ -79,11 +79,16 @@ public/images/        # Static images organized by page/section
 - **Branches are auto-deleted** after merge
 
 ## Pull Request Conventions
-- PRs require **at least 1 approval** before merging
+- **Approvals**: PRs → `main` require **1 approval**; PRs `main` → `release` require **2 approvals**
 - Stale approvals are dismissed when new commits are pushed
+- **Big changes should be split into smaller, focused PRs** — easier to review, less risk per merge
 - **Every PR description must start with a Motivation section** explaining *why* the change exists (not just *what* changed). This can be a short paragraph or a link to a Notion page / GitHub issue. This context is preserved in git history via squash merge and is critical for understanding decisions later.
 - Use the PR template (`.github/PULL_REQUEST_TEMPLATE.md`) which enforces: Motivation, Changes, and Screenshots sections
 - Do not leave commented-out code in PRs — either include it or remove it (git history preserves deleted code)
+
+## Code Ownership
+- Changes to `package.json`, `pnpm-lock.yaml`, and `.github/workflows/` require approval from a code owner (see `.github/CODEOWNERS`)
+- Code owners: @lukasschor, @rmeissner
 
 ## Contentful Build Notes
 - Blog pages require Contentful credentials to build successfully
