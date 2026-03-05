@@ -509,17 +509,24 @@ export const LOOKING_AHEAD: LookingAheadItem[] = [
 export const LETTER_TO_BACKERS = {
   greeting: "To our backers and stakeholders,",
   paragraphs: [
-    "Welcome to the Safe Ecosystem Foundation\u2019s inaugural public quarterly report. It is only fitting that we begin here, as Q1 2026 was defined by a series of transformative \u201cfirsts.\u201d Beyond this debut publication, the quarter saw us cross $10 million in annualized recurring revenue and surpass 60 million accounts secured on the protocol. What once began as a security primitive has evolved into one of the foundational layers of the onchain economy.",
-    "The numbers from Q1 tell a clear story. ETH-denominated transaction volume grew 35% quarter over quarter. More than 109 million transactions settled through Safe. In that same period, 1.49 million new Safe accounts were created.",
-    "Across the globe, the conversation around ownership is shifting. The question of who ultimately controls onchain assets, and under what conditions, is no longer theoretical. It is being debated in boardrooms, regulatory circles, and among everyday users who increasingly understand the tradeoffs of custodial systems.",
-    "Smart accounts are emerging as the architecture that makes this possible at scale. Today, Safe secures more value than any other protocol in DeFi, and roughly 2% of all stablecoins in existence are held in Safe accounts.",
-    "What I am most proud of from Q1 is the work happening across the Safe teams — Safe Labs, Foundation, Safe Research, Ventures and Hecate — and the wider ecosystem. The past quarter was defined by progress on our vision to make self-custody easy and secure.",
-    "Safe Labs introduced a euro-denominated savings product, the first institutional offering of its kind, alongside an upgraded API suite and new chain deployments. Safe Research advanced Safenet from testnet into Beta. Across internal teams and partners, more than 35 product and ecosystem updates were shipped collectively.",
+    "Welcome to the Safe Ecosystem Foundation\u2019s inaugural public quarterly report. It is only fitting that we begin here, as Q1 2026 was defined by a series of transformative \u201cfirsts.\u201d Beyond this debut publication, the quarter saw us cross $10 million in annualized recurring revenue and surpass 60 million accounts on the protocol. What once began as a security primitive has evolved into a foundational layer of the onchain economy.",
+    "The numbers from Q1 tell a clear story. ETH-denominated transaction volume grew 35% quarter-over-quarter. More than 109 million transactions have been settled through Safe. In that same period, 1.49 million new Safe accounts were created.",
+    "But numbers alone rarely explain why something is happening.",
+    "Across the globe, the conversation around ownership is shifting. The question of who ultimately controls assets, and under what conditions, is no longer theoretical. It is being debated in boardrooms, regulatory circles, and among everyday users who increasingly understand the tradeoffs of custodial systems.",
+    "Self-custody is moving from the edges of the ecosystem toward the center.",
+    "Smart accounts are emerging as the architecture that makes this possible at scale. Today, Safe secures more value than any other protocol in DeFi, and roughly 2% of all stablecoins in existence are held in Safe accounts. As digital assets become part of the global financial infrastructure, the systems responsible for safeguarding those assets will matter enormously.",
+    "GDP will move onchain, and a meaningful share of it will move through smart accounts.",
+    "What I am most proud of from Q1, however, is the work happening across the Safe teams (Safe Labs, Foundation, Safe Research, Ventures, and Hecate) and the wider ecosystem. The past quarter was defined by progress toward our vision of making self-custody easy and secure.",
+    "Safe Labs introduced a euro-denominated savings product, the first institutional offering of its kind, alongside an upgraded API suite and new chain deployments. Safe Research advanced Safenet from testnet into Beta, a major step toward a new layer of coordination for the Safe ecosystem. Across internal teams and partners, more than 35 product and ecosystem updates were shipped collectively. This kind of progress is easy to overlook when looking only at metrics, but it is the foundation that makes those metrics possible.",
+    "Safe has always been more than a single product. It is an ecosystem of developers, researchers, companies, and contributors working toward a shared vision of smarter self-custody. Seeing that the ecosystem continues to grow and ship at this pace is one of the clearest signals of long-term strength.",
+    "It was a strong quarter for the Safe onchain economy, and we are encouraged to see many ecosystem products gaining real traction.",
+    "Looking ahead, we believe 2026 could be one of the most important years yet for crypto. The roadmap ahead reflects that ambition.",
     "Safenet is moving toward public launch. Subscription and usage-based pricing across the Safe Labs product suite will go live. Both are in their final stages of development, and we look forward to sharing progress on each in the coming quarters.",
     "The long-term target remains clear: $100 million in ARR by 2030. The work happening across the ecosystem today is what will make that possible.",
+    "We are glad you are here for this.",
   ],
   signature: "Lukas Schor",
-  signatureTitle: "Co-Founder, Safe · President, Safe Ecosystem Foundation",
+  signatureTitle: "Co-Founder, Safe \u00b7 President, Safe Ecosystem Foundation",
 };
 
 // ---------------------------------------------------------------------------
