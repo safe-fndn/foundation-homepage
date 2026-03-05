@@ -12,6 +12,7 @@ import {
   Tooltip,
   Legend,
   Filler,
+  type TooltipItem,
 } from "chart.js";
 import { Bar, Line } from "react-chartjs-2";
 import DataToggle from "./DataToggle";
@@ -94,7 +95,7 @@ function NtvpChart() {
       tooltip: {
         ...baseChartOptions.plugins.tooltip,
         callbacks: {
-          label: (ctx: { parsed: { y: number } }) => ` ${ctx.parsed.y.toFixed(2)}K ETH`,
+          label: (ctx: TooltipItem<"line">) => ` ${(ctx.parsed as {y: number}).y.toFixed(2)}K ETH`,
         },
       },
     },
@@ -169,7 +170,7 @@ function TvlChart() {
       tooltip: {
         ...baseChartOptions.plugins.tooltip,
         callbacks: {
-          label: (ctx: { parsed: { y: number } }) => ` $${ctx.parsed.y.toFixed(2)}B`,
+          label: (ctx: TooltipItem<"line">) => ` $${(ctx.parsed as {y: number}).y.toFixed(2)}B`,
         },
       },
     },
@@ -242,8 +243,8 @@ function AccountsChart() {
       tooltip: {
         ...baseChartOptions.plugins.tooltip,
         callbacks: {
-          label: (ctx: { dataset: { label: string }; parsed: { y: number } }) =>
-            ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(0)}K`,
+          label: (ctx: TooltipItem<"bar">) =>
+            ` ${ctx.dataset.label}: ${(ctx.parsed as {y: number}).y.toFixed(0)}K`,
         },
       },
     },
@@ -313,7 +314,7 @@ function TransactionsChart() {
       tooltip: {
         ...baseChartOptions.plugins.tooltip,
         callbacks: {
-          label: (ctx: { parsed: { y: number } }) => ` ${ctx.parsed.y.toFixed(1)}M transactions`,
+          label: (ctx: TooltipItem<"bar">) => ` ${(ctx.parsed as {y: number}).y.toFixed(1)}M transactions`,
         },
       },
     },

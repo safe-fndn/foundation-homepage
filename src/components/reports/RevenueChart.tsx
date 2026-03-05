@@ -9,6 +9,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  type TooltipItem,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import DataToggle from "./DataToggle";
@@ -78,8 +79,8 @@ export default function RevenueChart() {
         padding: 12,
         cornerRadius: 8,
         callbacks: {
-          label: (ctx: { dataset: { label: string }; parsed: { y: number } }) =>
-            ` ${ctx.dataset.label}: $${ctx.parsed.y}K`,
+          label: (ctx: TooltipItem<"bar">) =>
+            ` ${ctx.dataset.label}: $${(ctx.parsed as {y: number}).y}K`,
         },
       },
     },
