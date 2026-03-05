@@ -509,7 +509,7 @@ export const LOOKING_AHEAD: LookingAheadItem[] = [
 export const LETTER_TO_BACKERS = {
   greeting: "To our backers and stakeholders,",
   paragraphs: [
-    "Welcome to the Safe Ecosystem Foundation\u2019s inaugural public quarterly report. It is only fitting that we begin here, as Q1 2026 was defined by a series of transformative \u201cfirsts.\u201d Beyond this debut publication, the quarter saw us cross $10 million in annualized recurring revenue and surpass 60 million accounts on the protocol. What once began as a security primitive has evolved into a foundational layer of the onchain economy.",
+    "Welcome to the Safe Ecosystem Foundation\u2019s inaugural public quarterly report. It is only fitting that we begin here, as Q1 2026 was defined by a series of transformative \"firsts.\" Beyond this debut publication, the quarter saw us cross $10 million in annualized recurring revenue and surpass 60 million accounts on the protocol. What once began as a security primitive has evolved into a foundational layer of the onchain economy.",
     "The numbers from Q1 tell a clear story. ETH-denominated transaction volume grew 35% quarter-over-quarter. More than 109 million transactions have been settled through Safe. In that same period, 1.49 million new Safe accounts were created.",
     "But numbers alone rarely explain why something is happening.",
     "Across the globe, the conversation around ownership is shifting. The question of who ultimately controls assets, and under what conditions, is no longer theoretical. It is being debated in boardrooms, regulatory circles, and among everyday users who increasingly understand the tradeoffs of custodial systems.",
