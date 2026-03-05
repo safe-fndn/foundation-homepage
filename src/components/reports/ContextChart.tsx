@@ -8,6 +8,7 @@ import {
   BarElement,
   Title,
   Tooltip,
+  type TooltipItem,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import DataToggle from "./DataToggle";
@@ -52,7 +53,7 @@ export default function ContextChart() {
         padding: 12,
         cornerRadius: 8,
         callbacks: {
-          label: (ctx: { parsed: { x: number } }) => ` $${ctx.parsed.x.toFixed(1)}B TVL`,
+          label: (ctx: TooltipItem<"bar">) => ` $${(ctx.parsed as {x: number}).x.toFixed(1)}B TVL`,
         },
       },
     },
