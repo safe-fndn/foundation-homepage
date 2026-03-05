@@ -133,7 +133,7 @@ export default function ContextChart() {
         </div>
       </div>
       <p className="text-xs text-[#1A1A1A66]">
-        Source: DeFiLlama. Benchmarks as of Q1 2026 close. Safe's TVL includes all assets in Safe accounts; Aave and Lido are listed protocols.
+        Source: DeFiLlama. Benchmarks as of Q1 2026 close. Safe&apos;s TVL includes all assets in Safe accounts; Aave and Lido are listed protocols.
       </p>
     </div>
   );
