@@ -32,6 +32,7 @@ export const companyLinks = [
   { name: "About", href: "/about" },
   { name: "Blog", href: "/blog" },
   { name: "Grants", href: "/grants" },
+  { name: "Reports", href: "/reports/q1-2026" },
   { name: "Brand", href: "https://press.safefoundation.org" },
 ];
 

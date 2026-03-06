@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { Caveat } from "next/font/google";
 import "./globals.css";
 import PlausibleProvider from "next-plausible";
+
+const caveat = Caveat({ subsets: ["latin"] });
 
 const defaultMetaTags = {
   pageTitle: "Safe",
