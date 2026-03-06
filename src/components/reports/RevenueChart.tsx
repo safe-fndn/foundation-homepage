@@ -128,9 +128,9 @@ export default function RevenueChart() {
     <div className="bg-white border border-[#E5E5E5] rounded-2xl p-5 md:p-6 flex flex-col gap-6">
       {/* Header */}
       <div className="flex flex-wrap items-start justify-between gap-3">
-        <div>
-          <div className="text-base font-medium text-[#1A1A1A]">Revenue by Stream</div>
-          <div className="text-sm text-[#1A1A1A66]">Monthly breakdown across Foundation, Safe Labs, and Hecate from Jun 2025 to Mar 2026 (grey = prior months, full color = Q1)</div>
+        <div className="flex-1">
+          <h3 className="text-lg md:text-xl font-medium text-[#1A1A1A] leading-tight mb-1">Q1 2026 Revenue Totalled ~$2.5M, Down 16% Q/Q</h3>
+          <div className="text-xs text-[#1A1A1A66]">Breakdown across Foundation, Safe Labs, and Hecate. Jun 2025 to Mar 2026; grey = prior months, full color = Q1 2026</div>
         </div>
         <DataToggle view={view} onChange={setView} />
       </div>

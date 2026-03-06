@@ -112,8 +112,6 @@ export default function Q1ReportPage() {
       <ReportSectionWrapper
         id="revenue"
         tag="Financial Performance"
-        title="Q1 2026 revenue totalled approximately $2.5M, down 16% Q/Q."
-        subtitle="Breakdown across Foundation, Safe Labs, and Hecate. Q4 2025 included a non-recurring performance event."
         className="bg-white"
       >
         <RevenueChart />
