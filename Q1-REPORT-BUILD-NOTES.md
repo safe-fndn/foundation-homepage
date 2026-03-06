@@ -132,6 +132,37 @@ March data is a projection. The `isProjection: boolean` field on `ProtocolMonth`
 
 ---
 
+## Data Structure Evolution: Quarterly to Monthly
+
+**Initial Approach (Discarded):** Charts were originally designed as 3-point quarterly view:
+- Q3 2025 (single entry, grey)
+- Q4 2025 (single entry, grey)  
+- Q1 2026 (three months Jan/Feb/Mar, green)
+
+**Problem Identified:** "Charts with only 3 points are rather pointless" (Lukas feedback). The sparse visualization was not compelling for investor communication.
+
+**Final Implementation (Current):** Restructured to 10-point monthly view:
+- **Prior Period (Jun-Dec 2025):** 7 months of context showing market conditions leading into Q1
+- **Current Quarter (Jan-Mar 2026):** Q1 metrics
+
+**Data Structure Details:**
+- All PROTOCOL_METRICS and REVENUE data stored as `.months` array with 10 entries
+- Indices 0-6 represent Jun-Dec 2025 (prior context, grey/muted colors)
+- Indices 7-9 represent Jan-Mar 2026 (current quarter, full color saturation)
+
+**Color Differentiation Implementation:**
+In `ProtocolMetricsChart.tsx`, `RevenueChart.tsx`, and all chart components:
+```ts
+const color = i < 7 ? MUTED_GREY : SAFE_GREEN;  // Grey prior months, full color Q1
+```
+
+**Rationale:** Monthly granularity matches reporting frequency and creates visually interesting charts with sufficient data density. Prior period context (Jun-Dec) provides continuity without overwhelming the current quarter focus. The color legend is explicitly stated in chart descriptions: *"(grey = prior months, full color = Q1)"*.
+
+**Chart Descriptions Updated:** All chart components now reference the full timeframe:
+- "Jun 2025 to Mar 2026 (grey = prior months, full color = Q1)"
+
+---
+
 ## How to Update for Q2
 
 1. Duplicate `q1-2026-data.ts` → `q2-2026-data.ts` (or update in place if you want a single file)
