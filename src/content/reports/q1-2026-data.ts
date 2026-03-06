@@ -65,6 +65,7 @@ export interface Milestone {
   date: string;
   title: string;
   body: string;
+  icon?: string;
 }
 
 export interface TeamUpdateItem {
@@ -178,19 +179,22 @@ export const HEADLINE_KPIS: KPI[] = [
 
 export const MILESTONES: Milestone[] = [
   {
-    date: "February 2026",
+    date: "Feb",
     title: "$10M ARR",
     body: "Safe announced $10 million in annualised recurring revenue — a milestone three years in the making from a commercial model built from zero in 2022. The stated target is $100M ARR by 2030.",
+    icon: "mdi:cash-multiple",
   },
   {
-    date: "March 2026",
+    date: "Mar",
     title: "60 Million Safes",
     body: "The Safe protocol crossed 60 million cumulative accounts across all supported chains.",
+    icon: "mdi:shield-check",
   },
   {
-    date: "February 25, 2026",
+    date: "Feb",
     title: "EURCV Euro Savings Live",
     body: "The first institutional euro stablecoin savings product built on Safe, powered by Morpho and Steakhouse, available to Safe{Wallet} users.",
+    icon: "mdi:piggy-bank",
   },
 ];
 
