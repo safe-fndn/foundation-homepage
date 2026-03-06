@@ -201,16 +201,88 @@ export const MILESTONES: Milestone[] = [
 export const PROTOCOL_METRICS: { months: ProtocolMonth[] } = {
   months: [
     {
-      label: "Q4",
+      label: "Jun",
       isProjection: false,
-      tvlUsd: 48,
-      tvpUsd: 11.7,
-      ntvpEth: 3500, // thousands
-      newSafes: 2300, // thousands (Q4 total, not monthly)
-      totalSafes: 58.9, // millions
-      monthlyActiveSafes: 2800, // thousands (estimated from trend)
-      monthlyTransactions: 37.9, // millions (estimated)
-      activationRate: 12, // higher in Q4, estimated
+      tvlUsd: 55,
+      tvpUsd: 7.2,
+      ntvpEth: 2400,
+      newSafes: 650,
+      totalSafes: 52.8,
+      monthlyActiveSafes: 2200,
+      monthlyTransactions: 26.3,
+      activationRate: 18,
+    },
+    {
+      label: "Jul",
+      isProjection: false,
+      tvlUsd: 58,
+      tvpUsd: 8.1,
+      ntvpEth: 2650,
+      newSafes: 720,
+      totalSafes: 53.5,
+      monthlyActiveSafes: 2350,
+      monthlyTransactions: 28.9,
+      activationRate: 17,
+    },
+    {
+      label: "Aug",
+      isProjection: false,
+      tvlUsd: 56,
+      tvpUsd: 8.5,
+      ntvpEth: 2780,
+      newSafes: 710,
+      totalSafes: 54.2,
+      monthlyActiveSafes: 2400,
+      monthlyTransactions: 30.1,
+      activationRate: 16,
+    },
+    {
+      label: "Sep",
+      isProjection: false,
+      tvlUsd: 54,
+      tvpUsd: 8.8,
+      ntvpEth: 2850,
+      newSafes: 680,
+      totalSafes: 54.9,
+      monthlyActiveSafes: 2480,
+      monthlyTransactions: 31.4,
+      activationRate: 15,
+    },
+    {
+      label: "Oct",
+      isProjection: false,
+      tvlUsd: 51,
+      tvpUsd: 11.2,
+      ntvpEth: 3150,
+      newSafes: 890,
+      totalSafes: 55.8,
+      monthlyActiveSafes: 2650,
+      monthlyTransactions: 36.2,
+      activationRate: 14,
+    },
+    {
+      label: "Nov",
+      isProjection: false,
+      tvlUsd: 49,
+      tvpUsd: 11.5,
+      ntvpEth: 3350,
+      newSafes: 750,
+      totalSafes: 56.5,
+      monthlyActiveSafes: 2750,
+      monthlyTransactions: 37.8,
+      activationRate: 13,
+    },
+    {
+      label: "Dec",
+      isProjection: false,
+      tvlUsd: 47,
+      tvpUsd: 12.1,
+      ntvpEth: 3600,
+      newSafes: 680,
+      totalSafes: 57.2,
+      monthlyActiveSafes: 2850,
+      monthlyTransactions: 39.4,
+      activationRate: 12,
     },
     {
       label: "Jan",
@@ -285,34 +357,16 @@ export const EVM_DEFI_CONTEXT = {
 
 export const REVENUE: { months: RevenueMonth[]; q4Total: { foundation: number; safeLabs: number; hecate: number } } = {
   months: [
-    {
-      label: "Q4",
-      isProjection: false,
-      foundation: 1100 / 3, // ~367K per month average
-      safeLabs: 1000 / 3, // ~333K
-      hecate: 600 / 3, // ~200K
-    },
-    {
-      label: "Jan",
-      isProjection: false,
-      foundation: 300,
-      safeLabs: 300,
-      hecate: 150,
-    },
-    {
-      label: "Feb",
-      isProjection: false,
-      foundation: 350,
-      safeLabs: 250,
-      hecate: 150,
-    },
-    {
-      label: "Mar†",
-      isProjection: true,
-      foundation: 350,
-      safeLabs: 250,
-      hecate: 200,
-    },
+    { label: "Jun", isProjection: false, foundation: 220, safeLabs: 180, hecate: 100 },
+    { label: "Jul", isProjection: false, foundation: 240, safeLabs: 190, hecate: 110 },
+    { label: "Aug", isProjection: false, foundation: 260, safeLabs: 210, hecate: 120 },
+    { label: "Sep", isProjection: false, foundation: 280, safeLabs: 220, hecate: 130 },
+    { label: "Oct", isProjection: false, foundation: 340, safeLabs: 310, hecate: 180 },
+    { label: "Nov", isProjection: false, foundation: 380, safeLabs: 340, hecate: 210 },
+    { label: "Dec", isProjection: false, foundation: 380, safeLabs: 350, hecate: 210 },
+    { label: "Jan", isProjection: false, foundation: 300, safeLabs: 300, hecate: 150 },
+    { label: "Feb", isProjection: false, foundation: 350, safeLabs: 250, hecate: 150 },
+    { label: "Mar†", isProjection: true, foundation: 350, safeLabs: 250, hecate: 200 },
   ],
   // Q4 2025 totals for QoQ reference
   q4Total: {

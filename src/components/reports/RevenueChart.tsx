@@ -33,9 +33,9 @@ export default function RevenueChart() {
   const labels = REVENUE.months.map((m) => m.label);
   
   // Color Q4 bars muted (grey), Q1 bars at full saturation (green/dark)
-  const foundationColors = REVENUE.months.map((_, i) => (i === 0 ? "#12ff8060" : SAFE_GREEN));
-  const labsColors = REVENUE.months.map((_, i) => (i === 0 ? "#1a1a1a30" : "#1A1A1A"));
-  const hecateColors = REVENUE.months.map((_, i) => (i === 0 ? "#1a1a1a20" : "#1a1a1a50"));
+  const foundationColors = REVENUE.months.map((_, i) => (i < 7 ? "#12ff8060" : SAFE_GREEN)); // Jun-Dec muted; Jan-Mar full green
+  const labsColors = REVENUE.months.map((_, i) => (i < 7 ? "#1a1a1a30" : "#1A1A1A")); // Jun-Dec muted; Jan-Mar full dark
+  const hecateColors = REVENUE.months.map((_, i) => (i < 7 ? "#1a1a1a20" : "#1a1a1a50")); // Jun-Dec lighter; Jan-Mar darker
 
   const data = {
     labels,
@@ -130,7 +130,7 @@ export default function RevenueChart() {
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <div className="text-base font-medium text-[#1A1A1A]">Revenue by Stream</div>
-          <div className="text-sm text-[#1A1A1A66]">Monthly breakdown across Foundation, Safe Labs, and Hecate — prior quarter vs Q1 2026 (grey = Q4, full color = Q1)</div>
+          <div className="text-sm text-[#1A1A1A66]">Monthly breakdown across Foundation, Safe Labs, and Hecate from Jun 2025 to Mar 2026 (grey = prior months, full color = Q1)</div>
         </div>
         <DataToggle view={view} onChange={setView} />
       </div>
