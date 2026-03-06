@@ -113,9 +113,9 @@ function NtvpChart() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <div>
-          <div className="text-base font-medium text-[#1A1A1A]">Transaction Volume (nTVP)</div>
-          <div className="text-sm text-[#1A1A1A66]">Monthly ETH-denominated throughput — Jun 2025 to Mar 2026 (grey = prior months, green = Q1)</div>
+        <div className="flex-1">
+          <h3 className="text-lg md:text-xl font-medium text-[#1A1A1A] leading-tight mb-1">nTVP Grew 35% — Transaction Volume Surged to 4.75M ETH</h3>
+          <div className="text-xs text-[#1A1A1A66]">Monthly ETH-denominated throughput. Jun 2025 to Mar 2026; grey = prior months, green = Q1 2026</div>
         </div>
         <DataToggle view={view} onChange={setView} />
       </div>
@@ -189,9 +189,9 @@ function TvlChart() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <div>
-          <div className="text-base font-medium text-[#1A1A1A]">Total Value Locked (TVL)</div>
-          <div className="text-sm text-[#1A1A1A66]">USD value of assets in Safe accounts — Jun 2025 to Mar 2026 (grey = prior months, dark = Q1)</div>
+        <div className="flex-1">
+          <h3 className="text-lg md:text-xl font-medium text-[#1A1A1A] leading-tight mb-1">TVL Softened to ~$33.8B — Yet Remains Infrastructure-Leading</h3>
+          <div className="text-xs text-[#1A1A1A66]">USD value of assets in Safe accounts. Jun 2025 to Mar 2026; grey = prior months, dark = Q1 2026</div>
         </div>
         <DataToggle view={view} onChange={setView} />
       </div>
@@ -265,9 +265,9 @@ function AccountsChart() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <div>
-          <div className="text-base font-medium text-[#1A1A1A]">Account Activity</div>
-          <div className="text-sm text-[#1A1A1A66]">New Safes created and monthly active Safes — Jun 2025 to Mar 2026 (grey = prior months, green = Q1)</div>
+        <div className="flex-1">
+          <h3 className="text-lg md:text-xl font-medium text-[#1A1A1A] leading-tight mb-1">60 Million Safes Created — Activation Rate Remains Strong</h3>
+          <div className="text-xs text-[#1A1A1A66]">New Safes created and monthly active Safes. Jun 2025 to Mar 2026; grey = prior months, green = Q1 2026</div>
         </div>
         <DataToggle view={view} onChange={setView} />
       </div>
@@ -340,9 +340,9 @@ function TransactionsChart() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <div>
-          <div className="text-base font-medium text-[#1A1A1A]">Monthly Transactions</div>
-          <div className="text-sm text-[#1A1A1A66]">Transactions settled through Safe — Jun 2025 to Mar 2026 (grey = prior months, green = Q1)</div>
+        <div className="flex-1">
+          <h3 className="text-lg md:text-xl font-medium text-[#1A1A1A] leading-tight mb-1">Transactions Grew Through Q1 — Safe Captured Protocol Growth</h3>
+          <div className="text-xs text-[#1A1A1A66]">Transactions settled through Safe. Jun 2025 to Mar 2026; grey = prior months, green = Q1 2026</div>
         </div>
         <DataToggle view={view} onChange={setView} />
       </div>

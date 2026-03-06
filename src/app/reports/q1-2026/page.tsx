@@ -97,13 +97,13 @@ export default function Q1ReportPage() {
         <ProtocolMetricsChart />
       </ReportSectionWrapper>
 
-      {/* ── Safe in Context ── */}
+      {/* ── Safe in Context (Subsection) ── */}
       <ReportSectionWrapper
         id="context"
-        tag="Safe in Context"
+        tag="Within Protocol Metrics"
         title="Infrastructure beneath DeFi"
         subtitle="At ~$33.8B, Safe's TVL at Q1 close exceeds Aave and Lido individually. Safe is not a protocol within DeFi — it is infrastructure beneath much of it."
-        className="bg-[#F5F5F5]"
+        className="bg-[#F5F5F5] py-12 md:py-16 border-t border-[#12FF80]/20"
       >
         <ContextChart />
       </ReportSectionWrapper>
