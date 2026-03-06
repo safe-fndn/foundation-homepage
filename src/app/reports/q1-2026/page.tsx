@@ -69,7 +69,6 @@ export default function Q1ReportPage() {
       {/* ── Letter to Backers ── */}
       <ReportSectionWrapper
         id="letter"
-        tag="Inaugural Report"
         title="Letter to Backers"
         className="bg-white"
       >
