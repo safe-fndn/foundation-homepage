@@ -30,15 +30,15 @@ export default function MetricCard({ kpi, index = 0, className }: MetricCardProp
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
       className={cn(
-        "relative bg-white border border-[#E5E5E5] rounded-2xl p-5 md:p-6 flex flex-col gap-4",
-        "hover:border-[#12ff8060] hover:shadow-[0_0_0_1px_#12ff8020] transition-all duration-200",
-        "focus-within:border-[#12FF80] focus-within:ring-2 focus-within:ring-[#12FF80] focus-within:ring-offset-2",
+        "relative bg-transparent rounded-xl p-3 flex flex-col gap-3",
+        "hover:shadow-[0_0_12px_rgba(18,255,128,0.3)] transition-all duration-300 ease-out",
+        "focus-within:ring-2 focus-within:ring-[#12FF80] focus-within:ring-offset-2",
         className
       )}
     >
       {/* Header row */}
       <div className="flex items-start justify-between gap-2">
-        <span className="text-sm font-medium text-[#1A1A1A99]">{kpi.label}</span>
+        <span className="text-xs font-medium text-[#1A1A1A99]">{kpi.label}</span>
 
         {/* Info toggle */}
         <button
@@ -62,7 +62,7 @@ export default function MetricCard({ kpi, index = 0, className }: MetricCardProp
           initial={{ opacity: 0, y: -4 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -4 }}
-          className="text-xs text-[#1A1A1A99] bg-[#F5F5F5] rounded-lg p-3 -mt-2"
+          className="text-[10px] text-[#1A1A1A99] bg-[#F5F5F5] rounded-lg p-2 -mt-2"
           role="tooltip"
         >
           {kpi.description}
@@ -71,17 +71,17 @@ export default function MetricCard({ kpi, index = 0, className }: MetricCardProp
 
       {/* Value */}
       <div>
-        <div className="text-[32px] md:text-[36px] font-medium text-[#1A1A1A] leading-none tracking-tight">
+        <div className="text-[28px] md:text-[32px] font-medium text-[#1A1A1A] leading-none tracking-tight">
           {kpi.value}
         </div>
         {kpi.unit && (
-          <div className="text-xs text-[#1A1A1A66] mt-1">{kpi.unit}</div>
+          <div className="text-[10px] text-[#1A1A1A66] mt-1">{kpi.unit}</div>
         )}
       </div>
 
       {/* Delta + Sparkline */}
       <div className="flex items-center justify-between gap-2">
-        <span className={cn("inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-full", deltaColor)}>
+        <span className={cn("inline-flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-full", deltaColor)}>
           {deltaIcon} {kpi.delta} vs Q4
         </span>
         {kpi.sparkline && (

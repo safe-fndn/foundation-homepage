@@ -49,13 +49,14 @@ export default function ReportHero() {
             transition={{ duration: 0.45, delay: 0.05 }}
             className="max-w-[860px]"
           >
-            <h1 className="text-[36px] md:text-[60px] font-medium leading-[1.1] tracking-tight text-[#1A1A1A] mb-4">
+            <h1 className="text-[36px] md:text-[60px] font-medium leading-[1.1] tracking-tight text-[#1A1A1A] mb-4"
+              style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.15)' }}>
               {REPORT_META.title}
             </h1>
-            <p className="text-[#1A1A1A80] text-base mb-2">
+            <p className="text-[#1A1A1A99] text-base mb-2">
               {REPORT_META.period}
             </p>
-            <p className="text-[#1A1A1A50] text-sm max-w-[520px] leading-relaxed mx-auto">
+            <p className="text-[#1A1A1A80] text-sm max-w-[520px] leading-relaxed mx-auto">
               {REPORT_META.publishedNote}
             </p>
           </motion.div>
@@ -64,19 +65,18 @@ export default function ReportHero() {
 
       {/* Headline KPI strip — sits directly below the full-screen hero */}
       <div className="bg-white border-b border-[#E5E5E5]">
-        <div className="max-w-[1242px] mx-auto px-4 py-6">
+        <div className="max-w-[1242px] mx-auto px-4 py-8">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"
           >
             {HEADLINE_KPIS.map((kpi, i) => (
               <MetricCard
                 key={kpi.id}
                 kpi={kpi}
                 index={i}
-                className="bg-[#F5F5F5] border-[#E5E5E5] hover:border-[#12ff8060]"
               />
             ))}
           </motion.div>
