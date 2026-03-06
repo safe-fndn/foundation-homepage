@@ -47,7 +47,7 @@ export default function ReportHero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.05 }}
-            className="max-w-[860px]"
+            className="max-w-[860px] px-0 md:px-8 lg:px-12"
           >
             <h1 className="text-[36px] md:text-[60px] font-medium leading-[1.1] tracking-tight text-[#1A1A1A] mb-4"
               style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.15)' }}>
@@ -65,12 +65,12 @@ export default function ReportHero() {
 
       {/* Headline KPI strip — sits directly below the full-screen hero */}
       <div className="bg-white border-b border-[#E5E5E5]">
-        <div className="max-w-[1242px] mx-auto px-4 py-8">
+        <div className="max-w-[1242px] mx-auto px-4 py-12">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5"
           >
             {HEADLINE_KPIS.map((kpi, i) => (
               <MetricCard
