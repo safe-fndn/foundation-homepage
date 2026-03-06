@@ -36,6 +36,8 @@ const SAFE_GREEN = "#12FF80";
 const DARK = "#1A1A1A";
 const MUTED = "#1a1a1a40";
 const GRID = "#1a1a1a0f";
+const Q4_GREY = "#1A1A1A40"; // Prior quarter (muted)
+const Q1_MONTHS = [1, 2, 3]; // indices for Jan, Feb, Mar (0=Q4)
 
 const baseChartOptions = {
   responsive: true,
@@ -69,6 +71,7 @@ const baseChartOptions = {
 
 function NtvpChart() {
   const [view, setView] = useState<"chart" | "table">("chart");
+  const pointColors = PROTOCOL_METRICS.months.map((_, i) => (i === 0 ? Q4_GREY : SAFE_GREEN));
   const data = {
     labels: LABELS,
     datasets: [
@@ -79,7 +82,7 @@ function NtvpChart() {
         backgroundColor: "#12ff8018",
         fill: true,
         tension: 0.4,
-        pointBackgroundColor: SAFE_GREEN,
+        pointBackgroundColor: pointColors,
         pointBorderColor: "#fff",
         pointBorderWidth: 2,
         pointRadius: 5,
@@ -113,7 +116,7 @@ function NtvpChart() {
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div>
           <div className="text-base font-medium text-[#1A1A1A]">Transaction Volume (nTVP)</div>
-          <div className="text-sm text-[#1A1A1A66]">Monthly ETH-denominated throughput — Q1 2026</div>
+          <div className="text-sm text-[#1A1A1A66]">Monthly ETH-denominated throughput — prior quarter vs Q1 2026 (grey = Q4, green = Q1)</div>
         </div>
         <DataToggle view={view} onChange={setView} />
       </div>
@@ -144,6 +147,7 @@ function NtvpChart() {
 
 function TvlChart() {
   const [view, setView] = useState<"chart" | "table">("chart");
+  const pointColors = PROTOCOL_METRICS.months.map((_, i) => (i === 0 ? Q4_GREY : DARK));
   const data = {
     labels: LABELS,
     datasets: [
@@ -154,7 +158,7 @@ function TvlChart() {
         backgroundColor: "#1a1a1a10",
         fill: true,
         tension: 0.4,
-        pointBackgroundColor: DARK,
+        pointBackgroundColor: pointColors,
         pointBorderColor: "#fff",
         pointBorderWidth: 2,
         pointRadius: 5,
@@ -217,19 +221,21 @@ function TvlChart() {
 
 function AccountsChart() {
   const [view, setView] = useState<"chart" | "table">("chart");
+  const newSafesColors = PROTOCOL_METRICS.months.map((_, i) => (i === 0 ? Q4_GREY : SAFE_GREEN));
+  const activeColors = PROTOCOL_METRICS.months.map((_, i) => (i === 0 ? "#1a1a1a15" : "#1a1a1a20"));
   const data = {
     labels: LABELS,
     datasets: [
       {
         label: "New Safes (thousands)",
         data: PROTOCOL_METRICS.months.map((m) => m.newSafes),
-        backgroundColor: SAFE_GREEN,
+        backgroundColor: newSafesColors,
         borderRadius: 4,
       },
       {
         label: "Monthly Active Safes (thousands)",
         data: PROTOCOL_METRICS.months.map((m) => +(m.monthlyActiveSafes / 1000).toFixed(2)),
-        backgroundColor: "#1a1a1a20",
+        backgroundColor: activeColors,
         borderRadius: 4,
       },
     ],
@@ -295,13 +301,19 @@ function AccountsChart() {
 
 function TransactionsChart() {
   const [view, setView] = useState<"chart" | "table">("chart");
+  const transactionColors = PROTOCOL_METRICS.months.map((_, i) => {
+    if (i === 0) return Q4_GREY; // Q4 muted
+    if (i === 1) return SAFE_GREEN; // Jan full green
+    if (i === 2) return "#12ff8070"; // Feb lighter
+    return "#12ff8040"; // Mar† lightest
+  });
   const data = {
     labels: LABELS,
     datasets: [
       {
         label: "Monthly Transactions (millions)",
         data: PROTOCOL_METRICS.months.map((m) => m.monthlyTransactions),
-        backgroundColor: [SAFE_GREEN, "#12ff8070", "#12ff8040"],
+        backgroundColor: transactionColors,
         borderRadius: 4,
       },
     ],

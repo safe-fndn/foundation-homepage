@@ -25,11 +25,17 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 const SAFE_GREEN = "#12FF80";
 const DARK = "#1A1A1A";
 const GRID = "#1a1a1a0f";
+const Q4_GREY = "#1A1A1A40"; // Prior quarter (muted)
 
 export default function RevenueChart() {
   const [view, setView] = useState<"chart" | "table">("chart");
 
   const labels = REVENUE.months.map((m) => m.label);
+  
+  // Color Q4 bars muted (grey), Q1 bars at full saturation (green/dark)
+  const foundationColors = REVENUE.months.map((_, i) => (i === 0 ? "#12ff8060" : SAFE_GREEN));
+  const labsColors = REVENUE.months.map((_, i) => (i === 0 ? "#1a1a1a30" : "#1A1A1A"));
+  const hecateColors = REVENUE.months.map((_, i) => (i === 0 ? "#1a1a1a20" : "#1a1a1a50"));
 
   const data = {
     labels,
@@ -37,21 +43,21 @@ export default function RevenueChart() {
       {
         label: "Foundation",
         data: REVENUE.months.map((m) => m.foundation),
-        backgroundColor: SAFE_GREEN,
+        backgroundColor: foundationColors,
         borderRadius: 4,
         stack: "revenue",
       },
       {
         label: "Safe Labs",
         data: REVENUE.months.map((m) => m.safeLabs),
-        backgroundColor: "#1A1A1A",
+        backgroundColor: labsColors,
         borderRadius: 0,
         stack: "revenue",
       },
       {
         label: "Hecate",
         data: REVENUE.months.map((m) => m.hecate),
-        backgroundColor: "#1a1a1a50",
+        backgroundColor: hecateColors,
         borderRadius: 0,
         stack: "revenue",
       },
@@ -124,7 +130,7 @@ export default function RevenueChart() {
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <div className="text-base font-medium text-[#1A1A1A]">Revenue by Stream</div>
-          <div className="text-sm text-[#1A1A1A66]">Monthly breakdown across Foundation, Safe Labs, and Hecate — Q1 2026</div>
+          <div className="text-sm text-[#1A1A1A66]">Monthly breakdown across Foundation, Safe Labs, and Hecate — prior quarter vs Q1 2026 (grey = Q4, full color = Q1)</div>
         </div>
         <DataToggle view={view} onChange={setView} />
       </div>
@@ -195,6 +201,13 @@ export default function RevenueChart() {
       <p className="text-xs text-[#1A1A1A66]">
         † March figures are projections. Q4 2025 total included a non-recurring performance event.
       </p>
+
+      {/* Unaudited Disclaimer */}
+      <div className="p-3 bg-[#12ff800a] border border-[#12ff8030] rounded-lg">
+        <p className="text-xs text-[#1A1A1A99]">
+          <span className="font-medium">Note:</span> All revenue figures presented are approximations and have not been independently audited. These figures are provided for illustrative purposes only. Actual results may differ materially.
+        </p>
+      </div>
     </div>
   );
 }

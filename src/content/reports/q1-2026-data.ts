@@ -201,6 +201,18 @@ export const MILESTONES: Milestone[] = [
 export const PROTOCOL_METRICS: { months: ProtocolMonth[] } = {
   months: [
     {
+      label: "Q4",
+      isProjection: false,
+      tvlUsd: 48,
+      tvpUsd: 11.7,
+      ntvpEth: 3500, // thousands
+      newSafes: 2300, // thousands (Q4 total, not monthly)
+      totalSafes: 58.9, // millions
+      monthlyActiveSafes: 2800, // thousands (estimated from trend)
+      monthlyTransactions: 37.9, // millions (estimated)
+      activationRate: 12, // higher in Q4, estimated
+    },
+    {
       label: "Jan",
       isProjection: false,
       tvlUsd: 40.27,
@@ -273,6 +285,13 @@ export const EVM_DEFI_CONTEXT = {
 
 export const REVENUE: { months: RevenueMonth[]; q4Total: { foundation: number; safeLabs: number; hecate: number } } = {
   months: [
+    {
+      label: "Q4",
+      isProjection: false,
+      foundation: 1100 / 3, // ~367K per month average
+      safeLabs: 1000 / 3, // ~333K
+      hecate: 600 / 3, // ~200K
+    },
     {
       label: "Jan",
       isProjection: false,
