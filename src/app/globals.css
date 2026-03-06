@@ -8,6 +8,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-safenet-green: #12FF80;
+  --color-safenet-black: #000000;
+  --color-safenet-white: #FFFFFF;
 }
 
 @font-face {
@@ -146,5 +149,87 @@ body {
 
   .rich-text table th {
     @apply text-left;
+  }
+}
+
+@layer components {
+  .sn-display-xl {
+    font-family: "Citerne", sans-serif;
+    font-size: 140px;
+    line-height: 110%;
+    font-weight: 500;
+    letter-spacing: -2%;
+  }
+
+  .sn-display-lg {
+    font-family: "Citerne", sans-serif;
+    font-size: 104px;
+    line-height: 110%;
+    font-weight: 400;
+    letter-spacing: -2%;
+  }
+
+  .sn-heading-xl {
+    font-family: "Citerne", sans-serif;
+    font-size: 96px;
+    line-height: 120%;
+    font-weight: 400;
+    letter-spacing: -2%;
+  }
+
+  .sn-heading-lg {
+    font-family: "Citerne", sans-serif;
+    font-size: 56px;
+    line-height: 120%;
+    font-weight: 400;
+    letter-spacing: -2%;
+  }
+
+  .sn-body-lg {
+    font-family: "Citerne", sans-serif;
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .sn-body-md {
+    font-family: "Citerne", sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .sn-body-sm {
+    font-family: "Citerne", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .sn-mono-display {
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 80px;
+    line-height: 110%;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .sn-mono-md {
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .sn-mono-sm {
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 400;
+    letter-spacing: 0;
   }
 }

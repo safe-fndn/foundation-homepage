@@ -105,6 +105,11 @@ export const menuItems: MenuItem[] = [
     dropdown: fundingDropdownItems,
   },
   {
+    id: "safenet",
+    title: "Safenet",
+    href: "/safenet",
+  },
+  {
     id: "research",
     title: "Research",
     href: "https://safe.dev",
