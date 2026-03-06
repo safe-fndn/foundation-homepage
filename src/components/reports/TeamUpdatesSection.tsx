@@ -19,6 +19,34 @@ const TEAM_ICONS: Record<string, string> = {
   "Safe Research": "⬢",
 };
 
+const TEAM_COLORS: Record<string, { bg: string; border: string; accent: string }> = {
+  "The Foundation": {
+    bg: "#12ff800a",
+    border: "#12ff8030",
+    accent: "#12FF80",
+  },
+  "Safe Labs": {
+    bg: "#3b82f60a",
+    border: "#3b82f630",
+    accent: "#3b82f6",
+  },
+  "Hecate": {
+    bg: "#a855f70a",
+    border: "#a855f730",
+    accent: "#a855f7",
+  },
+  "Safe Ventures": {
+    bg: "#f97316Ff0a",
+    border: "#f9731630",
+    accent: "#f97316",
+  },
+  "Safe Research": {
+    bg: "#ec48560a",
+    border: "#ec485630",
+    accent: "#ec4856",
+  },
+};
+
 export default function TeamUpdatesSection() {
   return (
     <div className="grid grid-cols-1 gap-4">
@@ -28,11 +56,29 @@ export default function TeamUpdatesSection() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: teamIdx * 0.07, duration: 0.35 }}
-          className="bg-white border border-[#E5E5E5] rounded-2xl overflow-hidden"
+          className={cn(
+            "border rounded-2xl overflow-hidden",
+            `bg-white border-[#E5E5E5]`,
+            `ring-2 ring-offset-0`,
+            `ring-[${TEAM_COLORS[team.team]?.accent || "#12FF80"}]`
+          )}
+          style={{
+            boxShadow: `0 0 0 1px ${TEAM_COLORS[team.team]?.border || "#12ff8030"}`,
+          }}
         >
-          {/* Team header */}
-          <div className="flex items-center gap-3 px-5 py-4 border-b border-[#E5E5E5] bg-[#F5F5F5]">
-            <span className="text-lg text-[#12FF80]" aria-hidden="true">
+          {/* Team header with colored accent */}
+          <div
+            className="flex items-center gap-3 px-5 py-4 border-b border-[#E5E5E5] bg-[#F5F5F5]"
+            style={{
+              borderLeftWidth: "4px",
+              borderLeftColor: TEAM_COLORS[team.team]?.accent || "#12FF80",
+            }}
+          >
+            <span
+              className="text-lg"
+              style={{ color: TEAM_COLORS[team.team]?.accent || "#12FF80" }}
+              aria-hidden="true"
+            >
               {TEAM_ICONS[team.team] ?? "◆"}
             </span>
             <h3 className="text-base font-medium text-[#1A1A1A]">{team.team}</h3>

@@ -426,7 +426,7 @@ export const TEAM_UPDATES: TeamUpdate[] = [
       },
       {
         title: "Safe Standard",
-        body: "Launched February 16, the Safe Standard defines the compliance and safety baseline for chain deployments formally adopting Safe as their smart account layer. Polygon and multiple networks adopted the Standard in Q1.",
+        body: "Launched February 16, the Safe Standard defines the compliance and safety baseline for chain deployments formally adopting Safe as their smart account layer. Polygon and multiple networks have adopted the Standard.",
         url: undefined,
       },
       {
@@ -446,7 +446,7 @@ export const TEAM_UPDATES: TeamUpdate[] = [
       },
       {
         title: "DeFi Portfolio",
-        body: "Deployed capital expanded from $8.8M in January to $12M+ in February, generating above 7% APY throughout Q1 across blue-chip, audited protocols.",
+        body: "Deployed capital expanded from $8.8M in January to $12M+ in February, generating above 7% APY across blue-chip, audited protocols.",
         url: undefined,
       },
     ],
@@ -456,12 +456,12 @@ export const TEAM_UPDATES: TeamUpdate[] = [
     items: [
       {
         title: "Ecosystem Development",
-        body: "Q1 saw continued progress in the partnership portfolio, with new network partner agreements and the Hypernative-Guardian security integration live across Safe deployments.",
+        body: "Continued progress in the partnership portfolio, with new network partner agreements and the Hypernative-Guardian security integration live across Safe deployments.",
         url: undefined,
       },
       {
         title: "Sales Pipeline",
-        body: "The Q1 inbound pipeline includes 10 highly qualified network leads, with strong enterprise chain team interest in Safe Standard adoption and API partnerships.",
+        body: "The inbound pipeline includes 10 highly qualified network leads, with strong enterprise chain team interest in Safe Standard adoption and API partnerships.",
         url: undefined,
       },
     ],
@@ -471,7 +471,7 @@ export const TEAM_UPDATES: TeamUpdate[] = [
     items: [
       {
         title: "Safenet",
-        body: "Safenet moved from testnet to Beta in March after operating on testnet throughout Q1. A closed validator set went live on Gnosis Chain, a DAO governance proposal was posted, and the public launch roadmap for Q2 is finalised.",
+        body: "Safenet moved from testnet to Beta in March. A closed validator set went live on Gnosis Chain, a DAO governance proposal was posted, and the public launch roadmap for Q2 is finalised.",
         url: undefined,
       },
       {
