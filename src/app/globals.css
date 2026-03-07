@@ -13,6 +13,74 @@
   --color-safenet-white: #FFFFFF;
 }
 
+.sn-side-borders {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+
+  .sn-side-borders::before,
+  .sn-side-borders::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 16px;
+    pointer-events: none;
+    background: repeating-linear-gradient(to bottom,
+        #DBDBDB 0px,
+        #DBDBDB 1px,
+        transparent 1px,
+        transparent 3px);
+  }
+
+  .sn-side-borders::before {
+    left: 4px;
+    border-right: 1px solid rgba(0, 0, 0, 0.10);
+    padding-right: 4px;
+    background-clip: content-box;
+  }
+
+  .sn-side-borders::after {
+    right: 4px;
+    border-left: 1px solid rgba(0, 0, 0, 0.10);
+    padding-left: 4px;
+    background-clip: content-box;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .sn-side-borders::before,
+  .sn-side-borders::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 36px;
+    pointer-events: none;
+    background: repeating-linear-gradient(to bottom,
+        #DBDBDB 0px,
+        #DBDBDB 2px,
+        transparent 2px,
+        transparent 6px);
+  }
+
+  .sn-side-borders::before {
+    left: 12px;
+    border-right: 1px solid rgba(0, 0, 0, 0.10);
+    padding-right: 12px;
+    background-clip: content-box;
+  }
+
+  .sn-side-borders::after {
+    right: 12px;
+    border-left: 1px solid rgba(0, 0, 0, 0.10);
+    padding-left: 12px;
+    background-clip: content-box;
+  }
+}
+
 @font-face {
   font-family: "Citerne";
   font-display: swap;
