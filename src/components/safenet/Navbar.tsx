@@ -17,7 +17,7 @@ const SafenetNavbar = () => {
         <DropdownMenu
           key={item.id}
           trigger={
-            <div className="px-3 py-1 text-sm cursor-pointer">{item.title}</div>
+            <div className="px-3 py-1 cursor-pointer sn-body-sm font-light">{item.title}</div>
           }
           items={item.dropdown}
           offsetTop={32}
@@ -29,7 +29,7 @@ const SafenetNavbar = () => {
       <a
         href={item.href}
         key={item.id}
-        className="px-3 py-1 text-sm flex flex-row items-center gap-1"
+        className="px-3 py-1 flex flex-row items-center gap-1 sn-body-sm font-light"
         {...(item.target && { target: item.target })}
         {...(item.rel && { rel: item.rel })}
       >
@@ -139,6 +139,7 @@ const SafenetNavbar = () => {
                 iconHeight={18}
                 iconWidth={18}
                 variant="link"
+                className="sn-mono-sm"
               >
                 STAKE SAFE
               </Button>
@@ -169,7 +170,7 @@ const SafenetNavbar = () => {
                   iconHeight={18}
                   iconWidth={18}
                   variant="link"
-                  className="pl-0"
+                  className="pl-0 sn-mono-sm"
                 >
                   STAKE SAFE
                 </Button>

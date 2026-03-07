@@ -49,6 +49,7 @@ body {
 }
 
 @layer components {
+
   /* Scoped to (footer) layout only */
   .footer-scope {
     @apply my-[80px] md:my-[150px] max-w-[1200px] mx-auto px-4 text-xl;
@@ -94,11 +95,11 @@ body {
     @apply text-xl;
   }
 
-  .footer-scope ul li + li {
+  .footer-scope ul li+li {
     @apply mt-6;
   }
 
-  .footer-scope details > ul li + li {
+  .footer-scope details>ul li+li {
     @apply mt-0;
   }
 
@@ -110,7 +111,7 @@ body {
     @apply italic;
   }
 
-  .footer-scope details > ul {
+  .footer-scope details>ul {
     @apply pl-[40px];
   }
 
@@ -125,12 +126,13 @@ body {
 }
 
 @layer components {
+
   /* Scoped to rich text only */
   .rich-text p {
     @apply text-xl font-light my-5;
   }
 
-  .rich-text p > b {
+  .rich-text p>b {
     @apply font-bold;
   }
 
