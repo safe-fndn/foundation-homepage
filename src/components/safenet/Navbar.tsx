@@ -96,7 +96,7 @@ const SafenetNavbar = () => {
 
   return (
     <nav className="z-50 w-full bg-safenet-green">
-      <div className="px-4 py-3 border-b border-safenet-black/10">
+      <div className="px-4 lg:px-10 py-3 border-b border-safenet-black/10">
         <div className="flex justify-between items-center">
           <Link href="/safenet" className="cursor-pointer">
             <Image
@@ -107,7 +107,7 @@ const SafenetNavbar = () => {
             />
           </Link>
 
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               type="button"
               className="p-2"
@@ -127,11 +127,11 @@ const SafenetNavbar = () => {
             </button>
           </div>
 
-          <div className="hidden md:flex items-center space-x-[2px]">
+          <div className="hidden lg:flex items-center space-x-[2px]">
             {menuItems.map(renderMenuItem)}
           </div>
 
-          <div className="hidden md:flex items-center">
+          <div className="hidden lg:flex items-center">
             <a href="#" target="_blank" rel="noopener noreferrer">
               <Button
                 icon="/images/common/arrow-external.svg"
@@ -149,7 +149,7 @@ const SafenetNavbar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-[61px] bg-white w-full">
+        <div className="lg:hidden absolute top-[61px] bg-white w-full">
           <div className="w-full rounded-2xl shadow-md">
             <div className="py-5">
               <Accordion allowMultiple={false}>
