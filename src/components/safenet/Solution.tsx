@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Solution() {
   return (
-    <div className='pb-8'>
+    <div className=''>
       <div className='px-[20px] md:px-[48px]'>
         <div className='h-px w-full bg-black/[0.1] relative'>
           <p className='max-w-[832px] w-fit bg-white absolute -top-3 left-[20%] md:left-[30%] border border-black/[0.1]'>SOLUTION</p>

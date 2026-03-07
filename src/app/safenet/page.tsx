@@ -1,3 +1,4 @@
+import Defenders from "@/components/safenet/Defenders";
 import HeroSection from "@/components/safenet/HeroSection";
 import Problem from "@/components/safenet/Problem";
 import Solution from "@/components/safenet/Solution";
@@ -14,6 +15,9 @@ export default function SafenetPage() {
       </div>
       <div className="pt-[25px] md:pt-[70px]">
         <Solution />
+      </div>
+      <div className="pt-[72px] md:pt-[80px]">
+        <Defenders />
       </div>
     </div>
   </main>)
