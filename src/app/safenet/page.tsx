@@ -1,6 +1,7 @@
 import Defenders from "@/components/safenet/Defenders";
 import HeroSection from "@/components/safenet/HeroSection";
 import HowItWorks from "@/components/safenet/HowItWorks";
+import NativeToken from "@/components/safenet/NativeToken";
 import Problem from "@/components/safenet/Problem";
 import Solution from "@/components/safenet/Solution";
 import WhoIsItFor from "@/components/safenet/WhoIsItFor";
@@ -27,6 +28,9 @@ export default function SafenetPage() {
       <div className="pt-[108px] md:pt-[180px]">
         <WhoIsItFor />
       </div>
+    </div>
+    <div className="bg-safenet-green">
+      <NativeToken />
     </div>
   </main>)
 }
