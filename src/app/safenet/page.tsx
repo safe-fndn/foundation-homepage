@@ -4,6 +4,7 @@ import HowItWorks from "@/components/safenet/HowItWorks";
 import NativeToken from "@/components/safenet/NativeToken";
 import Problem from "@/components/safenet/Problem";
 import Solution from "@/components/safenet/Solution";
+import StakeSafe from "@/components/safenet/StakeSafe";
 import WhoIsItFor from "@/components/safenet/WhoIsItFor";
 import React from "react";
 
@@ -31,6 +32,9 @@ export default function SafenetPage() {
     </div>
     <div className="bg-safenet-green">
       <NativeToken />
+    </div>
+    <div className="sn-side-borders max-w-[1440px] mx-auto">
+      <StakeSafe />
     </div>
   </main>)
 }
