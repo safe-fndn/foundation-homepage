@@ -3,6 +3,7 @@ import HeroSection from "@/components/safenet/HeroSection";
 import HowItWorks from "@/components/safenet/HowItWorks";
 import Problem from "@/components/safenet/Problem";
 import Solution from "@/components/safenet/Solution";
+import WhoIsItFor from "@/components/safenet/WhoIsItFor";
 import React from "react";
 
 export default function SafenetPage() {
@@ -22,6 +23,9 @@ export default function SafenetPage() {
       </div>
       <div className="pt-[72px] md:pt-[80px]">
         <HowItWorks />
+      </div>
+      <div className="pt-[108px] md:pt-[180px]">
+        <WhoIsItFor />
       </div>
     </div>
   </main>)
