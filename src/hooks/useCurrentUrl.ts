@@ -10,6 +10,7 @@ const useCurrentUrl = () => {
   useEffect(() => {
     // Check if running in the browser environment
     if (typeof window !== "undefined") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setCurrentUrl(window.location.href);
     }
   }, []);

@@ -23,6 +23,7 @@ export default function NoGas() {
       });
     };
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCellAnimations(generateAnimations());
   }, []);
 
