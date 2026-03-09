@@ -1,6 +1,7 @@
 import Defenders from "@/components/safenet/Defenders";
 import HeroSection from "@/components/safenet/HeroSection";
 import HowItWorks from "@/components/safenet/HowItWorks";
+import LearnMore from "@/components/safenet/LearnMore";
 import NativeToken from "@/components/safenet/NativeToken";
 import NetworkStats from "@/components/safenet/NetworkStats";
 import Problem from "@/components/safenet/Problem";
@@ -39,6 +40,7 @@ export default function SafenetPage() {
       <div className="pt-[183px] md:pt-[197px] px-[20px] md:px-[48px]">
         <NetworkStats />
       </div>
+      <LearnMore />
     </div>
   </main>)
 }
