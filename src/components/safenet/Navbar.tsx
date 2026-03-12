@@ -96,7 +96,7 @@ const SafenetNavbar = () => {
 
   return (
     <nav className="z-50 w-full bg-safenet-green">
-      <div className="px-4 lg:px-10 py-3 border-b border-safenet-black/10">
+      <div className="max-w-[1440px] mx-auto px-4 lg:px-10 py-3 border-b border-safenet-black/10">
         <div className="flex justify-between items-center">
           <Link href="/safenet" className="cursor-pointer">
             <Image
@@ -132,7 +132,7 @@ const SafenetNavbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="relative">
               <Button
                 icon="/images/common/arrow-external.svg"
                 iconAlt="Arrow External"
@@ -143,43 +143,53 @@ const SafenetNavbar = () => {
               >
                 STAKE SAFE
               </Button>
+              <div
+                className="absolute left-[10%] right-[10%] border-b border-dashed"
+                style={{
+                  pointerEvents: 'none',
+                  width: '80%',
+                  left: '10%',
+                  right: '10%',
+                }}
+              />
             </a>
           </div>
         </div>
       </div>
+      {
+        isMobileMenuOpen && (
+          <div className="lg:hidden absolute top-[61px] bg-white w-full">
+            <div className="w-full rounded-2xl shadow-md">
+              <div className="py-5">
+                <Accordion allowMultiple={false}>
+                  {menuItems.map(renderMobileMenuItem)}
+                </Accordion>
+              </div>
 
-      {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-[61px] bg-white w-full">
-          <div className="w-full rounded-2xl shadow-md">
-            <div className="py-5">
-              <Accordion allowMultiple={false}>
-                {menuItems.map(renderMobileMenuItem)}
-              </Accordion>
-            </div>
-
-            <div className="py-6 border-t border-[#E9EAEB]">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full px-4"
-              >
-                <Button
-                  icon="/images/common/arrow-external.svg"
-                  iconAlt="Arrow External"
-                  iconHeight={18}
-                  iconWidth={18}
-                  variant="link"
-                  className="pl-0 sn-mono-sm"
+              <div className="py-6 border-t border-[#E9EAEB]">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full px-4 relative"
                 >
-                  STAKE SAFE
-                </Button>
-              </a>
+                  <Button
+                    icon="/images/common/arrow-external.svg"
+                    iconAlt="Arrow External"
+                    iconHeight={18}
+                    iconWidth={18}
+                    variant="link"
+                    className="px-0 rounded-none sn-mono-sm border-b border-dashed"
+                  >
+                    STAKE SAFE
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </nav>
+        )
+      }
+    </nav >
   );
 };
 

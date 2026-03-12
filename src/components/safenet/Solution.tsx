@@ -6,7 +6,7 @@ export default function Solution() {
     <div className=''>
       <div className='px-[20px] md:px-[48px]'>
         <div className='h-px w-full bg-black/[0.1] relative'>
-          <p className='max-w-[832px] w-fit bg-white absolute -top-3 left-[20%] md:left-[30%] border border-black/[0.1]'>SOLUTION</p>
+          <p className='max-w-[832px] w-fit bg-white absolute -top-3 left-[50%] -translate-x-1/2 md:left-[30%] border border-black/[0.1]'>SOLUTION</p>
         </div>
       </div>
       <div className='flex justify-center pb-[43px] md:pb-[80px]'>

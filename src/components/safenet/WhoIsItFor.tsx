@@ -57,7 +57,7 @@ export default function WhoIsItFor() {
 
       <div className="px-6 md:px-[100px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-[24px] gap-y-[40px] md:gap-y-[48px]">
         {cards.map((card, index) => (
-          <div key={card.label} className='flex flex-col items-start md:items-center'>
+          <div key={card.label} className='flex flex-col items-start'>
             <div className='flex flex-row items-center pb-[16px] gap-1'>
               <div className='w-[16px] h-[16px] rounded-full border border-black text-[11px] font-light flex justify-center items-center'>
                 {index + 1}

@@ -32,12 +32,12 @@ export default function HowItWorks() {
   return (
     <div className="px-[20px] md:px-[48px]">
       <div className='h-px w-full bg-black/[0.1] relative'>
-        <div className='max-w-[832px] w-fit absolute flex flex-row gap-2 -top-3 left-[10%] md:left-[30%]'>
+        <div className='max-w-[832px] w-fit absolute flex flex-row gap-2 -top-3 left-[50%] -translate-x-1/2'>
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`tracking-wide border border-black/[0.1] cursor-pointer transition-colors ${activeTab === tab
+              className={`tracking-wide whitespace-nowrap border border-black/[0.1] cursor-pointer transition-colors ${activeTab === tab
                 ? 'text-safenet-green bg-safenet-black'
                 : 'text-safenet-black bg-white'
                 }`}

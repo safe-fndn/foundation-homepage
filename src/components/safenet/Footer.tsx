@@ -54,9 +54,9 @@ function FooterLink({
 const SafenetFooter = () => {
   return (
     <footer className="w-full bg-safenet-green border-t border-safenet-black">
-      <div className="max-w-[1440px] mx-auto px-5 md:px-[46px]">
+      <div className="max-w-[1440px] mx-auto px-[19px] md:px-[47px]">
         <div className="flex flex-col md:flex-row w-full">
-          <div className="py-6 px-4 border w-full border-safenet-black border-t-0">
+          <div className="py-6 px-4 border w-full md:[flex-basis:calc(50%+2px)] border-safenet-black border-t-0">
             <div className="flex items-start justify-between">
               <p className="text-base md:text-[20px] font-light">Safenet &copy; {new Date().getFullYear()}</p>
               <Image
@@ -72,7 +72,7 @@ const SafenetFooter = () => {
             </p>
           </div>
 
-          <div className="flex p-3 md:p-6 flex-col w-full border border-safenet-black border-t-0 md:border-l-0 md:flex-row gap-8">
+          <div className="flex p-3 md:p-6 flex-col w-full md:basis-1/2 border border-safenet-black border-t-0 md:border-l-0 md:flex-row gap-8">
             <div className="flex-1 pb-4">
               <p className="text-sm md:text-base font-medium pb-1">Company:</p>
               {companyFooterLinks.map((link) => (
@@ -95,7 +95,7 @@ const SafenetFooter = () => {
         </div>
 
         <div className="border border-safenet-black border-t-0">
-          <div className="grid grid-cols-[1fr_auto_auto] md:grid-cols-[auto_auto_auto] items-stretch">
+          <div className="grid grid-cols-[1fr_auto] md:grid-cols-2">
             <a
               href={`mailto:${COMMS_EMAIL}`}
               className="flex items-center md:hidden gap-2 sn-mono-md justify-between text-sm uppercase py-[10px] px-4"
@@ -120,45 +120,47 @@ const SafenetFooter = () => {
                 Reach out to us
               </SafenetButton>
             </div>
-            {socialLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center px-[24px] py-[10px] border-l border-safenet-black"
-              >
-                <Image
-                  src={`/images/common/${link.name.toLowerCase()}.svg`}
-                  alt={link.name}
-                  width={22}
-                  height={22}
-                  className="w-[22px] md:w-[40px] h-[22px] md:h-[40px]"
-                />
-              </a>
-            ))}
+            <div className="flex flex-row items-center">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex md:flex-1 h-full items-center justify-center px-[24px] py-[10px] border-l border-safenet-black"
+                >
+                  <Image
+                    src={`/images/safenet/${link.name.toLowerCase()}.svg`}
+                    alt={link.name}
+                    width={22}
+                    height={22}
+                    className="w-[22px] md:w-[40px] h-[22px] md:h-[40px]"
+                  />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
         <div className="border border-safenet-black border-t-0">
-          <div className="flex items-center gap-1 justify-center px-3 py-[14px]">
+          <div className="flex items-center gap-1 md:gap-3 justify-center px-3 py-[14px]">
             <Image
               src="/images/safenet/bracket.svg"
               alt="bracket"
               width={20}
               height={75}
-              className="w-[20px] md:w-[40px] h-[75px] md:h-[143px] inline shrink-0"
+              className="w-[20px] md:w-[40px] lg:w-[70px] h-[75px] md:h-[143px] lg:h-[250px] inline shrink-0"
             />
             <div
-              className="relative text-[70px] md:text-[152px] font-medium"
+              className="relative text-[70px] md:text-[152px] lg:text-[272px] font-medium"
               style={{ fontWeight: 500 }}
             >
               Safenet
-              <p className="absolute text-[10px] md:text-xl sn-mono-sm right-0 bottom-0 md:bottom-5">BETA</p>
+              <p className="absolute text-[10px] md:text-xl lg:text-[36px] sn-mono-sm right-0 bottom-0 md:bottom-5 lg:bottom-7">BETA</p>
             </div>
             <Image
               src="/images/safenet/bracket.svg"
-              className="w-[20px] md:w-[40px] h-[75px] md:h-[143px] rotate-180 inline shrink-0"
+              className="w-[20px] md:w-[40px] lg:w-[70px] h-[75px] md:h-[143px] lg:h-[250px] rotate-180 inline shrink-0"
               alt="bracket"
               width={20}
               height={75}
@@ -181,7 +183,7 @@ const SafenetFooter = () => {
           >
             {DITHER_TEXT.repeat(4)}
           </p>
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 md:-bottom-[24px]">
+          <div className="absolute left-1/2 -translate-x-1/2 -bottom-[46px] md:-bottom-[24px]">
             <Image
               src="/images/safenet/safe-footer-box.png"
               alt="Safe Box"
