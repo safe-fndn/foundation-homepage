@@ -1,18 +1,23 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
+import { AsciiScene } from '../ascii/AsciiScene'
 
 export default function NativeToken() {
   return (
     <div className="px-[20px] md:px-[48px] max-w-[1440px] mx-auto">
       <div className='border border-safenet-black border-t-0 border-b-0 items-center flex flex-col justify-between'>
-        <Image
+        {/* <Image
           src="/images/safenet/safe-coin.png"
           alt="coin"
           width={1000}
           height={1000}
           className="w-full max-w-[268px] md:max-w-[399px] lg:max-w-[462px] h-auto mx-auto"
-        />
-        <div className='border-t w-full border-t-safenet-black -mt-[100px]' style={{ backgroundColor: '#12FF80', backgroundImage: 'url(/images/safenet/native-token-bg.svg)', backgroundSize: '100% auto', backgroundRepeat: 'repeat-y', backgroundPosition: 'top center' }}>
+        /> */}
+        <div className='h-[420px] w-full'>
+          <AsciiScene />
+        </div>
+        <div className='border-t z-10 w-full border-t-safenet-black -mt-[100px]' style={{ backgroundColor: '#12FF80', backgroundImage: 'url(/images/safenet/native-token-bg.svg)', backgroundSize: '100% auto', backgroundRepeat: 'repeat-y', backgroundPosition: 'top center' }}>
           <p className='text-[48px] md:text-[80px] flex flex-row items-center mx-auto max-w-[330px] md:max-w-[740px] leading-[95%] pt-10 pb-5 text-center'>
             <Image
               src="/images/safenet/bracket.svg"
