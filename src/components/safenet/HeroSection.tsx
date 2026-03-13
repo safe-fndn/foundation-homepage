@@ -1,25 +1,50 @@
+
+'use client'
+
 import Image from 'next/image'
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import SafenetButton from './Button'
+import { cn } from '@/lib/utils'
 
 export default function HeroSection() {
+  const [showLoop, setShowLoop] = useState(false)
+  const loopRef = useRef<HTMLVideoElement>(null)
+
+  const handleIntroEnded = () => {
+    setShowLoop(true)
+    loopRef.current?.play()
+  }
+
   return (
     <div className='max-w-[1440px] mx-auto px-4 lg:px-10'>
-      <div className='py-[35px]'>
-        <Image
-          src="/images/safenet/hero-safenet.png"
-          alt="SafeNet Hero"
-          width={1360}
-          height={467}
-          className='w-full hidden lg:block h-auto'
-        />
-        <Image
-          src="/images/safenet/hero-safenet-mobile.png"
-          alt="SafeNet Hero Mobile"
-          width={1360}
-          height={540}
-          className='w-full lg:hidden max-h-[540px] h-auto'
-        />
+      <div className='py-[35px] relative'>
+        <div className="relative h-full">
+          <video
+            autoPlay
+            muted
+            playsInline
+            onEnded={handleIntroEnded}
+            className={cn(
+              'w-full h-auto',
+              showLoop ? 'hidden' : 'block'
+            )}
+          >
+            <source src="/videos/safenet-hero-in.webm" type="video/webm" />
+          </video>
+
+          <video
+            ref={loopRef}
+            muted
+            playsInline
+            loop
+            className={cn(
+              'w-full h-auto z-20',
+              showLoop ? 'block' : 'hidden'
+            )}
+          >
+            <source src="/videos/safenet-hero-loop.webm" type="video/webm" />
+          </video>
+        </div>
       </div>
       <h1
         className="text-[48px] md:text-[64px] pb-[24px] lg:[58px] max-w-[700px] lg:max-w-[1120px] lg:text-[104px] lg:sn-display-lg"

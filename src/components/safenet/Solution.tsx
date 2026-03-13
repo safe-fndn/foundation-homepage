@@ -1,7 +1,18 @@
-import Image from 'next/image'
-import React from 'react'
+
+'use client'
+
+import { cn } from '@/lib/utils'
+import React, { useRef, useState } from 'react'
 
 export default function Solution() {
+  const [showLoop, setShowLoop] = useState(false)
+  const loopRef = useRef<HTMLVideoElement>(null)
+
+  const handleIntroEnded = () => {
+    setShowLoop(true)
+    loopRef.current?.play()
+  }
+
   return (
     <div className=''>
       <div className='px-[20px] md:px-[48px]'>
@@ -17,13 +28,33 @@ export default function Solution() {
         </p>
       </div>
       <div className='px-[20px] md:px-[48px]'>
-        <Image
-          src="/images/safenet/solution-image.png"
-          alt="Problem Image"
-          width={1000}
-          height={1000}
-          className='w-full h-auto'
-        />
+        <div className='relative'>
+          <video
+            autoPlay
+            muted
+            playsInline
+            onEnded={handleIntroEnded}
+            className={cn(
+              'w-full h-auto',
+              showLoop ? 'hidden' : 'block'
+            )}
+          >
+            <source src="/videos/safenet-solution-in.webm" type="video/webm" />
+          </video>
+
+          <video
+            ref={loopRef}
+            muted
+            playsInline
+            loop
+            className={cn(
+              'w-full h-auto z-20',
+              showLoop ? 'block' : 'hidden'
+            )}
+          >
+            <source src="/videos/safenet-solution-loop.webm" type="video/webm" />
+          </video>
+        </div>
       </div>
     </div>
   )
