@@ -8,6 +8,77 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-safenet-green: #12FF80;
+  --color-safenet-black: #000000;
+  --color-safenet-white: #FFFFFF;
+}
+
+.sn-side-borders {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+
+  .sn-side-borders::before,
+  .sn-side-borders::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 16px;
+    pointer-events: none;
+    background: repeating-linear-gradient(to bottom,
+        #DBDBDB 0px,
+        #DBDBDB 1px,
+        transparent 1px,
+        transparent 3px);
+  }
+
+  .sn-side-borders::before {
+    left: 4px;
+    border-right: 1px solid rgba(0, 0, 0, 0.10);
+    padding-right: 4px;
+    background-clip: content-box;
+  }
+
+  .sn-side-borders::after {
+    right: 4px;
+    border-left: 1px solid rgba(0, 0, 0, 0.10);
+    padding-left: 4px;
+    background-clip: content-box;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .sn-side-borders::before,
+  .sn-side-borders::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 36px;
+    pointer-events: none;
+    background: repeating-linear-gradient(to bottom,
+        #DBDBDB 0px,
+        #DBDBDB 2px,
+        transparent 2px,
+        transparent 6px);
+  }
+
+  .sn-side-borders::before {
+    left: 12px;
+    border-right: 1px solid rgba(0, 0, 0, 0.10);
+    padding-right: 12px;
+    background-clip: content-box;
+  }
+
+  .sn-side-borders::after {
+    right: 12px;
+    border-left: 1px solid rgba(0, 0, 0, 0.10);
+    padding-left: 12px;
+    background-clip: content-box;
+  }
 }
 
 @font-face {
@@ -46,6 +117,7 @@ body {
 }
 
 @layer components {
+
   /* Scoped to (footer) layout only */
   .footer-scope {
     @apply my-[80px] md:my-[150px] max-w-[1200px] mx-auto px-4 text-xl;
@@ -91,11 +163,11 @@ body {
     @apply text-xl;
   }
 
-  .footer-scope ul li + li {
+  .footer-scope ul li+li {
     @apply mt-6;
   }
 
-  .footer-scope details > ul li + li {
+  .footer-scope details>ul li+li {
     @apply mt-0;
   }
 
@@ -107,7 +179,7 @@ body {
     @apply italic;
   }
 
-  .footer-scope details > ul {
+  .footer-scope details>ul {
     @apply pl-[40px];
   }
 
@@ -122,12 +194,13 @@ body {
 }
 
 @layer components {
+
   /* Scoped to rich text only */
   .rich-text p {
     @apply text-xl font-light my-5;
   }
 
-  .rich-text p > b {
+  .rich-text p>b {
     @apply font-bold;
   }
 
@@ -146,5 +219,87 @@ body {
 
   .rich-text table th {
     @apply text-left;
+  }
+}
+
+@layer components {
+  .sn-display-xl {
+    font-family: "Citerne", sans-serif;
+    font-size: 140px;
+    line-height: 110%;
+    font-weight: 500;
+    letter-spacing: -2%;
+  }
+
+  .sn-display-lg {
+    font-family: "Citerne", sans-serif;
+    font-size: 104px;
+    line-height: 110%;
+    font-weight: 400;
+    letter-spacing: -2%;
+  }
+
+  .sn-heading-xl {
+    font-family: "Citerne", sans-serif;
+    font-size: 96px;
+    line-height: 120%;
+    font-weight: 400;
+    letter-spacing: -2%;
+  }
+
+  .sn-heading-lg {
+    font-family: "Citerne", sans-serif;
+    font-size: 56px;
+    line-height: 120%;
+    font-weight: 400;
+    letter-spacing: -2%;
+  }
+
+  .sn-body-lg {
+    font-family: "Citerne", sans-serif;
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .sn-body-md {
+    font-family: "Citerne", sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .sn-body-sm {
+    font-family: "Citerne", sans-serif;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .sn-mono-display {
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 80px;
+    line-height: 110%;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .sn-mono-md {
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .sn-mono-sm {
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 400;
+    letter-spacing: 0;
   }
 }
